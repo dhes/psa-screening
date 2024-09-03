@@ -1,0 +1,28 @@
+{
+  "resourceType": "Observation",
+  "id": "mom-without-anaemia-pregnancy-status",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "82810-3",
+        "display": "Pregnancy status"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/anc-mom-without-anaemia"
+  },
+  "effectiveDateTime": "2023-10-03",
+  "issued": "2023-10-03",
+  "valueCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "LA15173-0",
+        "display": "Pregnant"
+      }
+    ]
+  }
+}

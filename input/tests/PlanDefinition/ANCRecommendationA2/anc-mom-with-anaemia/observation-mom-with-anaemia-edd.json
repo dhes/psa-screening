@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "mom-with-anaemia-edd",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11779-6",
+        "display": "Delivery date Estimated from last menstrual period"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/anc-mom-with-anaemia"
+  },
+  "effectiveDateTime": "2023-10-03",
+  "issued": "2023-10-03",
+  "valueDateTime": "2024-04-10",
+  "_valueDateTime": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+        "valueExpression": {
+          "language": "text/cql",
+          "expression": "Today() + 27 weeks"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "resourceType": "Group",
+  "id": "PSARecommendation",
+  "extension": [ {
+    "url": "http://hl7.org/fhir/StructureDefinition/artifact-testArtifact",
+    "valueCanonical": "http://ecqi.healthit.gov/ecqms/Measure/PSARecommendation"
+  } ],
+  "active": true,
+  "type": "person",
+  "actual": true,
+  "member": [ {
+    "entity": {
+      "reference": "Patient/berfel-ferd",
+      "display": "Ferd Berfel"
+    }
+  } ]
+}

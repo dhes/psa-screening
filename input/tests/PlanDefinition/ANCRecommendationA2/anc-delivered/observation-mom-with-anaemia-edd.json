@@ -1,0 +1,31 @@
+{
+  "resourceType": "Observation",
+  "id": "delivered-edd",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "11779-6",
+        "display": "Delivery date Estimated from last menstrual period"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/anc-delivered"
+  },
+  "effectiveDateTime": "2022-10-03",
+  "issued": "2022-10-03",
+  "valueDateTime": "2023-04-10",
+  "_valueDateTime": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/cqf-expression",
+        "valueExpression": {
+          "language": "text/cql",
+          "expression": "Today() + 27 weeks"
+        }
+      }
+    ]
+  }
+}

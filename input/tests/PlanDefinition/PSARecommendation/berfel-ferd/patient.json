@@ -1,0 +1,82 @@
+{
+  "resourceType": "Patient",
+  "id": "berfel-ferd",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2024-08-01T08:17:11.968-10:00",
+    "source": "#E9iiyobfovkYM250",
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "M"
+    },
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race",
+      "extension": [
+        {
+          "url": "text",
+          "valueString": "European"
+        },
+        {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2106-3",
+            "display": "White"
+          }
+        },
+        {
+          "url": "detailed",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2108-9",
+            "display": "European"
+          }
+        }
+      ]
+    },
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity",
+      "extension": [
+        {
+          "url": "text",
+          "valueString": "Not Hispanic or Latino"
+        },
+        {
+          "url": "ombCategory",
+          "valueCoding": {
+            "system": "urn:oid:2.16.840.1.113883.6.238",
+            "code": "2186-5",
+            "display": "Not Hispanic or Latino"
+          }
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "use": "official",
+      "family": "Berfel",
+      "given": ["Ferd"],
+      "period": {
+        "start": "1977-07-01"
+      }
+    },
+    {
+      "use": "old",
+      "family": "Berfelowski",
+      "given": ["Ferdinand"],
+      "period": {
+        "start": "1953-06-05",
+        "end": "1977-06-30"
+      }
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1953-05-05",
+  "deceasedBoolean": false
+}
