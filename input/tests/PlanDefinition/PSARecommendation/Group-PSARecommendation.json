@@ -13,5 +13,10 @@
       "reference": "Patient/berfel-ferd",
       "display": "Ferd Berfel"
     }
+  }, {
+    "entity": {
+      "reference": "Patient/ccs-should-screen",
+      "display": "Ben Dere"
+    }
   } ]
 }

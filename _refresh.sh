@@ -20,7 +20,7 @@ echo "$fsoption"
 
 tooling=$input_cache_path/$tooling_jar
 if test -f "$tooling"; then
-	java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t -elm $fsoption
+	java -jar $tooling -RefreshIG -ini="$ig_ini_path" -d -p -t $fsoption
 else
 	tooling=../$tooling_jar
 	echo $tooling

@@ -22,15 +22,6 @@ define PSATests:
   [Observation: code in "PSALOINCValueSet"] O
     where O.status in { 'final', 'amended', 'corrected' }
 
-// define LastPSATest:
-//   Exists([Observation: code in "PSALOINCValueSet"])
-//   // First([Observation: code in "PSALOINCValueSet"] L
-//   //     where L.status = 'final'
-//   //     sort by effective desc)
-
-// define LastPSATestDate:
-// 	LastPSATest.effective.value
-
 define "IsDueForPSA":
   not Exists(PSATests)
       or ( Exists(PSATests)
