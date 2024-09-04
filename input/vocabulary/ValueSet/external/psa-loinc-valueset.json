@@ -1,25 +1,17 @@
 {
   "resourceType": "ValueSet",
   "id": "psa-loinc-valueset",
+  "meta": {
+    "extension": [
+      {
+        "url": "http://hapifhir.io/fhir/StructureDefinition/valueset-expansion-message",
+        "valueString": "ValueSet was expanded using an expansion that was pre-calculated at 2024-09-03T07:47:07.252-10:00 (1.2 days ago)"
+      }
+    ],
+    "versionId": "1"
+  },
   "url": "http://example.org/fhir/ValueSet/psa-loinc-valueset",
-  "version": "1.0.0",
-  "name": "PSALOINCValueSet",
-  "title": "PSA LOINC ValueSet",
-  "status": "draft",
-  "experimental": false,
-  "publisher": "Your Organization",
-  "description": "A ValueSet containing the LOINC code for Prostate specific antigen [Mass/volume] in Serum or Plasma.",
-  "jurisdiction": [
-    {
-      "coding": [
-        {
-          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001",
-          "display": "World"
-        }
-      ]
-    }
-  ],
+  "status": "active",
   "compose": {
     "include": [
       {
@@ -30,6 +22,29 @@
             "display": "Prostate specific antigen [Mass/volume] in Serum or Plasma"
           }
         ]
+      }
+    ]
+  },
+  "expansion": {
+    "identifier": "3dadf90f-e9e9-45f9-a8a1-f16aadaacd14",
+    "timestamp": "2024-09-04T11:59:20-10:00",
+    "total": 1,
+    "offset": 0,
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 1000
+      }
+    ],
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "2857-1",
+        "display": "Prostate specific antigen [Mass/volume] in Serum or Plasma"
       }
     ]
   }

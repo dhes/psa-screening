@@ -43,7 +43,7 @@
   "action": [
     {
       "title": "Evaluate PSA Screening",
-      "description": "Determine whether PSA screening should be ordered or not.",
+      "description": "Determine whether PSA screening should be ordered.",
       "trigger": [
         {
           "type": "named-event",
@@ -68,7 +68,6 @@
           }
         }
       ],
-      "selectionBehavior": "exactly-one",
       "action": [
         {
           "description": "Will perform prostate cancer screening"
