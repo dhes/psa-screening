@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "delivered-hb",
+  "id": "psa-female-hb",
   "meta": {
     "profile": [
       "http://fhir.org/guides/who/anc-cds/StructureDefinition/hbobservation"
@@ -31,11 +31,14 @@
     ]
   },
   "subject": {
-    "reference": "Patient/anc-delivered",
+    "reference": "Patient/psa-female",
     "display": "Eve Everywoman"
   },
-  "effectiveDateTime": "2022-10-03",
-  "issued": "2022-10-03",
+  "effectivePeriod": {
+    "start": "2022-10-03T15:30:00Z",
+    "end": "2022-10-03T15:30:00Z"
+  },
+  "issued": "2022-10-03T15:30:00Z",
   "valueQuantity": {
     "value": 7.2,
     "unit": "g/dl",

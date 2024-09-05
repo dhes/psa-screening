@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "mom-with-anaemia-pregnancy-status",
+  "id": "psa-female-pregnancy-status",
   "status": "final",
   "code": {
     "coding": [
@@ -12,10 +12,13 @@
     ]
   },
   "subject": {
-    "reference": "Patient/anc-mom-with-anaemia"
+    "reference": "Patient/psa-female"
   },
-  "effectiveDateTime": "2023-10-03",
-  "issued": "2023-10-03",
+  "effectivePeriod": {
+    "start": "2022-10-03T15:30:00Z",
+    "end": "2022-10-03T15:30:00Z"
+  },
+  "issued": "2022-10-03T15:30:00Z",
   "valueCodeableConcept": {
     "coding": [
       {

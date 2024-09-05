@@ -39,7 +39,7 @@
       }
     ]
   },
-  "library": ["http://example.org/fhir/Library/PSARecommendation"],
+  "library": ["http://somewhere.org/fhir/uv/contentig/Library/PSARecommendation"],
   "action": [
     {
       "title": "Evaluate PSA Screening",
@@ -55,7 +55,7 @@
           "kind": "applicability",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "PlaceHolder"
+            "expression": "Tickle"
           }
         }
       ],

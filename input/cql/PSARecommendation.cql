@@ -1,4 +1,4 @@
-library PSARecommendation version '1.0.0'
+library PSARecommendation version '1.0.1'
 
 using FHIR version '4.0.1'
 
@@ -18,6 +18,8 @@ context Patient
 define "PatientAge":
   AgeInYearsAt(Now())
 
+// define PatientGender
+
 define "OlderThan40":
   PatientAge >= 40
     // and "PatientAge" <= 75 // follow patient preference consider prior test results and functional status
@@ -27,34 +29,31 @@ define "PSATests":
   [Observation: code in PSALOINCValueSet] O
     where O.status in { 'final', 'amended', 'corrected' }
 
-// define "LastPSATestDate":
-//   Last(PSATests).effective.value
+// define LastPSATestEffective:
+// 	Last("PSATests").effective.value
 
-// define NotExistsPSATests:
-// 	not Exists("PSATests")
-
-// define PSAExistsButTooOld:
-// 	( Exists("PSATests")
-//           and Last("PSATests").effective on or before ( Now() - 2 year ) 
+// define "NoRecentPSA":
+//   not Exists("PSATests")
+//       or ( Exists("PSATests")
+//           and Last("PSATests").effective on or before ( Now() - 2 year ) // as an outer boundary
 //       )
 
-// define NowMinusTwoYears:
-// 	Now() - 2 year
+// BEWARE THE not EXISTS TRAP
+// If it doesn't exist, you can't look for the Last one!
 
-define LastPSATestEffective:
-	Last("PSATests").effective.value
-
-define "NoRecentPSA":
-  not Exists("PSATests")
-      or ( Exists("PSATests")
-          and Last("PSATests").effective on or before ( Now() - 2 year ) // as an outer boundary
-      )
+define "YesRecentPSA":
+  exists ( PSATests )
+  and date from Last(PSATests).effective on or after (Now() - 2 years)
 
 // define PatientOptsOut
 
-define "Applicable":
-  "OlderThan40" and "NoRecentPSA" // and not PatientOptsOut
+// define "NotYesRecentPSA":
+// 	not "YesRecentPSA"
+
+define "Tickle":
+  OlderThan40 and not YesRecentPSA
+		// and not PatientOptsOut
 
 define "Reminder":
-  if "Applicable" then 'Discuss PSA' 
-    else null
+  if "Tickle" then 'Discuss PSA' 
+    else ''

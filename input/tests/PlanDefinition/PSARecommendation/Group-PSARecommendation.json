@@ -10,12 +10,17 @@
   "actual": true,
   "member": [ {
     "entity": {
-      "reference": "Patient/berfel-ferd",
+      "reference": "Patient/psa-female",
+      "display": "Eve Everywoman"
+    }
+  }, {
+    "entity": {
+      "reference": "Patient/psa-within-2-years",
       "display": "Ferd Berfel"
     }
   }, {
     "entity": {
-      "reference": "Patient/ccs-should-screen",
+      "reference": "Patient/psa-no-psa",
       "display": "Ben Dere"
     }
   } ]

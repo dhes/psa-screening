@@ -1,12 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "berfel-ferd-lab11",
-  "meta": {
-    "versionId": "1",
-    "lastUpdated": "2024-08-01T08:17:11.968-10:00",
-    "source": "#E9iiyobfovkYM250",
-    "profile": ["http://dhphr.org/StructureDefinition/berfel-ferd-labs"]
-  },
+  "id": "psa-within-2-years-lab11",
   "status": "final",
   "category": [
     {
@@ -29,7 +23,7 @@
     "text": "PSA"
   },
   "subject": {
-    "reference": "Patient/berfel-ferd",
+    "reference": "Patient/psa-no-psa",
     "display": "Ferd Berfel"
   },
   "effectiveDateTime": "2023-08-31",
