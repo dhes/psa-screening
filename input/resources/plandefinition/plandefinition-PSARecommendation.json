@@ -55,7 +55,7 @@
           "kind": "applicability",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "Recommendation"
+            "expression": "PlaceHolder"
           }
         }
       ],
@@ -64,22 +64,8 @@
           "path": "action.description",
           "expression": {
             "language": "text/cql-identifier",
-            "expression": "Rationale"
+            "expression": "Reminder"
           }
-        }
-      ],
-      "action": [
-        {
-          "description": "Will perform prostate cancer screening"
-        },
-        {
-          "description": "Will not perform prostate cancer screening at this time - Snooze 1 month."
-        },
-        {
-          "description": "Will not perform prostate cancer screening at this time - Snooze 12 months."
-        },
-        {
-          "description": "Will not perform prostate cancer screening at this time - patient declined."
         }
       ]
     }
