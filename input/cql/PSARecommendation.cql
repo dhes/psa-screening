@@ -15,22 +15,23 @@ context Patient
 //    onset before age 65
 //  African American
 
-define "PatientAge":
+define Age:
   AgeInYearsAt(Now())
 
-// define PatientGender
+define Man:
+  Patient.gender='male'
 
-define "OlderThan40":
-  PatientAge >= 40
-    // and "PatientAge" <= 75 // follow patient preference consider prior test results and functional status
+define OlderThan40:
+  Age >= 40
+    // and Age <= 75 // follow patient preference consider prior test results and functional status
     // this is the age to assess risk and discuss with patient
 
 define PSATests:
   [Observation: code in PSALOINCValueSet] O
     where O.status in { 'final', 'amended', 'corrected' }
 
-define LastPSATestEffective:
-	Last(PSATests).effective.value
+// define LastPSATestEffective:
+// 	Last(PSATests).effective.value
 
 // define "NoRecentPSA":
 //   not Exists("PSATests")
@@ -41,17 +42,17 @@ define LastPSATestEffective:
 // BEWARE THE not EXISTS TRAP
 // If it doesn't exist, you can't look for the Last one!
 
-define "RecentPSA":
+define RecentPSA:
   exists ( PSATests )
   and date from Last(PSATests).effective on or after (Now() - 2 years)
 
 // define PatientOptsOut
 
 // define "NotRecentPSA":
-// 	not "RecentPSA"
+// 	not RecentPSA
 
 define "Tickle":
-  OlderThan40 and not RecentPSA
+  OlderThan40 and Man and not RecentPSA
 		// and not PatientOptsOut
 
 define "Reminder":

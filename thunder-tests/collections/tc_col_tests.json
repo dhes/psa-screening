@@ -1,0 +1,177 @@
+{
+    "_id": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+    "colName": "tests",
+    "created": "2024-09-06T00:46:12.073Z",
+    "sortNum": 30000,
+    "folders": [],
+    "requests": [
+        {
+            "_id": "88571a82-6bb4-47b0-9798-f4178827e9d2",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "too-young",
+            "url": "http://localhost:8080/fhir/PlanDefinition/PSARecommendation/$apply?subject=Patient/psa-too-young",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-09-06T00:46:36.655Z",
+            "modified": "2024-09-06T00:58:41.614Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/fhir+json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "Patient/psa-too-young",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "let success = tc.response.json.contained && tc.response.json.contained[0] && tc.response.json.contained[0].action == null;",
+                            "tc.test(\"Action Element is null\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "eca646e8-3778-48f4-849f-f0e1ffa7455b",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "female",
+            "url": "http://localhost:8080/fhir/PlanDefinition/PSARecommendation/$apply?subject=Patient/psa-female",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-06T00:56:16.388Z",
+            "modified": "2024-09-06T00:59:36.050Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/fhir+json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "Patient/psa-female",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "let success = tc.response.json.contained && tc.response.json.contained[0] && tc.response.json.contained[0].action == null;",
+                            "tc.test(\"Action Element is null\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "bae40b66-2d82-47d9-a3e8-623ee92af84d",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "within-2-years",
+            "url": "http://localhost:8080/fhir/PlanDefinition/PSARecommendation/$apply?subject=Patient/psa-within-2-years",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-06T00:56:18.641Z",
+            "modified": "2024-09-06T00:59:16.305Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/fhir+json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "Patient/psa-within-2-years",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "let success = tc.response.json.contained && tc.response.json.contained[0] && tc.response.json.contained[0].action == null;",
+                            "tc.test(\"Action Element is null\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "a2521164-306a-4eec-9862-7449309f0ebb",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "no-psa",
+            "url": "http://localhost:8080/fhir/PlanDefinition/PSARecommendation/$apply?subject=Patient/psa-no-psa",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-09-06T00:56:21.218Z",
+            "modified": "2024-09-06T00:56:21.218Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/fhir+json"
+                }
+            ],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "Patient/psa-no-psa",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "let success = tc.response.json.contained && tc.response.json.contained[0] && tc.response.json.contained[0].action !== null;",
+                            "tc.test(\"Action Element is not null\", success);"
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}
