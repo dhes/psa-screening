@@ -25,12 +25,12 @@ define "OlderThan40":
     // and "PatientAge" <= 75 // follow patient preference consider prior test results and functional status
     // this is the age to assess risk and discuss with patient
 
-define "PSATests":
+define PSATests:
   [Observation: code in PSALOINCValueSet] O
     where O.status in { 'final', 'amended', 'corrected' }
 
-// define LastPSATestEffective:
-// 	Last("PSATests").effective.value
+define LastPSATestEffective:
+	Last(PSATests).effective.value
 
 // define "NoRecentPSA":
 //   not Exists("PSATests")
@@ -41,17 +41,17 @@ define "PSATests":
 // BEWARE THE not EXISTS TRAP
 // If it doesn't exist, you can't look for the Last one!
 
-define "YesRecentPSA":
+define "RecentPSA":
   exists ( PSATests )
   and date from Last(PSATests).effective on or after (Now() - 2 years)
 
 // define PatientOptsOut
 
-// define "NotYesRecentPSA":
-// 	not "YesRecentPSA"
+// define "NotRecentPSA":
+// 	not "RecentPSA"
 
 define "Tickle":
-  OlderThan40 and not YesRecentPSA
+  OlderThan40 and not RecentPSA
 		// and not PatientOptsOut
 
 define "Reminder":

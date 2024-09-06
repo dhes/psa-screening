@@ -23,10 +23,10 @@
     "text": "PSA"
   },
   "subject": {
-    "reference": "Patient/psa-no-psa",
+    "reference": "Patient/psa-within-2-years",
     "display": "Ferd Berfel"
   },
-  "effectiveDateTime": "2023-08-31",
+  "effectiveDateTime": "2024-08-31",
   "performer": [
     {
       "reference": "Organization/clinical-labs-hawaii"
