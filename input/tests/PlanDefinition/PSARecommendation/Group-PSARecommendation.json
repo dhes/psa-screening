@@ -15,6 +15,11 @@
     }
   }, {
     "entity": {
+      "reference": "Patient/psa-too-young",
+      "display": "Dave Everyman"
+    }
+  }, {
+    "entity": {
       "reference": "Patient/psa-within-2-years",
       "display": "Ferd Berfel"
     }
