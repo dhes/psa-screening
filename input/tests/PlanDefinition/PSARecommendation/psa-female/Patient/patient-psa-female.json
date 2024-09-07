@@ -1,14 +1,10 @@
 {
   "resourceType": "Patient",
   "id": "psa-female",
-  "text": {
-    "status": "generated",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: mom-with-anaemia</p><p><b>meta</b>: </p><p><b>identifier</b>: 1000 (OFFICIAL)</p><p><b>active</b>: true</p><p><b>name</b>: Eve Everywoman (OFFICIAL)</p><p><b>telecom</b>: ph: 555-555-2003(MOBILE)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1993-05-31</p><p><b>address</b>: 2222 Home Street(HOME)</p></div>"
-  },
-  "identifier": [
+  "extension": [
     {
-      "use": "official",
-      "value": "1000"
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "F"
     }
   ],
   "active": true,
@@ -16,24 +12,9 @@
     {
       "use": "official",
       "family": "Everywoman",
-      "given": [
-        "Eve"
-      ]
-    }
-  ],
-  "telecom": [
-    {
-      "system": "phone",
-      "value": "555-555-2003",
-      "use": "mobile"
+      "given": ["Eve"]
     }
   ],
   "gender": "female",
-  "birthDate": "1964-05-31",
-  "address": [
-    {
-      "use": "home",
-      "text": "2222 Home Street"
-    }
-  ]
+  "birthDate": "1964-05-31"
 }

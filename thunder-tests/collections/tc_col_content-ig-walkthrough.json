@@ -140,6 +140,29 @@
                     "value": "7"
                 }
             ]
+        },
+        {
+            "_id": "3757d950-5df1-4dba-a8ab-7436ba3cc55d",
+            "colId": "e7081802-e245-48b5-bb0b-b8ef81f36c4b",
+            "containerId": "",
+            "name": "update PlanDefinition",
+            "url": "http://localhost:8080/fhir/PlanDefinition/PSARecommendation",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-09-06T19:31:56.105Z",
+            "modified": "2024-09-06T19:33:09.175Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../input/resources/plandefinition/plandefinition-PSARecommendation.json"
+            }
         }
     ]
 }
