@@ -1,0 +1,22 @@
+{
+  "resourceType": "Observation",
+  "status": "final",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "21979-0",
+        "display": "Planned/next follow-up"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/psa-no-psa"
+  },
+  "valueQuantity": {
+    "value": 3,
+    "unit": "years",
+    "system": "http://unitsofmeasure.org",
+    "code": "a"
+  }
+}

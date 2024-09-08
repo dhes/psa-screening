@@ -6,6 +6,11 @@ include FHIRHelpers version '4.0.1' called FHIRHelpers
 
 valueset PSALOINCValueSet: 'http://example.org/fhir/ValueSet/psa-loinc-valueset'
 
+codesystem "LOINC": 'http://loinc.org'
+
+code "Birthdate": '21112-8' from "LOINC" display 'Birth date'
+code "PSA Follow-up": '21979-0' from "LOINC" display 'Planned/next follow-up'
+
 // parameter "Reference Date" DateTime default Now()
 
 context Patient
@@ -30,6 +35,22 @@ define PSATests:
   [Observation: code in PSALOINCValueSet] O
     where O.status in { 'final', 'amended', 'corrected' }
 
+define PSACarePlan:
+	[CarePlan] CP 
+		where exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive
+		and CP.status ~ 'active'
+// this assumes only one care plan with this category
+
+define scheduledTiming:
+	First(PSACarePlan.activity.detail.scheduled.repeat.period)
+
+define FollowUpObservation:
+	[Observation: "PSA Follow-up"] O
+		where O.status in { 'final', 'amended', 'corrected' }
+
+define FollowUpDuration:
+	First(FollowUpObservation.value) as Quantity
+
 // define LastPSATestEffective:
 // 	Last(PSATests).effective.value
 
@@ -42,14 +63,19 @@ define PSATests:
 // BEWARE THE not EXISTS TRAP
 // If it doesn't exist, you can't look for the Last one!
 
+// define OneYearQuantity:
+//   // Quantity { value: 1 as decimal, unit: 'year' }
+// 	ToQuantity('scheduledTiming \'years\'')
+
+// define blah:
+// Quantity { value:1, unit: 'year' }
+
+define LatestAcceptablePSATestDate:
+Today() - FollowUpDuration
+
 define RecentPSA:
   exists ( PSATests )
-  and date from Last(PSATests).effective on or after (Now() - 2 years)
-
-// define PatientOptsOut
-
-// define "NotRecentPSA":
-// 	not RecentPSA
+  and date from Last(PSATests).effective on or after (Today() - FollowUpDuration)
 
 define "Tickle":
   OlderThan40 and Man and not RecentPSA
