@@ -20,6 +20,11 @@
     }
   }, {
     "entity": {
+      "reference": "Patient/psa-follow-up-1-year",
+      "display": "Ferd Berfel"
+    }
+  }, {
+    "entity": {
       "reference": "Patient/psa-within-2-years",
       "display": "Ferd Berfel"
     }

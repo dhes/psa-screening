@@ -11,7 +11,7 @@
     ]
   },
   "subject": {
-    "reference": "Patient/psa-follow-up-1 year"
+    "reference": "Patient/psa-follow-up-1-year"
   },
   "valueQuantity": {
     "value": 1,
