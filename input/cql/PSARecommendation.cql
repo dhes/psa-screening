@@ -35,14 +35,14 @@ define PSATests:
   [Observation: code in PSALOINCValueSet] O
     where O.status in { 'final', 'amended', 'corrected' }
 
-define PSACarePlan:
-	[CarePlan] CP 
-		where exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive
-		and CP.status ~ 'active'
-// this assumes only one care plan with this category
+// define PSACarePlan:
+// 	[CarePlan] CP 
+// 		where exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive
+// 		and CP.status ~ 'active'
+// // this assumes only one care plan with this category
 
-define scheduledTiming:
-	First(PSACarePlan.activity.detail.scheduled.repeat.period)
+// define scheduledTiming:
+// 	First(PSACarePlan.activity.detail.scheduled.repeat.period)
 
 define FollowUpObservation:
 	[Observation: "PSA Follow-up"] O
@@ -72,6 +72,9 @@ define FollowUpDuration:
 
 define LatestAcceptablePSATestDate:
 Today() - FollowUpDuration
+
+define MostRecentPSATestDate:
+	Last(PSATests).effective.value
 
 define RecentPSA:
   exists ( PSATests )

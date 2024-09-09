@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "psa-within-2-years-lab11",
+	"id": "psa-follow-up-1-year-lab",
   "status": "final",
   "category": [
     {
