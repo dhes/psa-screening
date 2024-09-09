@@ -11,7 +11,7 @@
     ]
   },
   "subject": {
-    "reference": "Patient/psa-no-psa"
+    "reference": "Patient/psa-within-2-years"
   },
   "valueQuantity": {
     "value": 2,

@@ -11,10 +11,10 @@
     ]
   },
   "subject": {
-    "reference": "Patient/psa-no-psa"
+    "reference": "Patient/psa-follow-up-1 year"
   },
   "valueQuantity": {
-    "value": 2,
+    "value": 1,
     "unit": "years",
     "system": "http://unitsofmeasure.org",
     "code": "a"
