@@ -1,9 +1,9 @@
 [
   {
-    "id" : "psa-screening.fhir.uv.contentig",
+    "id" : "dhes.cds.prostate-cancer-screening",
     "type" : "ImplementationGuide",
-    "url" : "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig",
+    "url" : "https://dhes.github.io/psa-screening",
     "version" : "0.1.0",
-    "name" : "YourComputableContentIGNameHere"
+    "name" : "ProstateCancerScreening"
   }
 ]

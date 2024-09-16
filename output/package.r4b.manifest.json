@@ -1,6 +1,6 @@
 {
   "version" : "0.1.0",
-  "date" : "20240915185721",
+  "date" : "20240916111858",
   "notForPublication" : true,
-  "name" : "psa-screening.fhir.uv.contentig.r4b"
+  "name" : "dhes.cds.prostate-cancer-screening.r4b"
 }

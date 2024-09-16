@@ -1,19 +1,28 @@
-YourComputableContentIGNameHere
+ProstateCancerScreening
 =========================================
 
 Generic: line 0, col 0, Error - Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters) (NOTFOUND)
+Generic: line 0, col 0, Warning - The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole (INVALID)
 Generic: line 0, col 0, Error - CQL source was not associated with a library resource in the IG. (PROCESSING)
 Generic: line 0, col 0, Error - CQL source was not associated with a library resource in the IG. (PROCESSING)
 Generic: line 0, col 0, Warning - The <script> containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files) (INVALID)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - The <script> containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files) (INVALID)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
+Generic: line 0, col 0, Error - The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide (NOTFOUND)
 Generic: line 0, col 0, Warning - The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide (NOTFOUND)
-/Users/danheslinga/psa-screening/input/contentig.xml: line 0, col 0, Error - Conformance resource /Users/danheslinga/psa-screening/input/contentig.xml - the canonical URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig) does not match the URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig) (INVALID)
-/Users/danheslinga/psa-screening/input/contentig.xml: line 0, col 0, Error - Resource id/url mismatch: psa-screening.fhir.uv.contentig/http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig (INVARIANT)
-/Users/danheslinga/psa-screening/input/contentig.xml: line 1, col 12949, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
-/Users/danheslinga/psa-screening/input/contentig.xml: line 0, col 0, Error - URL Mismatch http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig vs http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig (BUSINESSRULE)
+/Users/danheslinga/psa-screening/input/contentig.json: line 0, col 0, Error - Conformance resource /Users/danheslinga/psa-screening/input/contentig.json - the canonical URL (https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening) does not match the URL (https://dhes.github.io/psa-screening) (INVALID)
+/Users/danheslinga/psa-screening/input/contentig.json: line 0, col 0, Error - Resource id/url mismatch: dhes.cds.prostate-cancer-screening/https://dhes.github.io/psa-screening (INVARIANT)
+/Users/danheslinga/psa-screening/input/contentig.json: line 1, col 1127, Error - Unknown code 'US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm' version '' (CODEINVALID)
+/Users/danheslinga/psa-screening/input/contentig.json: line 1, col 13217, Error - ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1) (STRUCTURE)
+/Users/danheslinga/psa-screening/input/contentig.json: line 0, col 0, Error - URL Mismatch https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening vs https://dhes.github.io/psa-screening (BUSINESSRULE)
 
-err = 7, warn = 6, info = 0
-IG Publisher Version: 1.6.22
+err = 8, warn = 7, info = 0
+IG Publisher Version: 1.6.24

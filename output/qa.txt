@@ -1,24 +1,33 @@
-YourComputableContentIGNameHere : Validation Results
+ProstateCancerScreening : Validation Results
 =========================================
 
-err = 7, warn = 6, info = 0
-IG Publisher Version: 1.6.22 Out of date - current version is 1.6.24
-Generated Sun Sep 15 18:58:25 HST 2024. FHIR version 4.0.1 for psa-screening.fhir.uv.contentig#0.1.0 (canonical = http://somewhere.org/fhir/uv/contentig)
- Build Errors : 3 / 6 / 0
- /Users/danheslinga/psa-screening/input/contentig : 4 / 0 / 1
+err = 8, warn = 7, info = 0
+IG Publisher Version: 1.6.24
+Generated Mon Sep 16 11:19:24 HST 2024. FHIR version 4.0.1 for dhes.cds.prostate-cancer-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
+ Build Errors : 10 / 7 / 0
+ /Users/danheslinga/psa-screening/input/contentig : 5 / 0 / 1
 </table>
 == n/a ==
-ERROR: ImplementationGuide.definition.parameter[25].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
+ERROR: ImplementationGuide.definition.parameter[26].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
+WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 ERROR: /Users/danheslinga/psa-screening/input/cql/PSARecommendation.cql: CQL source was not associated with a library resource in the IG.
 ERROR: /Users/danheslinga/psa-screening/input/cql/FHIRHelpers.cql: CQL source was not associated with a library resource in the IG.
 WARNING: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/script at Line 177, column 4: The <script> containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files)
+ERROR: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/div/div/div/p/a at Line 190, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
 WARNING: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/script at Line 217, column 4: The <script> containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files)
+ERROR: /Users/danheslinga/psa-screening/output/background.html#/html/body/div/div/div/p/a at Line 187, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/changes.html#/html/body/div/div/div/p/a at Line 189, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/downloads.html#/html/body/div/div/div/p/a at Line 225, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/index.html#/html/body/div/div/div/p/a at Line 251, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/spec.html#/html/body/div/div/div/p/a at Line 196, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/toc.html#/html/body/div/div/div/p/a at Line 178, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
 WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
 WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
-== input/contentig.xml ==
-ERROR: ImplementationGuide.where(url = 'http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig'): Conformance resource /Users/danheslinga/psa-screening/input/contentig.xml - the canonical URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig) does not match the URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig)
-ERROR: ImplementationGuide.url: Resource id/url mismatch: psa-screening.fhir.uv.contentig/http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig
-ERROR: ImplementationGuide/psa-screening.fhir.uv.contentig: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
-ERROR: /Users/danheslinga/psa-screening/input/contentig: URL Mismatch http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig vs http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig
+== input/contentig.json ==
+ERROR: ImplementationGuide.where(url = 'https://dhes.github.io/psa-screening'): Conformance resource /Users/danheslinga/psa-screening/input/contentig.json - the canonical URL (https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening) does not match the URL (https://dhes.github.io/psa-screening)
+ERROR: ImplementationGuide.url: Resource id/url mismatch: dhes.cds.prostate-cancer-screening/https://dhes.github.io/psa-screening
+ERROR: ImplementationGuide/dhes.cds.prostate-cancer-screening: ImplementationGuide.jurisdiction[0].coding[0].code: Unknown code 'US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm' version ''
+ERROR: ImplementationGuide/dhes.cds.prostate-cancer-screening: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
+ERROR: /Users/danheslinga/psa-screening/input/contentig: URL Mismatch https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening vs https://dhes.github.io/psa-screening

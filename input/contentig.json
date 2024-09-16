@@ -1,38 +1,70 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "example.fhir.uv.contentig",
-  "url": "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig",
+  "id": "dhes.cds.prostate-cancer-screening",
+  "url": "https://dhes.github.io/psa-screening",
   "version": "0.1.0",
-  "name": "YourComputableContentIGNameHere",
-  "title": "Your User Friendly Name for ContentIG Here",
+  "name": "ProstateCancerScreening",
+  "title": "Screening for prostate cancer",
   "status": "draft",
-  "experimental": false,
-  "publisher": "HL7 International - [Some] Work Group",
+  "date": "2024-09-16",
+  "experimental": true,
+  "publisher": "Dan Heslinga",
   "contact": [
     {
       "telecom": [
         {
-          "system": "url",
-          "value": "http://hl7.org/Special/committees/[something]"
+          "system": "email",
+          "value": "drdan@heslingamd.com"
         }
       ]
     }
   ],
-  "description": "A brief description of what ContentIG is about (probably the same text as in your readme)",
+  "description": "Periodic screening for prostate cancer with PSA testing",
   "jurisdiction": [
     {
       "coding": [
         {
           "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001"
+          "code": "US"
         }
       ]
     }
   ],
-  "packageId": "example.fhir.uv.contentig",
+  "copyright": "2024+ Dan Heslinga, all rights reserved Creative Commons License",
+  "packageId": "dhes.cds.prostate-cancer-screening",
   "license": "CC0-1.0",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": ["4.0.1"],
   "definition": {
+    "extension": [
+      {
+        "extension": [
+          { "url": "code", "valueString": "path-liquid" },
+          { "url": "value", "valueString": "template/liquid" }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          { "url": "code", "valueString": "releaselabel" },
+          { "url": "value", "valueString": "STU7" }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          { "url": "code", "valueString": "find-other-resources" },
+          { "url": "value", "valueBoolean": true }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      },
+      {
+        "extension": [
+          { "url": "code", "valueString": "path-binary" },
+          { "url": "value", "valueString": "input/cql" }
+        ],
+        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+      }
+    ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
@@ -40,7 +72,7 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "ContentIG Home Page",
+          "title": "Home Page",
           "generation": "html"
         },
         {
@@ -64,28 +96,6 @@
           "generation": "html"
         }
       ]
-    },
-    "parameter": [
-      {
-        "code": "copyrightyear",
-        "value": "2019+"
-      },
-      {
-        "code": "releaselabel",
-        "value": "CI Build"
-      },
-      {
-        "code": "find-other-resources",
-        "value": "true"
-      },
-      {
-        "code": "path-binary",
-        "value": "input/cql"
-      },
-      {
-        "code": "path-liquid",
-        "value": "templates\\liquid"
-      }
-    ]
+    }
   }
 }

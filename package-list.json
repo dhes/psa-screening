@@ -1,13 +1,12 @@
 {
- "package-id" : "com.dhes.psa-screening",
- "title" : "Prostate Cancer Screening",
- "canonical" : " https://dhes.github.io/psa-screening",
- "introduction" : "Screening for Prostate Cancer",
- "list" : [{
-  "version" : "current",
-  "desc" : "Continuous Integration Build (latest in version control)",
-  "path" : "https://dhes.github.io/psa-screening",
-  "status" : "ci-build",
-  "current" : true
- }]
+  "name": "dhes.cds.prostate-cancer-screening",
+  "version": "0.1.0",
+  "type": "IG",
+  "license": "CC0-1.0",
+  "canonical": " https://dhes.github.io/psa-screening",
+  "title": "Prostate Cancer Screening",
+  "description": "Screening for Prostate Cancer",
+  "dependencies": { "hl7.fhir.r4.core": "4.0.x" },
+  "author": "Dan Heslinga",
+  "jurisdiction": "urn:iso:std:iso:3166#US"
 }

@@ -1,33 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="psa-screening.fhir.uv.contentig"/>
+  <id value="dhes.cds.prostate-cancer-screening"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide psa-screening.fhir.uv.contentig</b></p><a name="psa-screening.fhir.uv.contentig"> </a><a name="hcpsa-screening.fhir.uv.contentig"> </a><a name="psa-screening.fhir.uv.contentig-en-US"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>Screening for prostate cancer</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name="dhes.cds.prostate-cancer-screening"> </a><a name="hcdhes.cds.prostate-cancer-screening"> </a><a name="dhes.cds.prostate-cancer-screening-en-US"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.github.io/psa-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>
 </div></div>
   </text>
-  <url value="http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig"/>
+  <url value="https://dhes.github.io/psa-screening"/>
   <version value="0.1.0"/>
-  <name value="YourComputableContentIGNameHere"/>
-  <title value="Dan Heslinga"/>
+  <name value="ProstateCancerScreening"/>
+  <title value="Screening for prostate cancer"/>
   <status value="draft"/>
   <experimental value="true"/>
-  <date value="2024-09-15T18:57:40-10:00"/>
+  <date value="2024-09-16"/>
   <publisher value="Dan Heslinga"/>
   <contact>
     <telecom>
-      <system value="url"/>
-      <value value="https://heslingamd.com"/>
+      <system value="email"/>
+      <value value="drdan@heslingamd.com"/>
     </telecom>
   </contact>
-  <description value="Screening for prostate cancer"/>
+  <description value="Periodic screening for prostate cancer with PSA testing"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="001"/>
+      <code value="US"/>
     </coding>
   </jurisdiction>
-  <packageId value="psa-screening.fhir.uv.contentig"/>
+  <copyright value="2024+ Dan Heslinga, all rights reserved Creative Commons License"/>
+  <packageId value="dhes.cds.prostate-cancer-screening"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -49,10 +50,10 @@
   <definition>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="copyrightyear"/>
+        <valueString value="path-liquid"/>
       </extension>
       <extension url="value">
-        <valueString value="2024+"/>
+        <valueString value="template/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -60,7 +61,7 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="CI Build"/>
+        <valueString value="STU7"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -76,7 +77,23 @@
         <valueString value="path-liquid"/>
       </extension>
       <extension url="value">
-        <valueString value="templates\liquid"/>
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU7"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-binary"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/cql"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -85,14 +102,6 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-liquid"/>
-      </extension>
-      <extension url="value">
-        <valueString value="template/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -140,7 +149,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://somewhere.org/fhir/uv/contentig/history.html"/>
+        <valueString value="history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -260,10 +269,10 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueCode value="copyrightyear"/>
+        <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
-        <valueString value="2024+"/>
+        <valueString value="template/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -271,7 +280,7 @@
         <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="CI Build"/>
+        <valueString value="STU7"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -287,7 +296,23 @@
         <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
-        <valueString value="templates\liquid"/>
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU7"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-binary"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/cql"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -296,14 +321,6 @@
       </extension>
       <extension url="value">
         <valueString value="true"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueCode value="path-liquid"/>
-      </extension>
-      <extension url="value">
-        <valueString value="template/liquid"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -351,7 +368,7 @@
         <valueCode value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://somewhere.org/fhir/uv/contentig/history.html"/>
+        <valueString value="history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -478,7 +495,7 @@
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="ContentIG Home Page"/>
+        <title value="Home Page"/>
         <generation value="html"/>
       </page>
       <page>
