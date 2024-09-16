@@ -3,7 +3,7 @@ ProstateCancerScreening : Validation Results
 
 err = 7, warn = 8, info = 0
 IG Publisher Version: 1.6.24
-Generated Mon Sep 16 12:39:50 HST 2024. FHIR version 4.0.1 for dhes.cds.prostate-cancer-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
+Generated Mon Sep 16 13:04:29 HST 2024. FHIR version 4.0.1 for dhes.cds.prostate-cancer-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
  Build Errors : 20 / 7 / 0
  /Users/danheslinga/psa-screening/input/contentig : 4 / 1 / 1
 </table>
