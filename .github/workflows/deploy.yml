@@ -13,27 +13,17 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Setup Node.js (optional if your project needs Node)
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'  # Update to 20 if needed
+    - name: List contents of the repository (for debugging)
+      run: ls -la
 
-    - name: Build project
-      run: |
-        npm install
-        npm run build
-
-    - name: List contents of the output directory
-      run: ls -la output  # Add this step to verify if the output directory has been created and files are there
-
-    - name: Create docs directory if not exists
+    - name: Create docs directory if it doesn't exist
       run: mkdir -p docs
 
     - name: Copy output to docs for GitHub Pages
       run: mv output/* docs/
 
-    - name: List contents of docs directory (debugging step)
-      run: ls -la docs  # Check if files were moved correctly
+    - name: List contents of docs directory (for debugging)
+      run: ls -la docs  # Check if files were copied correctly
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
