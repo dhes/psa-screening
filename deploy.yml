@@ -1,0 +1,35 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Node.js (optional if your project needs Node)
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'  # or your preferred version
+
+    - name: Build project (adjust according to your build process)
+      run: |
+        # If you have a build process, like npm install or npm run build
+        npm install
+        npm run build
+
+    - name: Copy output to root for GitHub Pages
+      run: |
+        mv output/* docs/
+    
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # The directory where your 'index.html' is located
