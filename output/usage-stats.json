@@ -1,5 +1,5 @@
 {
-  "package": "example.fhir.uv.contentig",
+  "package": "psa-screening.fhir.uv.contentig",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "001",

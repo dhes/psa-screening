@@ -5,35 +5,35 @@
 
 # - resource -------------------------------------------------------------------
 
-<http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig> a fhir:ImplementationGuide ;
+<http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
-  fhir:id [ fhir:v "example.fhir.uv.contentig"] ; # 
+  fhir:id [ fhir:v "psa-screening.fhir.uv.contentig"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide example.fhir.uv.contentig</b></p><a name=\"example.fhir.uv.contentig\"> </a><a name=\"hcexample.fhir.uv.contentig\"> </a><a name=\"example.fhir.uv.contentig-en-US\"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>A brief description of what ContentIG is about (probably the same text as in your readme)</p>\n</div></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide psa-screening.fhir.uv.contentig</b></p><a name=\"psa-screening.fhir.uv.contentig\"> </a><a name=\"hcpsa-screening.fhir.uv.contentig\"> </a><a name=\"psa-screening.fhir.uv.contentig-en-US\"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>Screening for prostate cancer</p>\n</div></div>"
   ] ; # 
   fhir:url [ fhir:v "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "YourComputableContentIGNameHere"] ; # 
-  fhir:title [ fhir:v "Your User Friendly Name for ContentIG Here"] ; # 
+  fhir:title [ fhir:v "Dan Heslinga"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2024-09-05T06:34:06-10:00"^^xsd:dateTime] ; # 
-  fhir:publisher [ fhir:v "HL7 International - [Some] Work Group"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-09-15T18:57:40-10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Dan Heslinga"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
        fhir:system [ fhir:v "url" ] ;
-       fhir:value [ fhir:v "http://hl7.org/Special/committees/[something]" ]
+       fhir:value [ fhir:v "https://heslingamd.com" ]
      ] )
   ] ) ; # 
-  fhir:description [ fhir:v "A brief description of what ContentIG is about (probably the same text as in your readme)"] ; # 
+  fhir:description [ fhir:v "Screening for prostate cancer"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
        fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "001" ]
      ] )
   ] ) ; # 
-  fhir:packageId [ fhir:v "example.fhir.uv.contentig"] ; # 
+  fhir:packageId [ fhir:v "psa-screening.fhir.uv.contentig"] ; # 
   fhir:license [ fhir:v "CC0-1.0"] ; # 
   fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
   fhir:dependsOn ( [
@@ -68,7 +68,7 @@
          fhir:value [ fhir:v "copyrightyear" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2019+" ]
+         fhir:value [ fhir:v "2024+" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [
@@ -305,7 +305,7 @@
          fhir:value [ fhir:v "copyrightyear" ]
        ] [
          fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "2019+" ]
+         fhir:value [ fhir:v "2024+" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
      ] [

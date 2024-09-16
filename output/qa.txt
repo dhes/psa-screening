@@ -1,11 +1,11 @@
 YourComputableContentIGNameHere : Validation Results
 =========================================
 
-err = 4, warn = 6, info = 0
-IG Publisher Version: 1.6.22
-Generated Thu Sep 05 06:34:16 HST 2024. FHIR version 4.0.1 for example.fhir.uv.contentig#0.1.0 (canonical = http://somewhere.org/fhir/uv/contentig)
+err = 7, warn = 6, info = 0
+IG Publisher Version: 1.6.22 Out of date - current version is 1.6.24
+Generated Sun Sep 15 18:58:25 HST 2024. FHIR version 4.0.1 for psa-screening.fhir.uv.contentig#0.1.0 (canonical = http://somewhere.org/fhir/uv/contentig)
  Build Errors : 3 / 6 / 0
- /Users/danheslinga/psa-screening/input/contentig : 1 / 0 / 1
+ /Users/danheslinga/psa-screening/input/contentig : 4 / 0 / 1
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[25].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
@@ -18,4 +18,7 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == input/contentig.xml ==
-ERROR: ImplementationGuide/example.fhir.uv.contentig: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
+ERROR: ImplementationGuide.where(url = 'http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig'): Conformance resource /Users/danheslinga/psa-screening/input/contentig.xml - the canonical URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig) does not match the URL (http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig)
+ERROR: ImplementationGuide.url: Resource id/url mismatch: psa-screening.fhir.uv.contentig/http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig
+ERROR: ImplementationGuide/psa-screening.fhir.uv.contentig: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
+ERROR: /Users/danheslinga/psa-screening/input/contentig: URL Mismatch http://somewhere.org/fhir/uv/contentig/ImplementationGuide/psa-screening.fhir.uv.contentig vs http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig

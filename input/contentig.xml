@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Start by finding all references to "contentig" and updating to appropriate text for your IG, including changing realm -->
-<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R5/fhir-single.xsd">
-  <id value="example.fhir.uv.contentig"/>
+<ImplementationGuide xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../input-cache/schemas/R4/fhir-single.xsd">
+  <id value="psa-screening.fhir.uv.contentig"/>
 <!--  <extension url="http://hl7.org/fhir/tools/StructureDefinition/igpublisher-spreadsheet">
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
@@ -9,18 +9,18 @@
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0"/>
   <name value="YourComputableContentIGNameHere"/>
-  <title value="Your User Friendly Name for ContentIG Here"/>
+  <title value="Dan Heslinga"/>
   <status value="draft"/>
-  <experimental value="false"/>
-  <publisher value="HL7 International - [Some] Work Group"/>
+  <experimental value="true"/>
+  <publisher value="Dan Heslinga"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/[something]"/>
+      <value value="https://heslingamd.com"/>
     </telecom>
   </contact>
-  <description value="A brief description of what ContentIG is about (probably the same text as in your readme)"/>
+  <description value="Screening for prostate cancer"/>
   <jurisdiction>
     <!-- This will drive SNOMED release used -->
     <coding>
@@ -33,7 +33,7 @@
       -->
     </coding>
   </jurisdiction>
-  <packageId value="example.fhir.uv.contentig"/>
+  <packageId value="psa-screening.fhir.uv.contentig"/>
   <!-- This should be changed to 'not-open-source' or another license if appropriate for non-HL7-published content -->
   <license value="CC0-1.0"/>
   <!-- This is whatever FHIR version(s) the IG artifacts are targeting (not the version of this file, which should always be 'current release') -->
@@ -90,7 +90,7 @@
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
-      <value value="2019+"/>
+      <value value="2024+"/>
     </parameter>
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>

@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="example.fhir.uv.contentig"/>
+  <id value="psa-screening.fhir.uv.contentig"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide example.fhir.uv.contentig</b></p><a name="example.fhir.uv.contentig"> </a><a name="hcexample.fhir.uv.contentig"> </a><a name="example.fhir.uv.contentig-en-US"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>A brief description of what ContentIG is about (probably the same text as in your readme)</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide psa-screening.fhir.uv.contentig</b></p><a name="psa-screening.fhir.uv.contentig"> </a><a name="hcpsa-screening.fhir.uv.contentig"> </a><a name="psa-screening.fhir.uv.contentig-en-US"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>Screening for prostate cancer</p>
 </div></div>
   </text>
   <url value="http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig"/>
   <version value="0.1.0"/>
   <name value="YourComputableContentIGNameHere"/>
-  <title value="Your User Friendly Name for ContentIG Here"/>
+  <title value="Dan Heslinga"/>
   <status value="draft"/>
-  <experimental value="false"/>
-  <date value="2024-09-05T06:34:06-10:00"/>
-  <publisher value="HL7 International - [Some] Work Group"/>
+  <experimental value="true"/>
+  <date value="2024-09-15T18:57:40-10:00"/>
+  <publisher value="Dan Heslinga"/>
   <contact>
     <telecom>
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/[something]"/>
+      <value value="https://heslingamd.com"/>
     </telecom>
   </contact>
-  <description value="A brief description of what ContentIG is about (probably the same text as in your readme)"/>
+  <description value="Screening for prostate cancer"/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
     </coding>
   </jurisdiction>
-  <packageId value="example.fhir.uv.contentig"/>
+  <packageId value="psa-screening.fhir.uv.contentig"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -52,7 +52,7 @@
         <valueString value="copyrightyear"/>
       </extension>
       <extension url="value">
-        <valueString value="2019+"/>
+        <valueString value="2024+"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -263,7 +263,7 @@
         <valueCode value="copyrightyear"/>
       </extension>
       <extension url="value">
-        <valueString value="2019+"/>
+        <valueString value="2024+"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">

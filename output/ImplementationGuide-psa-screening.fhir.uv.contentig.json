@@ -1,32 +1,32 @@
 {
   "resourceType" : "ImplementationGuide",
-  "id" : "example.fhir.uv.contentig",
+  "id" : "psa-screening.fhir.uv.contentig",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide example.fhir.uv.contentig</b></p><a name=\"example.fhir.uv.contentig\"> </a><a name=\"hcexample.fhir.uv.contentig\"> </a><a name=\"example.fhir.uv.contentig-en-US\"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>A brief description of what ContentIG is about (probably the same text as in your readme)</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide psa-screening.fhir.uv.contentig</b></p><a name=\"psa-screening.fhir.uv.contentig\"> </a><a name=\"hcpsa-screening.fhir.uv.contentig\"> </a><a name=\"psa-screening.fhir.uv.contentig-en-US\"> </a><h2>YourComputableContentIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig</pre><div><p>Screening for prostate cancer</p>\n</div></div>"
   },
   "url" : "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig",
   "version" : "0.1.0",
   "name" : "YourComputableContentIGNameHere",
-  "title" : "Your User Friendly Name for ContentIG Here",
+  "title" : "Dan Heslinga",
   "status" : "draft",
-  "experimental" : false,
-  "date" : "2024-09-05T06:34:06-10:00",
-  "publisher" : "HL7 International - [Some] Work Group",
+  "experimental" : true,
+  "date" : "2024-09-15T18:57:40-10:00",
+  "publisher" : "Dan Heslinga",
   "contact" : [{
     "telecom" : [{
       "system" : "url",
-      "value" : "http://hl7.org/Special/committees/[something]"
+      "value" : "https://heslingamd.com"
     }]
   }],
-  "description" : "A brief description of what ContentIG is about (probably the same text as in your readme)",
+  "description" : "Screening for prostate cancer",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
       "code" : "001"
     }]
   }],
-  "packageId" : "example.fhir.uv.contentig",
+  "packageId" : "psa-screening.fhir.uv.contentig",
   "license" : "CC0-1.0",
   "fhirVersion" : ["4.0.1"],
   "dependsOn" : [{
@@ -57,7 +57,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2019+"
+        "valueString" : "2024+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
@@ -347,7 +347,7 @@
       },
       {
         "url" : "value",
-        "valueString" : "2019+"
+        "valueString" : "2024+"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
     },
