@@ -1,0 +1,20 @@
+{
+  "resourceType": "Patient",
+  "id": "psa-no-psa",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "M"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Dere",
+      "given": ["Ben"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1968-01-01"
+}

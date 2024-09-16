@@ -1,0 +1,20 @@
+{
+  "resourceType": "Patient",
+  "id": "psa-female",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "F"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Everywoman",
+      "given": ["Eve"]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1964-05-31"
+}

@@ -1,0 +1,20 @@
+{
+  "resourceType": "Patient",
+  "id": "psa-within-2-years",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+      "valueCode": "M"
+    }
+  ],
+  "active": true,
+  "name": [
+    {
+      "use": "official",
+      "family": "Berfel",
+      "given": ["Ferd"]
+    }
+  ],
+  "gender": "male",
+  "birthDate": "1953-05-05"
+}
