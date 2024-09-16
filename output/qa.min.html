@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<!-- broken links = 7, errors = 8, warn = 7, info = 0-->
+<!-- broken links = 17, errors = 7, warn = 8, info = 0-->
 <head>
   <title>ProstateCancerScreening : Validation Results</title>
   <link href="fhir.css" rel="stylesheet"/>
@@ -36,7 +36,7 @@
 </head>
 <body style="margin: 20px; background-color: #ffffff">
  <h1>Validation Results for ProstateCancerScreening</h1>
- <p>Generated Mon Sep 16 11:19:24 HST 2024, FHIR version 4.0.1 for dhes.cds.prostate-cancer-screening#0.1.0 (canonical = <a href="https://dhes.github.io/psa-screening">https://dhes.github.io/psa-screening</a> (<a href="https://dhes.github.io/psa-screening/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
+ <p>Generated Mon Sep 16 12:39:50 HST 2024, FHIR version 4.0.1 for dhes.cds.prostate-cancer-screening#0.1.0 (canonical = <a href="https://dhes.github.io/psa-screening">https://dhes.github.io/psa-screening</a> (<a href="https://dhes.github.io/psa-screening/history.html">history</a>)). See <a href="qa.html">Full QA Report</a></p>
 <table class="grid"> <tr><td colspan=2><b>Quality Checks</b></td></tr>
  <tr><td>Publisher Version:</td><td><span>IG Publisher Version: v1.6.24</span></td></tr>
  <tr><td>Publication Code:</td><td>n/a<span style="color: maroon; font-weight: bold"> </span>. PackageId = dhes.cds.prostate-cancer-screening, Canonical = https://dhes.github.io/psa-screening</td></tr>
@@ -69,17 +69,17 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
  <tr><td>Previous Version Comparison:</td><td> Unable to compare with previous version: Unable to find version history at https://dhes.github.io/psa-screening (Problem #1 with package-list.json at https://dhes.github.io/psa-screening: Not Found)</td></tr>
  <tr><td>IPA Comparison:</td><td> n/a</td></tr>
  <tr><td>IPS Comparison:</td><td> n/a</td></tr>
- <tr><td>Summary:</td><td> errors = 8, warn = 7, info = 0, broken links = 7</td></tr>
+ <tr><td>Summary:</td><td> errors = 7, warn = 8, info = 0, broken links = 17</td></tr>
 </table>
  <table class="grid">
    <tr>
      <td><b>Filename</b></td><td><b>Errors</b></td><td><b>Warnings</b></td><td><b>Hints</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>10</b></td><td><b>7</b></td><td><b>0</b></td>
+     <td><a href="#internal"><b>Build Errors</b></a></td><td><b>20</b></td><td><b>7</b></td><td><b>0</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><a href="#_Users_danheslinga_psa-screening_input_contentig"><b>/Users/danheslinga/psa-screening/input/contentig</b></a></td><td><b>5</b></td><td><b>0</b></td><td><b>0</b></td>
+     <td><a href="#_Users_danheslinga_psa-screening_input_contentig"><b>/Users/danheslinga/psa-screening/input/contentig</b></a></td><td><b>4</b></td><td><b>1</b></td><td><b>0</b></td>
    </tr>
 </table>
 <hr/>
@@ -99,32 +99,62 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr style="background-color: #ffcccc">
      <td><b>input/cql/FHIRHelpers.cql</b></td><td><b>error</b></td><td title=""><b>CQL source was not associated with a library resource in the IG.</b></td>
    </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l148">output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 89, column 10</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="artifacts.html#l166">output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 99, column 10</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
+   </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/script at Line 177, column 4</b></td><td><b>warning</b></td><td title=""><b>The &lt;script&gt; containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files)</b></td>
+     <td><b>output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/script at Line 177, column 4</b></td><td><b>warning</b></td><td title=""><b>The &lt;script&gt; containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 4 other files)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b><a href="artifacts.html#l330">output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 190, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
-     <td><b>output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/script at Line 217, column 4</b></td><td><b>warning</b></td><td title=""><b>The &lt;script&gt; containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 6 other files)</b></td>
+     <td><b>output&#8203;/artifacts&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/script at Line 217, column 4</b></td><td><b>warning</b></td><td title=""><b>The &lt;script&gt; containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 4 other files)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="background.html#l344">output&#8203;/background&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 187, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="changes.html#l148">output&#8203;/changes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 89, column 10</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="changes.html#l336">output&#8203;/changes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 189, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="changes.html#l166">output&#8203;/changes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 99, column 10</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="downloads.html#l378">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 225, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="changes.html#l351">output&#8203;/changes&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 201, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="index.html#l422">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 251, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="downloads.html#l148">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 89, column 10</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="spec.html#l329">output&#8203;/spec&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 196, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="downloads.html#l166">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 99, column 10</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b><a href="toc.html#l364">output&#8203;/toc&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 178, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+     <td><b><a href="downloads.html#l393">output&#8203;/downloads&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 237, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l148">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 89, column 10</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l166">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 99, column 10</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l380">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 229, column 8</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l386">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/a at Line 233, column 8</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="index.html#l437">output&#8203;/index&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 262, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#l148">output&#8203;/toc&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 89, column 10</a></b></td><td><b>error</b></td><td><b>The link 'background.html' for &quot;Background&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#l166">output&#8203;/toc&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/nav&#8203;/div&#8203;/div&#8203;/ul&#8203;/li&#8203;/ul&#8203;/li&#8203;/a at Line 99, column 10</a></b></td><td><b>error</b></td><td><b>The link 'spec.html' for &quot;Detailed Specification&quot; cannot be resolved</b></td>
+   </tr>
+   <tr style="background-color: #ffcccc">
+     <td><b><a href="toc.html#l365">output&#8203;/toc&#8203;.html&#8203;#&#8203;/html&#8203;/body&#8203;/div&#8203;/div&#8203;/div&#8203;/p&#8203;/a at Line 190, column 23</a></b></td><td><b>error</b></td><td><b>The link 'drdan@heslingamd.com' for &quot;Dan Heslinga&quot; cannot be resolved</b></td>
    </tr>
    <tr style="background-color: #ffebcc">
      <td><b>1</b></td><td><b>warning</b></td><td title=""><b>The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide</b></td>
@@ -154,11 +184,11 @@ hl7.fhir.r4.core#4.0.1:     <a href="http://hl7.org/fhir/R4/codesystem-guide-par
    <tr style="background-color: #ffcccc">
      <td><b>ImplementationGuide.url</b></td><td><b>error</b></td><td title="RESOURCE_ID_MISMATCH"><b>Resource id/url mismatch: dhes.cds.prostate-cancer-screening/https://dhes.github.io/psa-screening</b></td>
    </tr>
-   <tr style="background-color: #ffcccc">
-     <td><b>ImplementationGuide&#8203;.jurisdiction[0]&#8203;.coding[0]&#8203;.code (l1&#8203;/c1127)</b></td><td><b>error</b></td><td><b>Unknown code 'US' in the CodeSystem 'http://unstats.un.org/unsd/methods/m49/m49.htm' version ''</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
+   <tr style="background-color: #ffebcc">
+     <td><b>ImplementationGuide&#8203;.jurisdiction[0]&#8203;.coding[0]&#8203;.system (l1&#8203;/c1100)</b></td><td><b>warning</b></td><td><b>A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated</b> (from <a href="qa-txsrvr.html#http://tx.fhir.org/r4">http://tx.fhir.org/r4</ta>)</td>
    </tr>
    <tr style="background-color: #ffcccc">
-     <td><b>ImplementationGuide&#8203;.definition (l1&#8203;/c13217)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)</b></td>
+     <td><b>ImplementationGuide&#8203;.definition (l1&#8203;/c13264)</b></td><td><b>error</b></td><td title="Validation_VAL_Profile_Minimum"><b>ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)</b></td>
    </tr>
    <tr style="background-color: #ffcccc">
      <td><b>input/contentig</b></td><td><b>error</b></td><td title=""><b>URL Mismatch https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening vs https://dhes.github.io/psa-screening</b></td>

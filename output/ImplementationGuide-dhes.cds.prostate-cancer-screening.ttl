@@ -29,7 +29,7 @@
   fhir:description [ fhir:v "Periodic screening for prostate cancer with PSA testing"] ; # 
   fhir:jurisdiction ( [
      fhir:coding ( [
-       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:system [ fhir:v "urn:iso:std:iso:316"^^xsd:anyURI ] ;
        fhir:code [ fhir:v "US" ]
      ] )
   ] ) ; # 
@@ -555,6 +555,9 @@
      ] ) ;
      fhir:page [
        fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "informative" ]
+       ] [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
          fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
        ] ) ;
@@ -563,30 +566,20 @@
        fhir:generation [ fhir:v "html" ] ;
        fhir:page ( [
          fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Home Page" ] ;
+         fhir:title [ fhir:v "Home" ] ;
          fhir:generation [ fhir:v "html" ]
        ] [
          fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "background.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "background.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Background" ] ;
-         fhir:generation [ fhir:v "html" ]
-       ] [
-         fhir:extension ( [
-           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "spec.html"^^xsd:anyURI ]
-         ] ) ;
-         fhir:name [ fhir:v "spec.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "Detailed Specification" ] ;
-         fhir:generation [ fhir:v "markdown" ]
-       ] [
-         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
          ] ) ;
@@ -595,11 +588,14 @@
          fhir:generation [ fhir:v "html" ]
        ] [
          fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
          ] ) ;
          fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
-         fhir:title [ fhir:v "IG Change History" ] ;
+         fhir:title [ fhir:v "Change History" ] ;
          fhir:generation [ fhir:v "html" ]
        ] )
      ] ;

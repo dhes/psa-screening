@@ -23,7 +23,7 @@
   <description value="Periodic screening for prostate cancer with PSA testing"/>
   <jurisdiction>
     <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <system value="urn:iso:std:iso:316"/>
       <code value="US"/>
     </coding>
   </jurisdiction>
@@ -484,6 +484,9 @@
       </extension>
     </extension>
     <page>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="informative"/>
+      </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
         <valueUrl value="toc.html"/>
       </extension>
@@ -491,30 +494,20 @@
       <title value="Table of Contents"/>
       <generation value="html"/>
       <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="index.html"/>
         </extension>
         <nameUrl value="index.html"/>
-        <title value="Home Page"/>
+        <title value="Home"/>
         <generation value="html"/>
       </page>
       <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="background.html"/>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
         </extension>
-        <nameUrl value="background.html"/>
-        <title value="Background"/>
-        <generation value="html"/>
-      </page>
-      <page>
-        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
-          <valueUrl value="spec.html"/>
-        </extension>
-        <nameUrl value="spec.html"/>
-        <title value="Detailed Specification"/>
-        <generation value="markdown"/>
-      </page>
-      <page>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="downloads.html"/>
         </extension>
@@ -523,11 +516,14 @@
         <generation value="html"/>
       </page>
       <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
         <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
           <valueUrl value="changes.html"/>
         </extension>
         <nameUrl value="changes.html"/>
-        <title value="IG Change History"/>
+        <title value="Change History"/>
         <generation value="html"/>
       </page>
     </page>

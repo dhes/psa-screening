@@ -1,49 +1,49 @@
 {
-  "date" : "Mon, 16 Sep, 2024 11:19:12 -1000",
+  "date" : "Mon, 16 Sep, 2024 12:39:38 -1000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/input/contentig.json",
-      "size" : 2731,
+      "size" : 3836,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 13,
-          "length" : 22
+          "start" : 14,
+          "length" : 26
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 13,
-          "length" : 5
+          "start" : 14,
+          "length" : 7
         },
         {
           "activity" : "generateNarratives",
-          "start" : 13,
-          "length" : 67
+          "start" : 14,
+          "length" : 68
         },
         {
           "activity" : "validate",
-          "start" : 13,
-          "length" : 1039
+          "start" : 14,
+          "length" : 1342
         },
         {
           "activity" : "generate1",
-          "start" : 14,
-          "length" : 91
+          "start" : 15,
+          "length" : 68
         },
         {
           "activity" : "generate2",
-          "start" : 16,
-          "length" : 36
+          "start" : 17,
+          "length" : 44
         },
         {
           "activity" : "generateValidationPack",
           "start" : 23,
-          "length" : 1
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 24,
+          "start" : 25,
           "length" : 2
         }
       ]
