@@ -1,0 +1,9 @@
+[
+  {
+    "id" : "example.fhir.uv.contentig",
+    "type" : "ImplementationGuide",
+    "url" : "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig",
+    "version" : "0.1.0",
+    "name" : "YourComputableContentIGNameHere"
+  }
+]
