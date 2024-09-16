@@ -13,20 +13,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    # - name: List contents of the repository (for debugging)
-    #   run: ls -la
+    - name: List contents of the repository (for debugging)
+      run: ls -la
 
-    # - name: Create docs directory if it doesn't exist
-    #   run: mkdir -p docs
+    - name: Create docs directory if it doesn't exist
+      run: mkdir -p docs
 
-    # - name: Copy output to docs for GitHub Pages
-    #   run: mv output/* docs/
+    - name: Copy output to docs for GitHub Pages
+      run: mv output/* .
 
-    # - name: List contents of docs directory (for debugging)
-    #   run: ls -la docs  # Check if files were copied correctly
+    - name: List contents of docs directory (for debugging)
+      run: ls -la docs  # Check if files were copied correctly
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./output
+        publish_dir: .
