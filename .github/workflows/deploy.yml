@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3  # Updated to v3
 
     - name: Setup Node.js (optional if your project needs Node)
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v3  # Updated to v3
       with:
-        node-version: '14'
+        node-version: '16'  # Node.js 16 is more stable or upgrade to 20 if needed
 
     - name: Build project
       run: |
