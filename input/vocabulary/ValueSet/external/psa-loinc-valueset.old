@@ -1,0 +1,36 @@
+{
+  "resourceType": "ValueSet",
+  "id": "psa-loinc-valueset",
+  "url": "http://example.org/fhir/ValueSet/psa-loinc-valueset",
+  "version": "1.0.0",
+  "name": "PSALOINCValueSet",
+  "title": "PSA LOINC ValueSet",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "Your Organization",
+  "description": "A ValueSet containing the LOINC code for Prostate specific antigen [Mass/volume] in Serum or Plasma.",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001",
+          "display": "World"
+        }
+      ]
+    }
+  ],
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          {
+            "code": "2857-1",
+            "display": "Prostate specific antigen [Mass/volume] in Serum or Plasma"
+          }
+        ]
+      }
+    ]
+  }
+}

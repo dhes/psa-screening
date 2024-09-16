@@ -1,0 +1,91 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "example.fhir.uv.contentig",
+  "url": "http://somewhere.org/fhir/uv/contentig/ImplementationGuide/example.fhir.uv.contentig",
+  "version": "0.1.0",
+  "name": "YourComputableContentIGNameHere",
+  "title": "Your User Friendly Name for ContentIG Here",
+  "status": "draft",
+  "experimental": false,
+  "publisher": "HL7 International - [Some] Work Group",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/Special/committees/[something]"
+        }
+      ]
+    }
+  ],
+  "description": "A brief description of what ContentIG is about (probably the same text as in your readme)",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "001"
+        }
+      ]
+    }
+  ],
+  "packageId": "example.fhir.uv.contentig",
+  "license": "CC0-1.0",
+  "fhirVersion": "4.0.1",
+  "definition": {
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "ContentIG Home Page",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "background.html",
+          "title": "Background",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "spec.html",
+          "title": "Detailed Specification",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Useful Downloads",
+          "generation": "html"
+        },
+        {
+          "nameUrl": "changes.html",
+          "title": "IG Change History",
+          "generation": "html"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2019+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "CI Build"
+      },
+      {
+        "code": "find-other-resources",
+        "value": "true"
+      },
+      {
+        "code": "path-binary",
+        "value": "input/cql"
+      },
+      {
+        "code": "path-liquid",
+        "value": "templates\\liquid"
+      }
+    ]
+  }
+}
