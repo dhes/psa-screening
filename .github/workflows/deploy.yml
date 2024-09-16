@@ -23,7 +23,7 @@ jobs:
       run: mv output/* docs/
 
     - name: List contents of docs directory (for debugging)
-      run: ls -la docs  # Check if files were copied OK
+      run: ls -la docs  # Check if files were copied correctly
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
