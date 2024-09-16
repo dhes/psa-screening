@@ -13,20 +13,20 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: List contents of the repository (for debugging)
-      run: ls -la
+    # If necessary for your project, uncomment this block to set up Node.js
+    # - name: Setup Node.js (optional)
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: '14'
 
-    - name: Create docs directory if it doesn't exist
-      run: mkdir -p docs
-
-    - name: Copy output to docs for GitHub Pages
-      run: mv output/* .
-
-    - name: List contents of docs directory (for debugging)
-      run: ls -la docs  # Check if files were copied correctly
+    # - name: Build project (if necessary)
+    #   run: |
+    #     # If you have a build process, run it here
+    #     npm install
+    #     npm run build
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
+        publish_dir: ./output  # Publish only the output directory
