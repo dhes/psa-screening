@@ -16,20 +16,24 @@ jobs:
     - name: Setup Node.js (optional if your project needs Node)
       uses: actions/setup-node@v2
       with:
-        node-version: '14'  # or your preferred version
+        node-version: '14'
 
-    - name: Build project (adjust according to your build process)
+    - name: Build project
       run: |
-        # If you have a build process, like npm install or npm run build
         npm install
         npm run build
 
-    - name: Copy output to root for GitHub Pages
-      run: |
-        mv output/* docs/
-    
+    - name: List files in output (debugging step)
+      run: ls -la output
+
+    - name: Create docs directory if not exists
+      run: mkdir -p docs
+
+    - name: Copy output to docs for GitHub Pages
+      run: mv output/* docs/
+
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs  # The directory where your 'index.html' is located
+        publish_dir: ./docs
