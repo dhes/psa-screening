@@ -16,7 +16,7 @@ jobs:
     - name: Setup Node.js (optional if your project needs Node)
       uses: actions/setup-node@v3
       with:
-        node-version: '16'  # Update to 20 if needed
+        node-version: '20'  # Update to 20 if needed
 
     - name: Build project
       run: |
