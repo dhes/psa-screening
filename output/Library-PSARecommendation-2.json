@@ -1,0 +1,1397 @@
+{
+   "library" : {
+      "localId" : "0",
+      "annotation" : [ {
+         "translatorVersion" : "3.11.0",
+         "translatorOptions" : "EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion",
+         "signatureLevel" : "None",
+         "type" : "CqlToElmInfo"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "message" : "The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime.",
+         "errorType" : "semantic",
+         "errorSeverity" : "warning",
+         "type" : "CqlToElmError"
+      }, {
+         "type" : "Annotation",
+         "s" : {
+            "r" : "349",
+            "s" : [ {
+               "value" : [ "","library PSARecommendation version '1.0.1'" ]
+            } ]
+         }
+      } ],
+      "identifier" : {
+         "id" : "PSARecommendation",
+         "system" : "https://dhes.cds.prostate-cancer-screening",
+         "version" : "1.0.1"
+      },
+      "schemaIdentifier" : {
+         "id" : "urn:hl7-org:elm",
+         "version" : "r1"
+      },
+      "usings" : {
+         "def" : [ {
+            "localId" : "1",
+            "localIdentifier" : "System",
+            "uri" : "urn:hl7-org:elm-types:r1"
+         }, {
+            "localId" : "206",
+            "locator" : "3:1-3:26",
+            "localIdentifier" : "FHIR",
+            "uri" : "http://hl7.org/fhir",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "206",
+                  "s" : [ {
+                     "value" : [ "","using " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIR" ]
+                     } ]
+                  }, {
+                     "value" : [ " version '4.0.1'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "includes" : {
+         "def" : [ {
+            "localId" : "207",
+            "locator" : "5:1-5:54",
+            "localIdentifier" : "FHIRHelpers",
+            "path" : "https://dhes.cds.prostate-cancer-screening/FHIRHelpers",
+            "version" : "4.0.1",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "207",
+                  "s" : [ {
+                     "value" : [ "","include " ]
+                  }, {
+                     "s" : [ {
+                        "value" : [ "FHIRHelpers" ]
+                     } ]
+                  }, {
+                     "value" : [ " version ","'4.0.1'"," called ","FHIRHelpers" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "codeSystems" : {
+         "def" : [ {
+            "localId" : "209",
+            "locator" : "9:1-9:38",
+            "name" : "LOINC",
+            "id" : "http://loinc.org",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "209",
+                  "s" : [ {
+                     "value" : [ "","codesystem ","\"LOINC\"",": ","'http://loinc.org'" ]
+                  } ]
+               }
+            } ]
+         } ]
+      },
+      "valueSets" : {
+         "def" : [ {
+            "localId" : "208",
+            "locator" : "7:1-7:80",
+            "name" : "PSALOINCValueSet",
+            "id" : "http://example.org/fhir/ValueSet/psa-loinc-valueset",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "208",
+                  "s" : [ {
+                     "value" : [ "","valueset ","PSALOINCValueSet",": ","'http://example.org/fhir/ValueSet/psa-loinc-valueset'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : [ ]
+         } ]
+      },
+      "codes" : {
+         "def" : [ {
+            "localId" : "210",
+            "locator" : "11:1-11:61",
+            "name" : "Birthdate",
+            "id" : "21112-8",
+            "display" : "Birth date",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "210",
+                  "s" : [ {
+                     "value" : [ "","code ","\"Birthdate\"",": ","'21112-8'"," from " ]
+                  }, {
+                     "r" : "211",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Birth date'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "211",
+               "locator" : "11:34-11:40",
+               "name" : "LOINC"
+            }
+         }, {
+            "localId" : "212",
+            "locator" : "12:1-12:77",
+            "name" : "PSA Follow-up",
+            "id" : "21979-0",
+            "display" : "Planned/next follow-up",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "212",
+                  "s" : [ {
+                     "value" : [ "","code ","\"PSA Follow-up\"",": ","'21979-0'"," from " ]
+                  }, {
+                     "r" : "213",
+                     "s" : [ {
+                        "value" : [ "\"LOINC\"" ]
+                     } ]
+                  }, {
+                     "value" : [ " display ","'Planned/next follow-up'" ]
+                  } ]
+               }
+            } ],
+            "codeSystem" : {
+               "localId" : "213",
+               "locator" : "12:38-12:44",
+               "name" : "LOINC"
+            }
+         } ]
+      },
+      "contexts" : {
+         "def" : [ {
+            "localId" : "217",
+            "locator" : "16:1-16:15",
+            "name" : "Patient"
+         } ]
+      },
+      "statements" : {
+         "def" : [ {
+            "localId" : "215",
+            "locator" : "16:1-16:15",
+            "name" : "Patient",
+            "context" : "Patient",
+            "expression" : {
+               "localId" : "216",
+               "type" : "SingletonFrom",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "214",
+                  "locator" : "16:1-16:15",
+                  "dataType" : "{http://hl7.org/fhir}Patient",
+                  "templateId" : "http://hl7.org/fhir/StructureDefinition/Patient",
+                  "type" : "Retrieve",
+                  "include" : [ ],
+                  "codeFilter" : [ ],
+                  "dateFilter" : [ ],
+                  "otherFilter" : [ ]
+               }
+            }
+         }, {
+            "localId" : "219",
+            "locator" : "23:1-24:21",
+            "name" : "Age",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "219",
+                  "s" : [ {
+                     "value" : [ "// consider\n//  first degree relative with prostate cancer\n//    onset before age 65\n//  African American\n\n","define ","Age",":\n  " ]
+                  }, {
+                     "r" : "229",
+                     "s" : [ {
+                        "value" : [ "AgeInYearsAt","(" ]
+                     }, {
+                        "r" : "222",
+                        "s" : [ {
+                           "value" : [ "Now","()" ]
+                        } ]
+                     }, {
+                        "value" : [ ")" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "229",
+               "locator" : "24:3-24:21",
+               "precision" : "Year",
+               "type" : "CalculateAgeAt",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "228",
+                  "type" : "ToDateTime",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "226",
+                     "path" : "birthDate.value",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "225",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               }, {
+                  "localId" : "222",
+                  "locator" : "24:16-24:20",
+                  "type" : "Now",
+                  "signature" : [ ]
+               } ]
+            }
+         }, {
+            "localId" : "231",
+            "locator" : "26:1-27:23",
+            "name" : "Man",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "231",
+                  "s" : [ {
+                     "value" : [ "","define ","Man",":\n  " ]
+                  }, {
+                     "r" : "232",
+                     "s" : [ {
+                        "r" : "234",
+                        "s" : [ {
+                           "r" : "233",
+                           "s" : [ {
+                              "value" : [ "Patient" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "234",
+                           "s" : [ {
+                              "value" : [ "gender" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "=" ]
+                     }, {
+                        "r" : "235",
+                        "s" : [ {
+                           "value" : [ "'male'" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "232",
+               "locator" : "27:3-27:23",
+               "type" : "Equal",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "236",
+                  "name" : "ToString",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "234",
+                     "locator" : "27:3-27:16",
+                     "path" : "gender",
+                     "type" : "Property",
+                     "source" : {
+                        "localId" : "233",
+                        "locator" : "27:3-27:9",
+                        "name" : "Patient",
+                        "type" : "ExpressionRef"
+                     }
+                  } ]
+               }, {
+                  "localId" : "235",
+                  "locator" : "27:18-27:23",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "male",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "238",
+            "locator" : "29:1-30:11",
+            "name" : "OlderThan40",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "238",
+                  "s" : [ {
+                     "value" : [ "","define ","OlderThan40",":\n  " ]
+                  }, {
+                     "r" : "239",
+                     "s" : [ {
+                        "r" : "240",
+                        "s" : [ {
+                           "value" : [ "Age" ]
+                        } ]
+                     }, {
+                        "r" : "241",
+                        "value" : [ " ",">="," ","40" ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "239",
+               "locator" : "30:3-30:11",
+               "type" : "GreaterOrEqual",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "240",
+                  "locator" : "30:3-30:5",
+                  "name" : "Age",
+                  "type" : "ExpressionRef"
+               }, {
+                  "localId" : "241",
+                  "locator" : "30:10-30:11",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}Integer",
+                  "value" : "40",
+                  "type" : "Literal"
+               } ]
+            }
+         }, {
+            "localId" : "243",
+            "locator" : "34:1-36:57",
+            "name" : "PSATests",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "243",
+                  "s" : [ {
+                     "value" : [ "// and Age <= 75 // follow patient preference consider prior test results and functional status\n    // this is the age to assess risk and discuss with patient\n\n","define ","PSATests",":\n  " ]
+                  }, {
+                     "r" : "258",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "244",
+                           "s" : [ {
+                              "r" : "247",
+                              "s" : [ {
+                                 "r" : "247",
+                                 "s" : [ {
+                                    "value" : [ "[","Observation",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "code" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ " ","in"," " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "PSALOINCValueSet" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","O" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n    " ]
+                     }, {
+                        "r" : "256",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "256",
+                           "s" : [ {
+                              "r" : "251",
+                              "s" : [ {
+                                 "r" : "250",
+                                 "s" : [ {
+                                    "value" : [ "O" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "251",
+                                 "s" : [ {
+                                    "value" : [ "status" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " in " ]
+                           }, {
+                              "r" : "252",
+                              "s" : [ {
+                                 "value" : [ "{ " ]
+                              }, {
+                                 "r" : "253",
+                                 "s" : [ {
+                                    "value" : [ "'final'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "254",
+                                 "s" : [ {
+                                    "value" : [ "'amended'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "255",
+                                 "s" : [ {
+                                    "value" : [ "'corrected'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "258",
+               "locator" : "35:3-36:57",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "244",
+                  "locator" : "35:3-35:43",
+                  "alias" : "O",
+                  "expression" : {
+                     "localId" : "247",
+                     "locator" : "35:3-35:41",
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "in",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "localId" : "246",
+                        "locator" : "35:25-35:40",
+                        "name" : "PSALOINCValueSet",
+                        "preserve" : true,
+                        "type" : "ValueSetRef"
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "256",
+                  "locator" : "36:5-36:57",
+                  "type" : "In",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "257",
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "251",
+                        "locator" : "36:11-36:18",
+                        "path" : "status",
+                        "scope" : "O",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "252",
+                     "locator" : "36:23-36:57",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "253",
+                        "locator" : "36:25-36:31",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "final",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "254",
+                        "locator" : "36:34-36:42",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "amended",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "255",
+                        "locator" : "36:45-36:55",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "corrected",
+                        "type" : "Literal"
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "260",
+            "locator" : "47:1-49:55",
+            "name" : "FollowUpObservation",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "260",
+                  "s" : [ {
+                     "value" : [ "// define PSACarePlan:\n// \t[CarePlan] CP \n// \t\twhere exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive\n// \t\tand CP.status ~ 'active'\n// // this assumes only one care plan with this category\n\n// define scheduledTiming:\n// \tFirst(PSACarePlan.activity.detail.scheduled.repeat.period)\n\n","define ","FollowUpObservation",":\n\t" ]
+                  }, {
+                     "r" : "278",
+                     "s" : [ {
+                        "s" : [ {
+                           "r" : "261",
+                           "s" : [ {
+                              "r" : "264",
+                              "s" : [ {
+                                 "r" : "264",
+                                 "s" : [ {
+                                    "value" : [ "[","Observation",": " ]
+                                 }, {
+                                    "s" : [ {
+                                       "value" : [ "\"PSA Follow-up\"" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ "]" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " ","O" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n\t\t" ]
+                     }, {
+                        "r" : "276",
+                        "s" : [ {
+                           "value" : [ "where " ]
+                        }, {
+                           "r" : "276",
+                           "s" : [ {
+                              "r" : "271",
+                              "s" : [ {
+                                 "r" : "270",
+                                 "s" : [ {
+                                    "value" : [ "O" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "271",
+                                 "s" : [ {
+                                    "value" : [ "status" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ " in " ]
+                           }, {
+                              "r" : "272",
+                              "s" : [ {
+                                 "value" : [ "{ " ]
+                              }, {
+                                 "r" : "273",
+                                 "s" : [ {
+                                    "value" : [ "'final'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "274",
+                                 "s" : [ {
+                                    "value" : [ "'amended'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ ", " ]
+                              }, {
+                                 "r" : "275",
+                                 "s" : [ {
+                                    "value" : [ "'corrected'" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " }" ]
+                              } ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "278",
+               "locator" : "48:2-49:55",
+               "type" : "Query",
+               "source" : [ {
+                  "localId" : "261",
+                  "locator" : "48:2-48:33",
+                  "alias" : "O",
+                  "expression" : {
+                     "localId" : "264",
+                     "locator" : "48:2-48:31",
+                     "dataType" : "{http://hl7.org/fhir}Observation",
+                     "templateId" : "http://hl7.org/fhir/StructureDefinition/Observation",
+                     "codeProperty" : "code",
+                     "codeComparator" : "~",
+                     "type" : "Retrieve",
+                     "codes" : {
+                        "localId" : "269",
+                        "type" : "ToList",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "263",
+                           "locator" : "48:16-48:30",
+                           "name" : "PSA Follow-up",
+                           "type" : "CodeRef"
+                        }
+                     },
+                     "include" : [ ],
+                     "codeFilter" : [ ],
+                     "dateFilter" : [ ],
+                     "otherFilter" : [ ]
+                  }
+               } ],
+               "let" : [ ],
+               "relationship" : [ ],
+               "where" : {
+                  "localId" : "276",
+                  "locator" : "49:3-49:55",
+                  "type" : "In",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "277",
+                     "name" : "ToString",
+                     "libraryName" : "FHIRHelpers",
+                     "type" : "FunctionRef",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "271",
+                        "locator" : "49:9-49:16",
+                        "path" : "status",
+                        "scope" : "O",
+                        "type" : "Property"
+                     } ]
+                  }, {
+                     "localId" : "272",
+                     "locator" : "49:21-49:55",
+                     "type" : "List",
+                     "element" : [ {
+                        "localId" : "273",
+                        "locator" : "49:23-49:29",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "final",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "274",
+                        "locator" : "49:32-49:40",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "amended",
+                        "type" : "Literal"
+                     }, {
+                        "localId" : "275",
+                        "locator" : "49:43-49:53",
+                        "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                        "value" : "corrected",
+                        "type" : "Literal"
+                     } ]
+                  } ]
+               }
+            }
+         }, {
+            "localId" : "280",
+            "locator" : "51:1-52:45",
+            "name" : "FollowUpDuration",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "280",
+                  "s" : [ {
+                     "value" : [ "","define ","FollowUpDuration",":\n\t" ]
+                  }, {
+                     "r" : "281",
+                     "s" : [ {
+                        "r" : "294",
+                        "s" : [ {
+                           "value" : [ "First","(" ]
+                        }, {
+                           "r" : "290",
+                           "s" : [ {
+                              "r" : "282",
+                              "s" : [ {
+                                 "value" : [ "FollowUpObservation" ]
+                              } ]
+                           }, {
+                              "value" : [ "." ]
+                           }, {
+                              "r" : "290",
+                              "s" : [ {
+                                 "value" : [ "value" ]
+                              } ]
+                           } ]
+                        }, {
+                           "value" : [ ")" ]
+                        } ]
+                     }, {
+                        "value" : [ " as " ]
+                     }, {
+                        "r" : "295",
+                        "s" : [ {
+                           "value" : [ "Quantity" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "281",
+               "locator" : "52:2-52:45",
+               "strict" : false,
+               "type" : "As",
+               "signature" : [ ],
+               "operand" : {
+                  "localId" : "294",
+                  "locator" : "52:2-52:33",
+                  "type" : "First",
+                  "signature" : [ ],
+                  "source" : {
+                     "localId" : "290",
+                     "locator" : "52:8-52:32",
+                     "type" : "Query",
+                     "source" : [ {
+                        "localId" : "289",
+                        "alias" : "$this",
+                        "expression" : {
+                           "localId" : "282",
+                           "locator" : "52:8-52:26",
+                           "name" : "FollowUpObservation",
+                           "type" : "ExpressionRef"
+                        }
+                     } ],
+                     "let" : [ ],
+                     "relationship" : [ ],
+                     "where" : {
+                        "localId" : "286",
+                        "type" : "Not",
+                        "signature" : [ ],
+                        "operand" : {
+                           "localId" : "285",
+                           "type" : "IsNull",
+                           "signature" : [ ],
+                           "operand" : {
+                              "localId" : "284",
+                              "path" : "value",
+                              "type" : "Property",
+                              "source" : {
+                                 "localId" : "283",
+                                 "name" : "$this",
+                                 "type" : "AliasRef"
+                              }
+                           }
+                        }
+                     },
+                     "return" : {
+                        "localId" : "291",
+                        "distinct" : false,
+                        "expression" : {
+                           "localId" : "288",
+                           "path" : "value",
+                           "type" : "Property",
+                           "source" : {
+                              "localId" : "287",
+                              "name" : "$this",
+                              "type" : "AliasRef"
+                           }
+                        }
+                     }
+                  }
+               },
+               "asTypeSpecifier" : {
+                  "localId" : "295",
+                  "locator" : "52:38-52:45",
+                  "name" : "{http://hl7.org/fhir}Quantity",
+                  "type" : "NamedTypeSpecifier"
+               }
+            }
+         }, {
+            "localId" : "297",
+            "locator" : "73:1-74:26",
+            "name" : "LatestAcceptablePSATestDate",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "297",
+                  "s" : [ {
+                     "value" : [ "// define LastPSATestEffective:\n// \tLast(PSATests).effective.value\n\n// define \"NoRecentPSA\":\n//   not Exists(\"PSATests\")\n//       or ( Exists(\"PSATests\")\n//           and Last(\"PSATests\").effective on or before ( Now() - 2 year ) // as an outer boundary\n//       )\n\n// BEWARE THE not EXISTS TRAP\n// If it doesn't exist, you can't look for the Last one!\n\n// define OneYearQuantity:\n//   // Quantity { value: 1 as decimal, unit: 'year' }\n// \tToQuantity('scheduledTiming \\'years\\'')\n\n// define blah:\n// Quantity { value:1, unit: 'year' }\n\n","define ","LatestAcceptablePSATestDate",":\n" ]
+                  }, {
+                     "r" : "298",
+                     "s" : [ {
+                        "r" : "301",
+                        "s" : [ {
+                           "value" : [ "Today","()" ]
+                        } ]
+                     }, {
+                        "value" : [ " - " ]
+                     }, {
+                        "r" : "302",
+                        "s" : [ {
+                           "value" : [ "FollowUpDuration" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "298",
+               "locator" : "74:1-74:26",
+               "type" : "Subtract",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "301",
+                  "locator" : "74:1-74:7",
+                  "type" : "Today",
+                  "signature" : [ ]
+               }, {
+                  "localId" : "303",
+                  "name" : "ToQuantity",
+                  "libraryName" : "FHIRHelpers",
+                  "type" : "FunctionRef",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "302",
+                     "locator" : "74:11-74:26",
+                     "name" : "FollowUpDuration",
+                     "type" : "ExpressionRef"
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "305",
+            "locator" : "76:1-77:31",
+            "name" : "MostRecentPSATestDate",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "305",
+                  "s" : [ {
+                     "value" : [ "","define ","MostRecentPSATestDate",":\n\t" ]
+                  }, {
+                     "r" : "311",
+                     "s" : [ {
+                        "r" : "310",
+                        "s" : [ {
+                           "r" : "309",
+                           "s" : [ {
+                              "value" : [ "Last","(" ]
+                           }, {
+                              "r" : "306",
+                              "s" : [ {
+                                 "value" : [ "PSATests" ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        }, {
+                           "value" : [ "." ]
+                        }, {
+                           "r" : "310",
+                           "s" : [ {
+                              "value" : [ "effective" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "." ]
+                     }, {
+                        "r" : "311",
+                        "s" : [ {
+                           "value" : [ "value" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "311",
+               "locator" : "77:2-77:31",
+               "path" : "value",
+               "type" : "Property",
+               "source" : {
+                  "localId" : "310",
+                  "locator" : "77:2-77:25",
+                  "path" : "effective",
+                  "type" : "Property",
+                  "source" : {
+                     "localId" : "309",
+                     "locator" : "77:2-77:15",
+                     "type" : "Last",
+                     "signature" : [ ],
+                     "source" : {
+                        "localId" : "306",
+                        "locator" : "77:7-77:14",
+                        "name" : "PSATests",
+                        "type" : "ExpressionRef"
+                     }
+                  }
+               }
+            }
+         }, {
+            "localId" : "313",
+            "locator" : "79:1-81:81",
+            "name" : "RecentPSA",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "313",
+                  "s" : [ {
+                     "value" : [ "","define ","RecentPSA",":\n  " ]
+                  }, {
+                     "r" : "314",
+                     "s" : [ {
+                        "r" : "315",
+                        "s" : [ {
+                           "value" : [ "exists " ]
+                        }, {
+                           "r" : "316",
+                           "s" : [ {
+                              "value" : [ "( " ]
+                           }, {
+                              "r" : "316",
+                              "s" : [ {
+                                 "value" : [ "PSATests" ]
+                              } ]
+                           }, {
+                              "value" : [ " )" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ "\n  and " ]
+                     }, {
+                        "r" : "339",
+                        "s" : [ {
+                           "r" : "317",
+                           "s" : [ {
+                              "value" : [ "date from " ]
+                           }, {
+                              "r" : "322",
+                              "s" : [ {
+                                 "r" : "321",
+                                 "s" : [ {
+                                    "value" : [ "Last","(" ]
+                                 }, {
+                                    "r" : "318",
+                                    "s" : [ {
+                                       "value" : [ "PSATests" ]
+                                    } ]
+                                 }, {
+                                    "value" : [ ")" ]
+                                 } ]
+                              }, {
+                                 "value" : [ "." ]
+                              }, {
+                                 "r" : "322",
+                                 "s" : [ {
+                                    "value" : [ "effective" ]
+                                 } ]
+                              } ]
+                           } ]
+                        }, {
+                           "r" : "339",
+                           "value" : [ " ","on or after"," " ]
+                        }, {
+                           "r" : "333",
+                           "s" : [ {
+                              "value" : [ "(" ]
+                           }, {
+                              "r" : "333",
+                              "s" : [ {
+                                 "r" : "336",
+                                 "s" : [ {
+                                    "value" : [ "Today","()" ]
+                                 } ]
+                              }, {
+                                 "value" : [ " - " ]
+                              }, {
+                                 "r" : "337",
+                                 "s" : [ {
+                                    "value" : [ "FollowUpDuration" ]
+                                 } ]
+                              } ]
+                           }, {
+                              "value" : [ ")" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "314",
+               "locator" : "80:3-81:81",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "315",
+                  "locator" : "80:3-80:21",
+                  "type" : "Exists",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "316",
+                     "locator" : "80:10-80:21",
+                     "name" : "PSATests",
+                     "type" : "ExpressionRef"
+                  }
+               }, {
+                  "localId" : "339",
+                  "locator" : "81:7-81:81",
+                  "type" : "SameOrAfter",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "317",
+                     "locator" : "81:7-81:40",
+                     "type" : "DateFrom",
+                     "signature" : [ ],
+                     "operand" : {
+                        "localId" : "325",
+                        "type" : "Case",
+                        "caseItem" : [ {
+                           "localId" : "326",
+                           "when" : {
+                              "localId" : "327",
+                              "isType" : "{http://hl7.org/fhir}dateTime",
+                              "type" : "Is",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "322",
+                                 "locator" : "81:17-81:40",
+                                 "path" : "effective",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "321",
+                                    "locator" : "81:17-81:30",
+                                    "type" : "Last",
+                                    "signature" : [ ],
+                                    "source" : {
+                                       "localId" : "318",
+                                       "locator" : "81:22-81:29",
+                                       "name" : "PSATests",
+                                       "type" : "ExpressionRef"
+                                    }
+                                 }
+                              }
+                           },
+                           "then" : {
+                              "localId" : "324",
+                              "name" : "ToDateTime",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "323",
+                                 "asType" : "{http://hl7.org/fhir}dateTime",
+                                 "type" : "As",
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "localId" : "322",
+                                    "locator" : "81:17-81:40",
+                                    "path" : "effective",
+                                    "type" : "Property",
+                                    "source" : {
+                                       "localId" : "321",
+                                       "locator" : "81:17-81:30",
+                                       "type" : "Last",
+                                       "signature" : [ ],
+                                       "source" : {
+                                          "localId" : "318",
+                                          "locator" : "81:22-81:29",
+                                          "name" : "PSATests",
+                                          "type" : "ExpressionRef"
+                                       }
+                                    }
+                                 }
+                              } ]
+                           }
+                        }, {
+                           "localId" : "328",
+                           "when" : {
+                              "localId" : "329",
+                              "isType" : "{http://hl7.org/fhir}instant",
+                              "type" : "Is",
+                              "signature" : [ ],
+                              "operand" : {
+                                 "localId" : "322",
+                                 "locator" : "81:17-81:40",
+                                 "path" : "effective",
+                                 "type" : "Property",
+                                 "source" : {
+                                    "localId" : "321",
+                                    "locator" : "81:17-81:30",
+                                    "type" : "Last",
+                                    "signature" : [ ],
+                                    "source" : {
+                                       "localId" : "318",
+                                       "locator" : "81:22-81:29",
+                                       "name" : "PSATests",
+                                       "type" : "ExpressionRef"
+                                    }
+                                 }
+                              }
+                           },
+                           "then" : {
+                              "localId" : "331",
+                              "name" : "ToDateTime",
+                              "libraryName" : "FHIRHelpers",
+                              "type" : "FunctionRef",
+                              "signature" : [ ],
+                              "operand" : [ {
+                                 "localId" : "330",
+                                 "asType" : "{http://hl7.org/fhir}instant",
+                                 "type" : "As",
+                                 "signature" : [ ],
+                                 "operand" : {
+                                    "localId" : "322",
+                                    "locator" : "81:17-81:40",
+                                    "path" : "effective",
+                                    "type" : "Property",
+                                    "source" : {
+                                       "localId" : "321",
+                                       "locator" : "81:17-81:30",
+                                       "type" : "Last",
+                                       "signature" : [ ],
+                                       "source" : {
+                                          "localId" : "318",
+                                          "locator" : "81:22-81:29",
+                                          "name" : "PSATests",
+                                          "type" : "ExpressionRef"
+                                       }
+                                    }
+                                 }
+                              } ]
+                           }
+                        } ],
+                        "else" : {
+                           "localId" : "332",
+                           "type" : "Null"
+                        }
+                     }
+                  }, {
+                     "localId" : "333",
+                     "locator" : "81:54-81:81",
+                     "type" : "Subtract",
+                     "signature" : [ ],
+                     "operand" : [ {
+                        "localId" : "336",
+                        "locator" : "81:55-81:61",
+                        "type" : "Today",
+                        "signature" : [ ]
+                     }, {
+                        "localId" : "338",
+                        "name" : "ToQuantity",
+                        "libraryName" : "FHIRHelpers",
+                        "type" : "FunctionRef",
+                        "signature" : [ ],
+                        "operand" : [ {
+                           "localId" : "337",
+                           "locator" : "81:65-81:80",
+                           "name" : "FollowUpDuration",
+                           "type" : "ExpressionRef"
+                        } ]
+                     } ]
+                  } ]
+               } ]
+            }
+         }, {
+            "localId" : "341",
+            "locator" : "83:1-84:39",
+            "name" : "Tickle",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "341",
+                  "s" : [ {
+                     "value" : [ "","define ","\"Tickle\"",":\n  " ]
+                  }, {
+                     "r" : "342",
+                     "s" : [ {
+                        "r" : "343",
+                        "s" : [ {
+                           "r" : "344",
+                           "s" : [ {
+                              "value" : [ "OlderThan40" ]
+                           } ]
+                        }, {
+                           "value" : [ " and " ]
+                        }, {
+                           "r" : "345",
+                           "s" : [ {
+                              "value" : [ "Man" ]
+                           } ]
+                        } ]
+                     }, {
+                        "value" : [ " and " ]
+                     }, {
+                        "r" : "346",
+                        "s" : [ {
+                           "value" : [ "not " ]
+                        }, {
+                           "r" : "347",
+                           "s" : [ {
+                              "value" : [ "RecentPSA" ]
+                           } ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "342",
+               "locator" : "84:3-84:39",
+               "type" : "And",
+               "signature" : [ ],
+               "operand" : [ {
+                  "localId" : "343",
+                  "locator" : "84:3-84:21",
+                  "type" : "And",
+                  "signature" : [ ],
+                  "operand" : [ {
+                     "localId" : "344",
+                     "locator" : "84:3-84:13",
+                     "name" : "OlderThan40",
+                     "type" : "ExpressionRef"
+                  }, {
+                     "localId" : "345",
+                     "locator" : "84:19-84:21",
+                     "name" : "Man",
+                     "type" : "ExpressionRef"
+                  } ]
+               }, {
+                  "localId" : "346",
+                  "locator" : "84:27-84:39",
+                  "type" : "Not",
+                  "signature" : [ ],
+                  "operand" : {
+                     "localId" : "347",
+                     "locator" : "84:31-84:39",
+                     "name" : "RecentPSA",
+                     "type" : "ExpressionRef"
+                  }
+               } ]
+            }
+         }, {
+            "localId" : "349",
+            "locator" : "87:1-89:11",
+            "name" : "Reminder",
+            "context" : "Patient",
+            "accessLevel" : "Public",
+            "annotation" : [ {
+               "type" : "Annotation",
+               "s" : {
+                  "r" : "349",
+                  "s" : [ {
+                     "value" : [ "// and not PatientOptsOut\n\n","define ","\"Reminder\"",":\n  " ]
+                  }, {
+                     "r" : "350",
+                     "s" : [ {
+                        "value" : [ "if " ]
+                     }, {
+                        "r" : "351",
+                        "s" : [ {
+                           "value" : [ "\"Tickle\"" ]
+                        } ]
+                     }, {
+                        "value" : [ " then " ]
+                     }, {
+                        "r" : "352",
+                        "s" : [ {
+                           "value" : [ "'Discuss PSA'" ]
+                        } ]
+                     }, {
+                        "value" : [ " \n    else " ]
+                     }, {
+                        "r" : "353",
+                        "s" : [ {
+                           "value" : [ "''" ]
+                        } ]
+                     } ]
+                  } ]
+               }
+            } ],
+            "expression" : {
+               "localId" : "350",
+               "locator" : "88:3-89:11",
+               "type" : "If",
+               "condition" : {
+                  "localId" : "351",
+                  "locator" : "88:6-88:13",
+                  "name" : "Tickle",
+                  "type" : "ExpressionRef"
+               },
+               "then" : {
+                  "localId" : "352",
+                  "locator" : "88:20-88:32",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "Discuss PSA",
+                  "type" : "Literal"
+               },
+               "else" : {
+                  "localId" : "353",
+                  "locator" : "89:10-89:11",
+                  "valueType" : "{urn:hl7-org:elm-types:r1}String",
+                  "value" : "",
+                  "type" : "Literal"
+               }
+            }
+         } ]
+      }
+   }
+}

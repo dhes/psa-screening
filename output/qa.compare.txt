@@ -1,22 +1,61 @@
 ProstateCancerScreening : Validation Results
 =========================================
 
-err = 7, warn = 8, info = 0
+err = 17, warn = 12, info = 0
 $--
-Generated $--. FHIR version $-- for dhes.cds.prostate-cancer-screening#$-- (canonical = https://dhes.github.io/psa-screening)
- Build Errors : 20 / 7 / 0
- /Users/danheslinga/psa-screening/input/contentig : 4 / 1 / 1
+Generated $--. FHIR version $-- for dhes.cds.prostate-cancer-screening#$-- (canonical = https://dhes.cds.prostate-cancer-screening)
+ Build Errors : 56 / 8 / 0
+ /Users/danheslinga/psa-screening/input/contentig : 2 / 1 / 1
+ /Users/danheslinga/psa-screening/input/resources/library/PSARecommendation : 3 / 1 / 2
+ /Users/danheslinga/psa-screening/input/resources/plandefinition/PSARecommendation : 9 / 2 / 1
 </table>
 == n/a ==
 ERROR: ImplementationGuide.definition.parameter[26].value: Supressed messages file is not using the new format (see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters)
 WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
 ERROR: /Users/danheslinga/psa-screening/input/cql/PSARecommendation.cql: CQL source was not associated with a library resource in the IG.
 ERROR: /Users/danheslinga/psa-screening/input/cql/FHIRHelpers.cql: CQL source was not associated with a library resource in the IG.
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+WARNING: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/script at Line 227, column 4: The <script> containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 16 other files)
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/div/div/div/p/a at Line 240, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+WARNING: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/script at Line 267, column 4: The <script> containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 16 other files)
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+WARNING: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.change.history.html#/html/body/script at Line 207, column 4: The <script> containing the javascript 'try {       var curr'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 1 other files)
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.change.history.html#/html/body/div/div/div/p/a at Line 243, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.html#/html/body/div/div/div/p/a at Line 366, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.json.html#/html/body/div/div/div/p/a at Line 539, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.ttl.html#/html/body/div/div/div/p/a at Line 469, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation.xml.html#/html/body/div/div/div/p/a at Line 594, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation-testing.html#/html/body/div/div/div/p/a at Line 240, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 93, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.change.history.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 103, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.change.history.html#/html/body/div/div/div/p/a at Line 243, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.html#/html/body/div/div/div/p/a at Line 285, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.json.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.json.html#/html/body/div/div/div/p/a at Line 348, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.ttl.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.ttl.html#/html/body/div/div/div/p/a at Line 327, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 91, column 10: The link 'background.html' for "Background" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.xml.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 101, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
+ERROR: /Users/danheslinga/psa-screening/output/PlanDefinition-PSARecommendation.xml.html#/html/body/div/div/div/p/a at Line 331, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
 ERROR: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
 ERROR: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
-WARNING: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/script at Line 177, column 4: The <script> containing the javascript '$(document).ready(fu'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 4 other files)
-ERROR: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/div/div/div/p/a at Line 190, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
-WARNING: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/script at Line 217, column 4: The <script> containing the javascript 'anchors.options.visi'... is illegal and not allowed on the HL7 cibuild - need to put the script in a  .js file in a trusted template if this IG is to build on the HL7 cibuild (also in 4 other files)
+ERROR: /Users/danheslinga/psa-screening/output/artifacts.html#/html/body/div/div/div/p/a at Line 238, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
 ERROR: /Users/danheslinga/psa-screening/output/changes.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
 ERROR: /Users/danheslinga/psa-screening/output/changes.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 99, column 10: The link 'spec.html' for "Detailed Specification" cannot be resolved
 ERROR: /Users/danheslinga/psa-screening/output/changes.html#/html/body/div/div/div/p/a at Line 201, column 23: The link 'drdan@heslingamd.com' for "Dan Heslinga" cannot be resolved
@@ -36,8 +75,23 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == input/contentig.json ==
-ERROR: ImplementationGuide.where(url = 'https://dhes.github.io/psa-screening'): Conformance resource /Users/danheslinga/psa-screening/input/contentig.json - the canonical URL (https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening) does not match the URL (https://dhes.github.io/psa-screening)
-ERROR: ImplementationGuide.url: Resource id/url mismatch: dhes.cds.prostate-cancer-screening/https://dhes.github.io/psa-screening
-WARNING: ImplementationGuide/dhes.cds.prostate-cancer-screening: ImplementationGuide.jurisdiction[0].coding[0].system: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
-ERROR: ImplementationGuide/dhes.cds.prostate-cancer-screening: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide|4.0.1)
-ERROR: /Users/danheslinga/psa-screening/input/contentig: URL Mismatch https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening vs https://dhes.github.io/psa-screening
+ERROR: ImplementationGuide.where(url = 'https://dhes.cds.prostate-cancer-screening'): Conformance resource /Users/danheslinga/psa-screening/input/contentig.json - the canonical URL (https://dhes.cds.prostate-cancer-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening) does not match the URL (https://dhes.cds.prostate-cancer-screening)
+WARNING: ImplementationGuide/dhes.cds.prostate-cancer-screening: ImplementationGuide.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
+ERROR: /Users/danheslinga/psa-screening/input/contentig: URL Mismatch https://dhes.cds.prostate-cancer-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening vs https://dhes.cds.prostate-cancer-screening
+== input/resources/library/PSARecommendation.json ==
+ERROR: Library/PSARecommendation: Library.extension[1]: The extension http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem could not be found so is not allowed here
+ERROR: Library/PSARecommendation: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
+ERROR: Library/PSARecommendation: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
+WARNING: Library/PSARecommendation: Library.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
+== input/resources/plandefinition/PSARecommendation.json ==
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition' does not resolve
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[0]: The extension http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability could not be found so is not allowed here
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[0].url: URL value 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability' does not resolve
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[1]: The extension http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability could not be found so is not allowed here
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[1].url: URL value 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability' does not resolve
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[2]: The extension http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability could not be found so is not allowed here
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[2].url: URL value 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability' does not resolve
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[3]: The extension http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability could not be found so is not allowed here
+ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[3].url: URL value 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability' does not resolve
+WARNING: PlanDefinition/PSARecommendation: PlanDefinition.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
+WARNING: PlanDefinition/PSARecommendation: PlanDefinition.meta.profile[0]: Profile reference 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles

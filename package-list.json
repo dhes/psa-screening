@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "type": "IG",
   "license": "CC0-1.0",
-  "canonical": " https://dhes.github.io/psa-screening",
+  "canonical": " https://dhes.cds.prostate-cancer-screening",
   "title": "Prostate Cancer Screening",
   "description": "Screening for Prostate Cancer",
   "dependencies": { "hl7.fhir.r4.core": "4.0.x" },

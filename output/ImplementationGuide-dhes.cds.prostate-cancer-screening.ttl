@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening> a fhir:ImplementationGuide ;
+<https://dhes.cds.prostate-cancer-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening> a fhir:ImplementationGuide ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "dhes.cds.prostate-cancer-screening"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name=\"dhes.cds.prostate-cancer-screening\"> </a><a name=\"hcdhes.cds.prostate-cancer-screening\"> </a><a name=\"dhes.cds.prostate-cancer-screening-en-US\"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.github.io/psa-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>\n</div></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name=\"dhes.cds.prostate-cancer-screening\"> </a><a name=\"hcdhes.cds.prostate-cancer-screening\"> </a><a name=\"dhes.cds.prostate-cancer-screening-en-US\"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.cds.prostate-cancer-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>\n</div></div>"
   ] ; # 
-  fhir:url [ fhir:v "https://dhes.github.io/psa-screening"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "https://dhes.cds.prostate-cancer-screening"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "ProstateCancerScreening"] ; # 
   fhir:title [ fhir:v "Screening for prostate cancer"] ; # 
@@ -552,6 +552,31 @@
          fhir:value [ fhir:v "true" ]
        ] ) ;
        fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Library" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation> ;
+         fhir:reference [ fhir:v "Library/PSARecommendation" ]
+       ] ;
+       fhir:name [ fhir:v "PSARecommendation" ] ;
+       fhir:description [ fhir:v "PSA Recommendation CQL Library" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PlanDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation> ;
+         fhir:reference [ fhir:v "PlanDefinition/PSARecommendation" ]
+       ] ;
+       fhir:name [ fhir:v "PSARecommendation" ] ;
+       fhir:description [ fhir:v "Plan Definition for PSA Screening" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

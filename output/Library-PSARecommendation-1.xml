@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns="urn:hl7-org:elm:r1" xmlns:t="urn:hl7-org:elm-types:r1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:fhir="http://hl7.org/fhir" xmlns:qdm43="urn:healthit-gov:qdm:v4_3" xmlns:qdm53="urn:healthit-gov:qdm:v5_3" xmlns:a="urn:hl7-org:cql-annotations:r1" localId="0">
+   <annotation translatorVersion="3.11.0" translatorOptions="EnableAnnotations,EnableLocators,DisableListDemotion,DisableListPromotion" signatureLevel="None" xsi:type="a:CqlToElmInfo"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToString has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation message="The function FHIRHelpers.ToDateTime has multiple overloads and due to the SignatureLevel setting (None), the overload signature is not being included in the output. This may result in ambiguous function resolution at runtime, consider setting the SignatureLevel to Overloads or All to ensure that the output includes sufficient information to support correct overload selection at runtime." errorType="semantic" errorSeverity="warning" xsi:type="a:CqlToElmError"/>
+   <annotation xsi:type="a:Annotation">
+      <a:s r="349">
+         <a:s>library PSARecommendation version '1.0.1'</a:s>
+      </a:s>
+   </annotation>
+   <identifier id="PSARecommendation" system="https://dhes.cds.prostate-cancer-screening" version="1.0.1"/>
+   <schemaIdentifier id="urn:hl7-org:elm" version="r1"/>
+   <usings>
+      <def localId="1" localIdentifier="System" uri="urn:hl7-org:elm-types:r1"/>
+      <def localId="206" locator="3:1-3:26" localIdentifier="FHIR" uri="http://hl7.org/fhir" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="206">
+               <a:s>using </a:s>
+               <a:s>
+                  <a:s>FHIR</a:s>
+               </a:s>
+               <a:s> version '4.0.1'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </usings>
+   <includes>
+      <def localId="207" locator="5:1-5:54" localIdentifier="FHIRHelpers" path="https://dhes.cds.prostate-cancer-screening/FHIRHelpers" version="4.0.1">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="207">
+               <a:s>include </a:s>
+               <a:s>
+                  <a:s>FHIRHelpers</a:s>
+               </a:s>
+               <a:s> version '4.0.1' called FHIRHelpers</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </includes>
+   <codeSystems>
+      <def localId="209" locator="9:1-9:38" name="LOINC" id="http://loinc.org" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="209">
+               <a:s>codesystem &quot;LOINC&quot;: 'http://loinc.org'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </codeSystems>
+   <valueSets>
+      <def localId="208" locator="7:1-7:80" name="PSALOINCValueSet" id="http://example.org/fhir/ValueSet/psa-loinc-valueset" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="208">
+               <a:s>valueset PSALOINCValueSet: 'http://example.org/fhir/ValueSet/psa-loinc-valueset'</a:s>
+            </a:s>
+         </annotation>
+      </def>
+   </valueSets>
+   <codes>
+      <def localId="210" locator="11:1-11:61" name="Birthdate" id="21112-8" display="Birth date" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="210">
+               <a:s>code &quot;Birthdate&quot;: '21112-8' from </a:s>
+               <a:s r="211">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+               <a:s> display 'Birth date'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="211" locator="11:34-11:40" name="LOINC"/>
+      </def>
+      <def localId="212" locator="12:1-12:77" name="PSA Follow-up" id="21979-0" display="Planned/next follow-up" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="212">
+               <a:s>code &quot;PSA Follow-up&quot;: '21979-0' from </a:s>
+               <a:s r="213">
+                  <a:s>&quot;LOINC&quot;</a:s>
+               </a:s>
+               <a:s> display 'Planned/next follow-up'</a:s>
+            </a:s>
+         </annotation>
+         <codeSystem localId="213" locator="12:38-12:44" name="LOINC"/>
+      </def>
+   </codes>
+   <contexts>
+      <def localId="217" locator="16:1-16:15" name="Patient"/>
+   </contexts>
+   <statements>
+      <def localId="215" locator="16:1-16:15" name="Patient" context="Patient">
+         <expression localId="216" xsi:type="SingletonFrom">
+            <operand localId="214" locator="16:1-16:15" dataType="fhir:Patient" templateId="http://hl7.org/fhir/StructureDefinition/Patient" xsi:type="Retrieve"/>
+         </expression>
+      </def>
+      <def localId="219" locator="23:1-24:21" name="Age" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="219">
+               <a:s>// consider
+//  first degree relative with prostate cancer
+//    onset before age 65
+//  African American
+
+define Age:
+  </a:s>
+               <a:s r="229">
+                  <a:s>AgeInYearsAt(</a:s>
+                  <a:s r="222">
+                     <a:s>Now()</a:s>
+                  </a:s>
+                  <a:s>)</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="229" locator="24:3-24:21" precision="Year" xsi:type="CalculateAgeAt">
+            <operand localId="228" xsi:type="ToDateTime">
+               <operand localId="226" path="birthDate.value" xsi:type="Property">
+                  <source localId="225" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand localId="222" locator="24:16-24:20" xsi:type="Now"/>
+         </expression>
+      </def>
+      <def localId="231" locator="26:1-27:23" name="Man" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="231">
+               <a:s>define Man:
+  </a:s>
+               <a:s r="232">
+                  <a:s r="234">
+                     <a:s r="233">
+                        <a:s>Patient</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="234">
+                        <a:s>gender</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>=</a:s>
+                  <a:s r="235">
+                     <a:s>'male'</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="232" locator="27:3-27:23" xsi:type="Equal">
+            <operand localId="236" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="234" locator="27:3-27:16" path="gender" xsi:type="Property">
+                  <source localId="233" locator="27:3-27:9" name="Patient" xsi:type="ExpressionRef"/>
+               </operand>
+            </operand>
+            <operand localId="235" locator="27:18-27:23" valueType="t:String" value="male" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="238" locator="29:1-30:11" name="OlderThan40" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="238">
+               <a:s>define OlderThan40:
+  </a:s>
+               <a:s r="239">
+                  <a:s r="240">
+                     <a:s>Age</a:s>
+                  </a:s>
+                  <a:s r="241"> >= 40</a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="239" locator="30:3-30:11" xsi:type="GreaterOrEqual">
+            <operand localId="240" locator="30:3-30:5" name="Age" xsi:type="ExpressionRef"/>
+            <operand localId="241" locator="30:10-30:11" valueType="t:Integer" value="40" xsi:type="Literal"/>
+         </expression>
+      </def>
+      <def localId="243" locator="34:1-36:57" name="PSATests" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="243">
+               <a:s>// and Age &lt;= 75 // follow patient preference consider prior test results and functional status
+    // this is the age to assess risk and discuss with patient
+
+define PSATests:
+  </a:s>
+               <a:s r="258">
+                  <a:s>
+                     <a:s r="244">
+                        <a:s r="247">
+                           <a:s r="247">
+                              <a:s>[Observation: </a:s>
+                              <a:s>
+                                 <a:s>code</a:s>
+                              </a:s>
+                              <a:s> in </a:s>
+                              <a:s>
+                                 <a:s>PSALOINCValueSet</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> O</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+    </a:s>
+                  <a:s r="256">
+                     <a:s>where </a:s>
+                     <a:s r="256">
+                        <a:s r="251">
+                           <a:s r="250">
+                              <a:s>O</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="251">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> in </a:s>
+                        <a:s r="252">
+                           <a:s>{ </a:s>
+                           <a:s r="253">
+                              <a:s>'final'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="254">
+                              <a:s>'amended'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="255">
+                              <a:s>'corrected'</a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="258" locator="35:3-36:57" xsi:type="Query">
+            <source localId="244" locator="35:3-35:43" alias="O">
+               <expression localId="247" locator="35:3-35:41" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="in" xsi:type="Retrieve">
+                  <codes localId="246" locator="35:25-35:40" name="PSALOINCValueSet" preserve="true" xsi:type="ValueSetRef"/>
+               </expression>
+            </source>
+            <where localId="256" locator="36:5-36:57" xsi:type="In">
+               <operand localId="257" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="251" locator="36:11-36:18" path="status" scope="O" xsi:type="Property"/>
+               </operand>
+               <operand localId="252" locator="36:23-36:57" xsi:type="List">
+                  <element localId="253" locator="36:25-36:31" valueType="t:String" value="final" xsi:type="Literal"/>
+                  <element localId="254" locator="36:34-36:42" valueType="t:String" value="amended" xsi:type="Literal"/>
+                  <element localId="255" locator="36:45-36:55" valueType="t:String" value="corrected" xsi:type="Literal"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="260" locator="47:1-49:55" name="FollowUpObservation" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="260">
+               <a:s>// define PSACarePlan:
+// 	[CarePlan] CP 
+// 		where exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive
+// 		and CP.status ~ 'active'
+// // this assumes only one care plan with this category
+
+// define scheduledTiming:
+// 	First(PSACarePlan.activity.detail.scheduled.repeat.period)
+
+define FollowUpObservation:
+	</a:s>
+               <a:s r="278">
+                  <a:s>
+                     <a:s r="261">
+                        <a:s r="264">
+                           <a:s r="264">
+                              <a:s>[Observation: </a:s>
+                              <a:s>
+                                 <a:s>&quot;PSA Follow-up&quot;</a:s>
+                              </a:s>
+                              <a:s>]</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> O</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+		</a:s>
+                  <a:s r="276">
+                     <a:s>where </a:s>
+                     <a:s r="276">
+                        <a:s r="271">
+                           <a:s r="270">
+                              <a:s>O</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="271">
+                              <a:s>status</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s> in </a:s>
+                        <a:s r="272">
+                           <a:s>{ </a:s>
+                           <a:s r="273">
+                              <a:s>'final'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="274">
+                              <a:s>'amended'</a:s>
+                           </a:s>
+                           <a:s>, </a:s>
+                           <a:s r="275">
+                              <a:s>'corrected'</a:s>
+                           </a:s>
+                           <a:s> }</a:s>
+                        </a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="278" locator="48:2-49:55" xsi:type="Query">
+            <source localId="261" locator="48:2-48:33" alias="O">
+               <expression localId="264" locator="48:2-48:31" dataType="fhir:Observation" templateId="http://hl7.org/fhir/StructureDefinition/Observation" codeProperty="code" codeComparator="~" xsi:type="Retrieve">
+                  <codes localId="269" xsi:type="ToList">
+                     <operand localId="263" locator="48:16-48:30" name="PSA Follow-up" xsi:type="CodeRef"/>
+                  </codes>
+               </expression>
+            </source>
+            <where localId="276" locator="49:3-49:55" xsi:type="In">
+               <operand localId="277" name="ToString" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                  <operand localId="271" locator="49:9-49:16" path="status" scope="O" xsi:type="Property"/>
+               </operand>
+               <operand localId="272" locator="49:21-49:55" xsi:type="List">
+                  <element localId="273" locator="49:23-49:29" valueType="t:String" value="final" xsi:type="Literal"/>
+                  <element localId="274" locator="49:32-49:40" valueType="t:String" value="amended" xsi:type="Literal"/>
+                  <element localId="275" locator="49:43-49:53" valueType="t:String" value="corrected" xsi:type="Literal"/>
+               </operand>
+            </where>
+         </expression>
+      </def>
+      <def localId="280" locator="51:1-52:45" name="FollowUpDuration" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="280">
+               <a:s>define FollowUpDuration:
+	</a:s>
+               <a:s r="281">
+                  <a:s r="294">
+                     <a:s>First(</a:s>
+                     <a:s r="290">
+                        <a:s r="282">
+                           <a:s>FollowUpObservation</a:s>
+                        </a:s>
+                        <a:s>.</a:s>
+                        <a:s r="290">
+                           <a:s>value</a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s>)</a:s>
+                  </a:s>
+                  <a:s> as </a:s>
+                  <a:s r="295">
+                     <a:s>Quantity</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="281" locator="52:2-52:45" strict="false" xsi:type="As">
+            <operand localId="294" locator="52:2-52:33" xsi:type="First">
+               <source localId="290" locator="52:8-52:32" xsi:type="Query">
+                  <source localId="289" alias="$this">
+                     <expression localId="282" locator="52:8-52:26" name="FollowUpObservation" xsi:type="ExpressionRef"/>
+                  </source>
+                  <where localId="286" xsi:type="Not">
+                     <operand localId="285" xsi:type="IsNull">
+                        <operand localId="284" path="value" xsi:type="Property">
+                           <source localId="283" name="$this" xsi:type="AliasRef"/>
+                        </operand>
+                     </operand>
+                  </where>
+                  <return localId="291" distinct="false">
+                     <expression localId="288" path="value" xsi:type="Property">
+                        <source localId="287" name="$this" xsi:type="AliasRef"/>
+                     </expression>
+                  </return>
+               </source>
+            </operand>
+            <asTypeSpecifier localId="295" locator="52:38-52:45" name="fhir:Quantity" xsi:type="NamedTypeSpecifier"/>
+         </expression>
+      </def>
+      <def localId="297" locator="73:1-74:26" name="LatestAcceptablePSATestDate" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="297">
+               <a:s>// define LastPSATestEffective:
+// 	Last(PSATests).effective.value
+
+// define &quot;NoRecentPSA&quot;:
+//   not Exists(&quot;PSATests&quot;)
+//       or ( Exists(&quot;PSATests&quot;)
+//           and Last(&quot;PSATests&quot;).effective on or before ( Now() - 2 year ) // as an outer boundary
+//       )
+
+// BEWARE THE not EXISTS TRAP
+// If it doesn't exist, you can't look for the Last one!
+
+// define OneYearQuantity:
+//   // Quantity { value: 1 as decimal, unit: 'year' }
+// 	ToQuantity('scheduledTiming \'years\'')
+
+// define blah:
+// Quantity { value:1, unit: 'year' }
+
+define LatestAcceptablePSATestDate:
+</a:s>
+               <a:s r="298">
+                  <a:s r="301">
+                     <a:s>Today()</a:s>
+                  </a:s>
+                  <a:s> - </a:s>
+                  <a:s r="302">
+                     <a:s>FollowUpDuration</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="298" locator="74:1-74:26" xsi:type="Subtract">
+            <operand localId="301" locator="74:1-74:7" xsi:type="Today"/>
+            <operand localId="303" name="ToQuantity" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+               <operand localId="302" locator="74:11-74:26" name="FollowUpDuration" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="305" locator="76:1-77:31" name="MostRecentPSATestDate" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="305">
+               <a:s>define MostRecentPSATestDate:
+	</a:s>
+               <a:s r="311">
+                  <a:s r="310">
+                     <a:s r="309">
+                        <a:s>Last(</a:s>
+                        <a:s r="306">
+                           <a:s>PSATests</a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                     <a:s>.</a:s>
+                     <a:s r="310">
+                        <a:s>effective</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>.</a:s>
+                  <a:s r="311">
+                     <a:s>value</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="311" locator="77:2-77:31" path="value" xsi:type="Property">
+            <source localId="310" locator="77:2-77:25" path="effective" xsi:type="Property">
+               <source localId="309" locator="77:2-77:15" xsi:type="Last">
+                  <source localId="306" locator="77:7-77:14" name="PSATests" xsi:type="ExpressionRef"/>
+               </source>
+            </source>
+         </expression>
+      </def>
+      <def localId="313" locator="79:1-81:81" name="RecentPSA" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="313">
+               <a:s>define RecentPSA:
+  </a:s>
+               <a:s r="314">
+                  <a:s r="315">
+                     <a:s>exists </a:s>
+                     <a:s r="316">
+                        <a:s>( </a:s>
+                        <a:s r="316">
+                           <a:s>PSATests</a:s>
+                        </a:s>
+                        <a:s> )</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s>
+  and </a:s>
+                  <a:s r="339">
+                     <a:s r="317">
+                        <a:s>date from </a:s>
+                        <a:s r="322">
+                           <a:s r="321">
+                              <a:s>Last(</a:s>
+                              <a:s r="318">
+                                 <a:s>PSATests</a:s>
+                              </a:s>
+                              <a:s>)</a:s>
+                           </a:s>
+                           <a:s>.</a:s>
+                           <a:s r="322">
+                              <a:s>effective</a:s>
+                           </a:s>
+                        </a:s>
+                     </a:s>
+                     <a:s r="339"> on or after </a:s>
+                     <a:s r="333">
+                        <a:s>(</a:s>
+                        <a:s r="333">
+                           <a:s r="336">
+                              <a:s>Today()</a:s>
+                           </a:s>
+                           <a:s> - </a:s>
+                           <a:s r="337">
+                              <a:s>FollowUpDuration</a:s>
+                           </a:s>
+                        </a:s>
+                        <a:s>)</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="314" locator="80:3-81:81" xsi:type="And">
+            <operand localId="315" locator="80:3-80:21" xsi:type="Exists">
+               <operand localId="316" locator="80:10-80:21" name="PSATests" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="339" locator="81:7-81:81" xsi:type="SameOrAfter">
+               <operand localId="317" locator="81:7-81:40" xsi:type="DateFrom">
+                  <operand localId="325" xsi:type="Case">
+                     <caseItem localId="326">
+                        <when localId="327" isType="fhir:dateTime" xsi:type="Is">
+                           <operand localId="322" locator="81:17-81:40" path="effective" xsi:type="Property">
+                              <source localId="321" locator="81:17-81:30" xsi:type="Last">
+                                 <source localId="318" locator="81:22-81:29" name="PSATests" xsi:type="ExpressionRef"/>
+                              </source>
+                           </operand>
+                        </when>
+                        <then localId="324" name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="323" asType="fhir:dateTime" xsi:type="As">
+                              <operand localId="322" locator="81:17-81:40" path="effective" xsi:type="Property">
+                                 <source localId="321" locator="81:17-81:30" xsi:type="Last">
+                                    <source localId="318" locator="81:22-81:29" name="PSATests" xsi:type="ExpressionRef"/>
+                                 </source>
+                              </operand>
+                           </operand>
+                        </then>
+                     </caseItem>
+                     <caseItem localId="328">
+                        <when localId="329" isType="fhir:instant" xsi:type="Is">
+                           <operand localId="322" locator="81:17-81:40" path="effective" xsi:type="Property">
+                              <source localId="321" locator="81:17-81:30" xsi:type="Last">
+                                 <source localId="318" locator="81:22-81:29" name="PSATests" xsi:type="ExpressionRef"/>
+                              </source>
+                           </operand>
+                        </when>
+                        <then localId="331" name="ToDateTime" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                           <operand localId="330" asType="fhir:instant" xsi:type="As">
+                              <operand localId="322" locator="81:17-81:40" path="effective" xsi:type="Property">
+                                 <source localId="321" locator="81:17-81:30" xsi:type="Last">
+                                    <source localId="318" locator="81:22-81:29" name="PSATests" xsi:type="ExpressionRef"/>
+                                 </source>
+                              </operand>
+                           </operand>
+                        </then>
+                     </caseItem>
+                     <else localId="332" xsi:type="Null"/>
+                  </operand>
+               </operand>
+               <operand localId="333" locator="81:54-81:81" xsi:type="Subtract">
+                  <operand localId="336" locator="81:55-81:61" xsi:type="Today"/>
+                  <operand localId="338" name="ToQuantity" libraryName="FHIRHelpers" xsi:type="FunctionRef">
+                     <operand localId="337" locator="81:65-81:80" name="FollowUpDuration" xsi:type="ExpressionRef"/>
+                  </operand>
+               </operand>
+            </operand>
+         </expression>
+      </def>
+      <def localId="341" locator="83:1-84:39" name="Tickle" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="341">
+               <a:s>define &quot;Tickle&quot;:
+  </a:s>
+               <a:s r="342">
+                  <a:s r="343">
+                     <a:s r="344">
+                        <a:s>OlderThan40</a:s>
+                     </a:s>
+                     <a:s> and </a:s>
+                     <a:s r="345">
+                        <a:s>Man</a:s>
+                     </a:s>
+                  </a:s>
+                  <a:s> and </a:s>
+                  <a:s r="346">
+                     <a:s>not </a:s>
+                     <a:s r="347">
+                        <a:s>RecentPSA</a:s>
+                     </a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="342" locator="84:3-84:39" xsi:type="And">
+            <operand localId="343" locator="84:3-84:21" xsi:type="And">
+               <operand localId="344" locator="84:3-84:13" name="OlderThan40" xsi:type="ExpressionRef"/>
+               <operand localId="345" locator="84:19-84:21" name="Man" xsi:type="ExpressionRef"/>
+            </operand>
+            <operand localId="346" locator="84:27-84:39" xsi:type="Not">
+               <operand localId="347" locator="84:31-84:39" name="RecentPSA" xsi:type="ExpressionRef"/>
+            </operand>
+         </expression>
+      </def>
+      <def localId="349" locator="87:1-89:11" name="Reminder" context="Patient" accessLevel="Public">
+         <annotation xsi:type="a:Annotation">
+            <a:s r="349">
+               <a:s>// and not PatientOptsOut
+
+define &quot;Reminder&quot;:
+  </a:s>
+               <a:s r="350">
+                  <a:s>if </a:s>
+                  <a:s r="351">
+                     <a:s>&quot;Tickle&quot;</a:s>
+                  </a:s>
+                  <a:s> then </a:s>
+                  <a:s r="352">
+                     <a:s>'Discuss PSA'</a:s>
+                  </a:s>
+                  <a:s> 
+    else </a:s>
+                  <a:s r="353">
+                     <a:s>''</a:s>
+                  </a:s>
+               </a:s>
+            </a:s>
+         </annotation>
+         <expression localId="350" locator="88:3-89:11" xsi:type="If">
+            <condition localId="351" locator="88:6-88:13" name="Tickle" xsi:type="ExpressionRef"/>
+            <then localId="352" locator="88:20-88:32" valueType="t:String" value="Discuss PSA" xsi:type="Literal"/>
+            <else localId="353" locator="89:10-89:11" valueType="t:String" value="" xsi:type="Literal"/>
+         </expression>
+      </def>
+   </statements>
+</library>

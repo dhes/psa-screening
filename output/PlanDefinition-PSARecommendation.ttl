@@ -1,0 +1,91 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation> a fhir:PlanDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PSARecommendation"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: PlanDefinition PSARecommendation</b></p><a name=\"PSARecommendation\"> </a><a name=\"hcPSARecommendation\"> </a><a name=\"PSARecommendation-en-US\"> </a><p><b>org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability</b>: shareable</p><p><b>org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability</b>: computable</p><p><b>org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability</b>: executable</p><p><b>org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability</b>: publishable</p><p><b>url</b>: <a href=\"PlanDefinition-PSARecommendation.html\">PlanDefinition PSA Screening Recommendation</a></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: PSARecommendation</p><p><b>title</b>: PSA Screening Recommendation</p><p><b>type</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/plan-definition-type eca-rule}\">ECA Rule</span></p><p><b>status</b>: Active</p><p><b>experimental</b>: true</p><p><b>date</b>: 2024-08-29</p><p><b>publisher</b>: Dan Heslinga</p><p><b>contact</b>: <a href=\"mailto:drdan@heslingamd.com\">drdan@heslingamd.com</a></p><p><b>description</b>: </p><div><p>PSA Screening Recommendation</p>\n</div><p><b>jurisdiction</b>: <span title=\"Codes:{urn:iso:std:iso:316 US}\">US</span></p><p><b>copyright</b>: </p><div><p>2024+ Dan Heslinga, all rights reserved Creative Commons License</p>\n</div><p><b>library</b>: <a href=\"Library-PSARecommendation.html\">PSARecommendation</a></p><blockquote><p><b>action</b></p><p><b>title</b>: Evaluate PSA Screening</p><p><b>description</b>: Determine whether PSA screening should be ordered.</p><h3>Triggers</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Name</b></td></tr><tr><td style=\"display: none\">*</td><td>Named Event</td><td>patient-view</td></tr></table><blockquote><p><b>condition</b></p><p><b>kind</b>: Applicability</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Tickle</td></tr></table></blockquote><blockquote><p><b>dynamicValue</b></p><p><b>path</b>: action.description</p><h3>Expressions</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Language</b></td><td><b>Expression</b></td></tr><tr><td style=\"display: none\">*</td><td>text/cql-identifier</td><td>Reminder</td></tr></table></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "shareable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "computable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "executable" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "publishable" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "PSARecommendation"] ; # 
+  fhir:title [ fhir:v "PSA Screening Recommendation"] ; # 
+  fhir:type [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/plan-definition-type"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "eca-rule" ] ;
+       fhir:display [ fhir:v "ECA Rule" ]
+     ] )
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-29"^^xsd:date] ; # 
+  fhir:publisher [ fhir:v "Dan Heslinga"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "drdan@heslingamd.com" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "PSA Screening Recommendation"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:316"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "2024+ Dan Heslinga, all rights reserved Creative Commons License"] ; # 
+  fhir:library ( [
+     fhir:v "https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"^^xsd:anyURI ;
+     fhir:link <https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation>
+  ] ) ; # 
+  fhir:action ( [
+     fhir:title [ fhir:v "Evaluate PSA Screening" ] ;
+     fhir:description [ fhir:v "Determine whether PSA screening should be ordered." ] ;
+     fhir:trigger ( [
+       fhir:type [ fhir:v "named-event" ] ;
+       fhir:name [ fhir:v "patient-view" ]
+     ] ) ;
+     fhir:condition ( [
+       fhir:kind [ fhir:v "applicability" ] ;
+       fhir:expression [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Tickle" ]
+       ]
+     ] ) ;
+     fhir:dynamicValue ( [
+       fhir:path [ fhir:v "action.description" ] ;
+       fhir:expression [
+         fhir:language [ fhir:v "text/cql-identifier" ] ;
+         fhir:expression [ fhir:v "Reminder" ]
+       ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

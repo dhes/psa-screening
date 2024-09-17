@@ -3,10 +3,10 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="dhes.cds.prostate-cancer-screening"/>
   <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name="dhes.cds.prostate-cancer-screening"> </a><a name="hcdhes.cds.prostate-cancer-screening"> </a><a name="dhes.cds.prostate-cancer-screening-en-US"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.github.io/psa-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name="dhes.cds.prostate-cancer-screening"> </a><a name="hcdhes.cds.prostate-cancer-screening"> </a><a name="dhes.cds.prostate-cancer-screening-en-US"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.cds.prostate-cancer-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>
 </div></div>
   </text>
-  <url value="https://dhes.github.io/psa-screening"/>
+  <url value="https://dhes.cds.prostate-cancer-screening"/>
   <version value="0.1.0"/>
   <name value="ProstateCancerScreening"/>
   <title value="Screening for prostate cancer"/>
@@ -483,6 +483,28 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Library"/>
+      </extension>
+      <reference>
+        <reference value="Library/PSARecommendation"/>
+      </reference>
+      <name value="PSARecommendation"/>
+      <description value="PSA Recommendation CQL Library"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PlanDefinition"/>
+      </extension>
+      <reference>
+        <reference value="PlanDefinition/PSARecommendation"/>
+      </reference>
+      <name value="PSARecommendation"/>
+      <description value="Plan Definition for PSA Screening"/>
+      <exampleBoolean value="false"/>
+    </resource>
     <page>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
         <valueCode value="informative"/>

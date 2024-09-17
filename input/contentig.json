@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "dhes.cds.prostate-cancer-screening",
-  "url": "https://dhes.github.io/psa-screening",
+  "url": "https://dhes.cds.prostate-cancer-screening",
   "version": "0.1.0",
   "name": "ProstateCancerScreening",
   "title": "Screening for prostate cancer",
@@ -126,6 +126,25 @@
           "generation": "html"
         }
       ]
-    }
+    },
+    "resource": [
+      {
+        "reference": {
+          "reference": "Library/PSARecommendation"
+        },
+        "name": "PSARecommendation",
+        "description": "PSA Recommendation CQL Library",
+        "exampleBoolean": false,
+        "url": "http://dhes.github.io/psa-screening/Library/PSARecommendation"
+      },
+      {
+        "reference": {
+          "reference": "PlanDefinition/PSARecommendation"
+        },
+        "name": "PSARecommendation",
+        "description": "Plan Definition for PSA Screening",
+        "exampleBoolean": false
+      }
+    ]
   }
 }

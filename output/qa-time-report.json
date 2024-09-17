@@ -1,50 +1,142 @@
 {
-  "date" : "Mon, 16 Sep, 2024 13:04:16 -1000",
+  "date" : "Mon, 16 Sep, 2024 14:20:39 -1000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/input/contentig.json",
-      "size" : 3836,
+      "size" : 4412,
       "processes" : [
         {
           "activity" : "load",
-          "start" : 13,
-          "length" : 29
+          "start" : 12,
+          "length" : 19
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 13,
-          "length" : 5
+          "start" : 12,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 13,
-          "length" : 90
+          "start" : 12,
+          "length" : 69
         },
         {
           "activity" : "validate",
           "start" : 13,
-          "length" : 1197
+          "length" : 1085
         },
         {
           "activity" : "generate1",
-          "start" : 15,
-          "length" : 60
+          "start" : 17,
+          "length" : 58
         },
         {
           "activity" : "generate2",
-          "start" : 17,
-          "length" : 41
+          "start" : 19,
+          "length" : 38
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 23,
-          "length" : 2
+          "start" : 25,
+          "length" : 3
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 26,
-          "length" : 2
+          "start" : 27,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/resources/library/PSARecommendation.json",
+      "size" : 122973,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 12,
+          "length" : 58
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 12,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 12,
+          "length" : 23
+        },
+        {
+          "activity" : "validate",
+          "start" : 14,
+          "length" : 2403
+        },
+        {
+          "activity" : "generate1",
+          "start" : 17,
+          "length" : 278
+        },
+        {
+          "activity" : "generate2",
+          "start" : 19,
+          "length" : 32
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 25,
+          "length" : 12
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 27,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "/input/resources/plandefinition/PSARecommendation.json",
+      "size" : 1894,
+      "processes" : [
+        {
+          "activity" : "load-configure",
+          "start" : 12,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 12,
+          "length" : 26
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 12,
+          "length" : 179
+        },
+        {
+          "activity" : "validate",
+          "start" : 13,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 16,
+          "length" : 350
+        },
+        {
+          "activity" : "generate1",
+          "start" : 17,
+          "length" : 19
+        },
+        {
+          "activity" : "generate2",
+          "start" : 19,
+          "length" : 12
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 25,
+          "length" : 1
         }
       ]
     }

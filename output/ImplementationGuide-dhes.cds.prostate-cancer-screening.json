@@ -3,9 +3,9 @@
   "id" : "dhes.cds.prostate-cancer-screening",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name=\"dhes.cds.prostate-cancer-screening\"> </a><a name=\"hcdhes.cds.prostate-cancer-screening\"> </a><a name=\"dhes.cds.prostate-cancer-screening-en-US\"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.github.io/psa-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>\n</div></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide dhes.cds.prostate-cancer-screening</b></p><a name=\"dhes.cds.prostate-cancer-screening\"> </a><a name=\"hcdhes.cds.prostate-cancer-screening\"> </a><a name=\"dhes.cds.prostate-cancer-screening-en-US\"> </a><h2>ProstateCancerScreening</h2><p>The official URL for this implementation guide is: </p><pre>https://dhes.cds.prostate-cancer-screening</pre><div><p>Periodic screening for prostate cancer with PSA testing</p>\n</div></div>"
   },
-  "url" : "https://dhes.github.io/psa-screening",
+  "url" : "https://dhes.cds.prostate-cancer-screening",
   "version" : "0.1.0",
   "name" : "ProstateCancerScreening",
   "title" : "Screening for prostate cancer",
@@ -648,6 +648,30 @@
         "valueString" : "true"
       }],
       "url" : "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
+    }],
+    "resource" : [{
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Library"
+      }],
+      "reference" : {
+        "reference" : "Library/PSARecommendation"
+      },
+      "name" : "PSARecommendation",
+      "description" : "PSA Recommendation CQL Library",
+      "exampleBoolean" : false
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "PlanDefinition"
+      }],
+      "reference" : {
+        "reference" : "PlanDefinition/PSARecommendation"
+      },
+      "name" : "PSARecommendation",
+      "description" : "Plan Definition for PSA Screening",
+      "exampleBoolean" : false
     }],
     "page" : {
       "extension" : [{
