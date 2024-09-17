@@ -1,12 +1,16 @@
 {
-  "name": "dhes.cds.prostate-cancer-screening",
-  "version": "0.1.0",
-  "type": "IG",
-  "license": "CC0-1.0",
-  "canonical": " https://dhes.cds.prostate-cancer-screening",
+  "packageId": "hl7.fhir.us.dhes.prostate-cancer-screening",
   "title": "Prostate Cancer Screening",
-  "description": "Screening for Prostate Cancer",
-  "dependencies": { "hl7.fhir.r4.core": "4.0.x" },
-  "author": "Dan Heslinga",
-  "jurisdiction": "urn:iso:std:iso:3166#US"
+  "canonical": "https://dhes.cds.prostate-cancer-screening",
+  "introduction": "This implementation guide provides clinical decision support for prostate cancer screening.",
+  "category": "Quality / CDS",
+  "language": "en",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Initial version",
+      "status": "ci-build",
+      "path": "https://dhes.cds.prostate-cancer-screening/0.1.0"
+    }
+  ]
 }
