@@ -659,7 +659,7 @@
       },
       "name" : "PSARecommendation",
       "description" : "PSA Recommendation CQL Library",
-      "exampleBoolean" : false
+      "exampleBoolean" : true
     },
     {
       "extension" : [{
@@ -671,7 +671,19 @@
       },
       "name" : "PSARecommendation",
       "description" : "Plan Definition for PSA Screening",
-      "exampleBoolean" : false
+      "exampleBoolean" : true
+    },
+    {
+      "extension" : [{
+        "url" : "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+        "valueString" : "Patient"
+      }],
+      "reference" : {
+        "reference" : "Patient/psa-female"
+      },
+      "name" : "psa-female",
+      "description" : "no screening due to gender",
+      "exampleBoolean" : true
     }],
     "page" : {
       "extension" : [{

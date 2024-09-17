@@ -1,50 +1,50 @@
 {
-  "date" : "Mon, 16 Sep, 2024 14:20:39 -1000",
+  "date" : "Tue, 17 Sep, 2024 04:38:50 -1000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
       "name" : "/input/contentig.json",
-      "size" : 4412,
+      "size" : 4539,
       "processes" : [
         {
           "activity" : "load",
           "start" : 12,
-          "length" : 19
+          "length" : 26
         },
         {
           "activity" : "checkR4R4B",
           "start" : 12,
-          "length" : 2
+          "length" : 9
         },
         {
           "activity" : "generateNarratives",
           "start" : 12,
-          "length" : 69
+          "length" : 79
         },
         {
           "activity" : "validate",
           "start" : 13,
-          "length" : 1085
+          "length" : 1159
         },
         {
           "activity" : "generate1",
-          "start" : 17,
-          "length" : 58
+          "start" : 14,
+          "length" : 64
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 38
+          "start" : 17,
+          "length" : 39
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 25,
-          "length" : 3
+          "start" : 23,
+          "length" : 4
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 27,
-          "length" : 1
+          "start" : 26,
+          "length" : 2
         }
       ]
     },
@@ -55,7 +55,7 @@
         {
           "activity" : "load",
           "start" : 12,
-          "length" : 58
+          "length" : 72
         },
         {
           "activity" : "checkR4R4B",
@@ -65,32 +65,27 @@
         {
           "activity" : "generateNarratives",
           "start" : 12,
-          "length" : 23
+          "length" : 67
         },
         {
           "activity" : "validate",
           "start" : 14,
-          "length" : 2403
+          "length" : 93
         },
         {
           "activity" : "generate1",
-          "start" : 17,
-          "length" : 278
+          "start" : 14,
+          "length" : 277
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 32
+          "start" : 17,
+          "length" : 35
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 25,
-          "length" : 12
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 27,
-          "length" : 1
+          "start" : 23,
+          "length" : 13
         }
       ]
     },
@@ -106,37 +101,53 @@
         {
           "activity" : "load",
           "start" : 12,
-          "length" : 26
+          "length" : 25
         },
         {
           "activity" : "generateNarratives",
-          "start" : 12,
-          "length" : 179
-        },
-        {
-          "activity" : "validate",
           "start" : 13,
-          "length" : 1
+          "length" : 200
         },
         {
           "activity" : "validate",
-          "start" : 16,
-          "length" : 350
+          "start" : 14,
+          "length" : 54
         },
         {
           "activity" : "generate1",
-          "start" : 17,
-          "length" : 19
+          "start" : 14,
+          "length" : 18
         },
         {
           "activity" : "generate2",
-          "start" : 19,
-          "length" : 12
+          "start" : 17,
+          "length" : 10
+        }
+      ]
+    },
+    {
+      "name" : "/input/examples/patient/psa-female.json",
+      "size" : 368,
+      "processes" : [
+        {
+          "activity" : "generateNarratives",
+          "start" : 13,
+          "length" : 2
         },
         {
-          "activity" : "generateValidationPack",
-          "start" : 25,
-          "length" : 1
+          "activity" : "validate",
+          "start" : 14,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 14,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 17,
+          "length" : 11
         }
       ]
     }

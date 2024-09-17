@@ -564,7 +564,7 @@
        ] ;
        fhir:name [ fhir:v "PSARecommendation" ] ;
        fhir:description [ fhir:v "PSA Recommendation CQL Library" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] [
        fhir:extension ( [
          fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
@@ -576,7 +576,19 @@
        ] ;
        fhir:name [ fhir:v "PSARecommendation" ] ;
        fhir:description [ fhir:v "Plan Definition for PSA Screening" ] ;
-       fhir:example [ fhir:v "false"^^xsd:boolean ]
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <https://dhes.cds.prostate-cancer-screening/Patient/psa-female> ;
+         fhir:reference [ fhir:v "Patient/psa-female" ]
+       ] ;
+       fhir:name [ fhir:v "psa-female" ] ;
+       fhir:description [ fhir:v "no screening due to gender" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
      ] ) ;
      fhir:page [
        fhir:extension ( [

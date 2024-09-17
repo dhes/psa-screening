@@ -29,6 +29,9 @@
     "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
       "ImplementationGuide.definition.resource"
     ],
+    "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex": [
+      "Patient"
+    ],
     "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem": [
       "Library"
     ],

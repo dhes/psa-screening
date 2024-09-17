@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <title>DHES.CDS.PROSTATE-CANCER-SCREENING\PSARecommendation - FHIR v4.0.1</title>
+    <title>DHES.CDS.PROSTATE-CANCER-SCREENING\psa-female - TTL Representation - FHIR v4.0.1</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -39,8 +39,8 @@
 
 	  <script src="assets/js/prism.js"></script>
 
-    <style type="text/css">h2{--heading-prefix:"4.1"}
-    h3,h4,h5,h6{--heading-prefix:"4.1"}</style>
+    <style type="text/css">h2{--heading-prefix:"4.3"}
+    h3,h4,h5,h6{--heading-prefix:"4.3"}</style>
     <div id="segment-header" class="segment">    <!-- segment-header -->
       <div class="container">    <!-- container -->
         <script src="cql.js" type="text/javascript"> </script>
@@ -127,7 +127,7 @@
     <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
       <div class="container">    <!-- container -->
         <ul class="breadcrumb">
-          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>PSARecommendation</b></li>
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>psa-female</b></li>
 
         </ul>
       </div>    <!-- /container -->
@@ -139,9 +139,9 @@
         <div class="row">
           <div class="inner-wrapper">
 
-<div class="col-12">
-    <!-- ReleaseHeader --><p id="publish-box">Screening for prostate cancer - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://dhes.cds.prostate-cancer-screening/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
-  
+<div style="counter-reset: section 9" class="col-12">
+  <!-- ReleaseHeader --><p id="publish-box">Screening for prostate cancer - Local Development build (v0.1.0) built by the FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. See the <a href="https://dhes.cds.prostate-cancer-screening/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+
 
 
 
@@ -152,29 +152,29 @@
 
 <ul class="nav nav-tabs">
 
-  <li class="active">
-    <a href="#">Narrative Content</a>
+  <li>
+    <a href="Patient-psa-female.html">Narrative Content</a>
   </li>
 
 
 
   
     <li>
-      <a href="Library-PSARecommendation.xml.html">XML</a>
+      <a href="Patient-psa-female.xml.html">XML</a>
     </li>
   
 
 
   
     <li>
-      <a href="Library-PSARecommendation.json.html">JSON</a>
+      <a href="Patient-psa-female.json.html">JSON</a>
     </li>
   
 
 
   
-    <li>
-      <a href="Library-PSARecommendation.ttl.html">TTL</a>
+    <li class="active">
+      <a href="#">TTL</a>
     </li>
   
 
@@ -182,164 +182,68 @@
 
 </ul>
 
-  <a name="root"> </a>
 
-  <h2 id="root">Library: PSARecommendation
+<a name="root"> </a>
 
-  </h2>
 
-  <table class="colsd">
-
-    <tr>
-      <td colspan="4"><i>Official URL</i>: <span class="copy-text">https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation<button data-clipboard-text="https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation" title="Click to copy URL" class="btn-copy"></button></span>
-      </td>
-      <td><i>Version</i>:
-      <span class="copy-text">0.1.0<button data-clipboard-text="https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation|0.1.0" title="Click to copy versioned URL" class="btn-copy"></button></span>
-      </td>
-    </tr>
-
+<h2 id="root">: psa-female - TTL Representation</h2>
+  <table class="colsi">
     <tr>
 
-
-
-
-
-
-
-      <td colspan="4">
+      <td colspan="2">
         
-          Draft
           
-            as of 2024-09-17
           
         
       </td>
 
-
-
-      <td><i>Computable Name</i>: <span style="font-family: monospace;">PSARecommendation</span></td>
     </tr>
-
-
-
-
-    <tr>
-      <td colspan="5"><p><em>Copyright/Legal</em>: 2024+ Dan Heslinga, all rights reserved Creative Commons License</p>
-</td>
-    </tr>
-
   </table>
 
 
+<p><a href="Patient-psa-female.ttl" no-download="true">Raw ttl</a> | <a download="null" href="Patient-psa-female.ttl">Download</a></p>
 
     <!-- insert intro if present -->
   
 
 
 
-  <!-- <p>
-  Formats: <a href="Library-PSARecommendation.xml.html">XML</a>, <a href="Library-PSARecommendation.json.html">JSON</a>, <a href="Library-PSARecommendation.ttl.html">Turtle</a>
-  </p> -->
+  <pre style="white-space: pre; overflow: hidden" class="rdf"><code class="language-turtle">
+@prefix fhir: &lt;http://hl7.org/fhir/&gt; .
+@prefix owl: &lt;http://www.w3.org/2002/07/owl#&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 
-  
+# - resource -------------------------------------------------------------------
+
+ a fhir:Patient ;
+  <a href="http://hl7.org/fhir/R4/rdf.html#tree-root">fhir:nodeRole</a> fhir:treeRoot ;
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.id">fhir:id</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "psa-female"] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.text">fhir:text</a> [
+<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">fhir:status</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "generated" ] ;
+fhir:div "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;p class=\"res-header-id\"&gt;&lt;b&gt;Generated Narrative: Patient psa-female&lt;/b&gt;&lt;/p&gt;&lt;a name=\"psa-female\"&gt; &lt;/a&gt;&lt;a name=\"hcpsa-female\"&gt; &lt;/a&gt;&lt;a name=\"psa-female-en-US\"&gt; &lt;/a&gt;&lt;p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"&gt;Eve Everywoman (official) Female, DoB: 1964-05-31&lt;/p&gt;&lt;hr/&gt;&lt;table class=\"grid\"&gt;&lt;tr&gt;&lt;td style=\"background-color: #f3f5da\" title=\"Record is active\"&gt;Active:&lt;/td&gt;&lt;td colspan=\"3\"&gt;true&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"
+  ] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.extension">fhir:extension</a> ( [
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">fhir:url</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#uri">fhir:v</a> "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex"^^xsd:anyURI ] ;
+<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">fhir:value</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "F" ]
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.active">fhir:active</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#boolean">fhir:v</a> "true"^^xsd:boolean] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.name">fhir:name</a> ( [
+<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.use">fhir:use</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "official" ] ;
+<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">fhir:family</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Everywoman" ] ;
+    ( <a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">fhir:given</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#string">fhir:v</a> "Eve" ] )
+  ] ) ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">fhir:gender</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#code">fhir:v</a> "female"] ; # 
+  <a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">fhir:birthDate</a> [ <a href="http://hl7.org/fhir/R4/datatypes.html#date">fhir:v</a> "1964-05-31"^^xsd:date] . # 
+
+</code></pre>
 
 
-  <div><p class="res-header-id"><b>Generated Narrative: Library PSARecommendation</b></p><a name="PSARecommendation"> </a><a name="hcPSARecommendation"> </a><a name="PSARecommendation-en-US"> </a><h2>Related Artifacts</h2><table class="grid"><tr><td>Depends On</td><td>FHIR model information</td><td><code>http://fhir.org/guides/cqf/common/Library/FHIR-ModelInfo|4.0.1</code></td></tr><tr><td>Depends On</td><td>Library FHIRHelpers</td><td><code>https://dhes.cds.prostate-cancer-screening/Library/FHIRHelpers|4.0.1</code></td></tr><tr><td>Depends On</td><td>Code system LOINC</td><td><a href="http://terminology.hl7.org/6.0.2/CodeSystem-v3-loinc.html">Logical Observation Identifiers, Names and Codes (LOINC)</a></td></tr><tr><td>Depends On</td><td>Value set PSALOINCValueSet</td><td><code>http://example.org/fhir/ValueSet/psa-loinc-valueset</code></td></tr></table><h2>Parameters</h2><table class="grid"><tr><td>Patient</td><td>out</td><td>0</td><td>1</td><td>Patient</td></tr><tr><td>Age</td><td>out</td><td>0</td><td>1</td><td>integer</td></tr><tr><td>Man</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>OlderThan40</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>PSATests</td><td>out</td><td>0</td><td>*</td><td>Observation</td></tr><tr><td>FollowUpObservation</td><td>out</td><td>0</td><td>*</td><td>Observation</td></tr><tr><td>FollowUpDuration</td><td>out</td><td>0</td><td>1</td><td>Quantity</td></tr><tr><td>LatestAcceptablePSATestDate</td><td>out</td><td>0</td><td>1</td><td>date</td></tr><tr><td>MostRecentPSATestDate</td><td>out</td><td>0</td><td>1</td><td>dateTime</td></tr><tr><td>RecentPSA</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Tickle</td><td>out</td><td>0</td><td>1</td><td>boolean</td></tr><tr><td>Reminder</td><td>out</td><td>0</td><td>1</td><td>string</td></tr></table><h2>Data Requirements</h2><table class="grid"><tr><td colspan="2"><b>Type</b>: <a href="http://hl7.org/fhir/R4/patient.html">Patient</a> (<a href="http://hl7.org/fhir/R4/patient.html">Patient</a>)</td></tr></table><table class="grid"><tr><td colspan="2"><b>Type</b>: <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> (<a href="http://hl7.org/fhir/R4/observation.html">Observation</a>)</td></tr><tr style="background-color: #efefef"><td>Filter</td><td>Value</td></tr><tr><td>code</td><td>One of these codes: <a href="https://loinc.org/21979-0">Logical Observation Identifiers, Names and Codes (LOINC)</a> 21979-0: Planned/next follow-up</td></tr></table><table class="grid"><tr><td colspan="2"><b>Type</b>: <a href="http://hl7.org/fhir/R4/observation.html">Observation</a> (<a href="http://hl7.org/fhir/R4/observation.html">Observation</a>)</td></tr><tr style="background-color: #efefef"><td>Filter</td><td>Value</td></tr><tr><td>code</td><td>In ValueSet <code>http://example.org/fhir/ValueSet/psa-loinc-valueset</code></td></tr></table><h2>Contents</h2><p><code>text/cql</code></p><pre><code class="language-sql">library PSARecommendation version '1.0.1'
-
-using FHIR version '4.0.1'
-
-include FHIRHelpers version '4.0.1' called FHIRHelpers
-
-valueset PSALOINCValueSet: 'http://example.org/fhir/ValueSet/psa-loinc-valueset'
-
-codesystem "LOINC": 'http://loinc.org'
-
-code "Birthdate": '21112-8' from "LOINC" display 'Birth date'
-code "PSA Follow-up": '21979-0' from "LOINC" display 'Planned/next follow-up'
-
-// parameter "Reference Date" DateTime default Now()
-
-context Patient
-
-// consider
-//  first degree relative with prostate cancer
-//    onset before age 65
-//  African American
-
-define Age:
-  AgeInYearsAt(Now())
-
-define Man:
-  Patient.gender='male'
-
-define OlderThan40:
-  Age &gt;= 40
-    // and Age &lt;= 75 // follow patient preference consider prior test results and functional status
-    // this is the age to assess risk and discuss with patient
-
-define PSATests:
-  [Observation: code in PSALOINCValueSet] O
-    where O.status in { 'final', 'amended', 'corrected' }
-
-// define PSACarePlan:
-// 	[CarePlan] CP 
-// 		where exists (CP.category Categ where Categ.text='Prostate cancer screening') // apparently not case sensitive
-// 		and CP.status ~ 'active'
-// // this assumes only one care plan with this category
-
-// define scheduledTiming:
-// 	First(PSACarePlan.activity.detail.scheduled.repeat.period)
-
-define FollowUpObservation:
-	[Observation: "PSA Follow-up"] O
-		where O.status in { 'final', 'amended', 'corrected' }
-
-define FollowUpDuration:
-	First(FollowUpObservation.value) as Quantity
-
-// define LastPSATestEffective:
-// 	Last(PSATests).effective.value
-
-// define "NoRecentPSA":
-//   not Exists("PSATests")
-//       or ( Exists("PSATests")
-//           and Last("PSATests").effective on or before ( Now() - 2 year ) // as an outer boundary
-//       )
-
-// BEWARE THE not EXISTS TRAP
-// If it doesn't exist, you can't look for the Last one!
-
-// define OneYearQuantity:
-//   // Quantity { value: 1 as decimal, unit: 'year' }
-// 	ToQuantity('scheduledTiming \'years\'')
-
-// define blah:
-// Quantity { value:1, unit: 'year' }
-
-define LatestAcceptablePSATestDate:
-Today() - FollowUpDuration
-
-define MostRecentPSATestDate:
-	Last(PSATests).effective.value
-
-define RecentPSA:
-  exists ( PSATests )
-  and date from Last(PSATests).effective on or after (Today() - FollowUpDuration)
-
-define "Tickle":
-  OlderThan40 and Man and not RecentPSA
-		// and not PatientOptsOut
-
-define "Reminder":
-  if "Tickle" then 'Discuss PSA' 
-    else ''</code></pre><p><code>Content not shown - (</code><code>application/elm+xml</code>, size = 30Kb )</p><p><code>Content not shown - (</code><code>application/elm+json</code>, size = 54Kb )</p></div>
 
     <!-- insert notes if present -->
   
 
 
-
-  
 
 </div>
         </div>    <!-- /inner-wrapper -->
@@ -362,7 +266,7 @@ define "Reminder":
     <div class="container">    <!-- container -->
 
       <div class="inner-wrapper">
-        <p><a name="l663">​</a>
+        <p><a name="l442">​</a>
           IG &copy;  <a style="color:var(--footer-hyperlink-text-color)" href="drdan@heslingamd.com">Dan Heslinga</a>.  Package dhes.cds.prostate-cancer-screening#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Sep 17, 2024 04:38-1000">2024-09-17</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">

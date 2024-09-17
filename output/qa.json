@@ -7,14 +7,14 @@
   "status" : "draft",
   "package-id" : "dhes.cds.prostate-cancer-screening",
   "ig-ver" : "0.1.0",
-  "date" : "Mon, 16 Sep, 2024 14:20:39 -1000",
-  "dateISO8601" : "2024-09-16T14:20:39-10:00",
-  "errs" : 17,
+  "date" : "Tue, 17 Sep, 2024 04:38:50 -1000",
+  "dateISO8601" : "2024-09-17T04:38:50-10:00",
+  "errs" : 18,
   "warnings" : 12,
-  "hints" : 0,
+  "hints" : 2,
   "suppressed-hints" : 0,
   "suppressed-warnings" : 0,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 834568192
+  "maxMemory" : 1248755712
 }

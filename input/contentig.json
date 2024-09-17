@@ -134,8 +134,7 @@
         },
         "name": "PSARecommendation",
         "description": "PSA Recommendation CQL Library",
-        "exampleBoolean": false,
-        "url": "http://dhes.github.io/psa-screening/Library/PSARecommendation"
+        "exampleBoolean": true
       },
       {
         "reference": {
@@ -143,7 +142,15 @@
         },
         "name": "PSARecommendation",
         "description": "Plan Definition for PSA Screening",
-        "exampleBoolean": false
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/psa-female"
+        },
+        "name": "psa-female",
+        "description": "no screening due to gender",
+        "exampleBoolean": true
       }
     ]
   }

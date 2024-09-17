@@ -492,7 +492,7 @@
       </reference>
       <name value="PSARecommendation"/>
       <description value="PSA Recommendation CQL Library"/>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="true"/>
     </resource>
     <resource>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
@@ -503,7 +503,18 @@
       </reference>
       <name value="PSARecommendation"/>
       <description value="Plan Definition for PSA Screening"/>
-      <exampleBoolean value="false"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/psa-female"/>
+      </reference>
+      <name value="psa-female"/>
+      <description value="no screening due to gender"/>
+      <exampleBoolean value="true"/>
     </resource>
     <page>
       <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
