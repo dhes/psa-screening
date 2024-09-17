@@ -31,7 +31,7 @@
     }
   ],
   "copyright": "2024+ Dan Heslinga, all rights reserved Creative Commons License",
-  "packageId": "hl7.fhir.us.dhes.prostate-cancer-screening",
+  "packageId": "dhes.cds.psa-screening",
   "license": "CC0-1.0",
   "fhirVersion": ["4.0.1"],
   "definition": {

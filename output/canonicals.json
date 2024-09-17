@@ -1,8 +1,8 @@
 [
   {
-    "id" : "hl7.fhir.us.dhes.prostate-cancer-screening",
+    "id" : "psa-screening",
     "type" : "ImplementationGuide",
-    "url" : "https://dhes.github.io/psa-screening/ImplementationGuide/hl7.fhir.us.dhes.prostate-cancer-screening",
+    "url" : "https://dhes.github.io/psa-screening/ImplementationGuide/psa-screening",
     "version" : "0.1.0",
     "name" : "ProstateCancerScreening"
   },

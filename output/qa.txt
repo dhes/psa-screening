@@ -1,16 +1,17 @@
 ProstateCancerScreening : Validation Results
 =========================================
 
-err = 16, warn = 14, info = 2
+err = 16, warn = 12, info = 2
 IG Publisher Version: 1.6.24
-Generated Tue Sep 17 11:59:08 HST 2024. FHIR version 4.0.1 for hl7.fhir.us.dhes.prostate-cancer-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
- Build Errors : 70 / 7 / 0
- /Users/danheslinga/psa-screening/input/contentig : 0 / 2 / 1
+Generated Tue Sep 17 12:06:42 HST 2024. FHIR version 4.0.1 for dhes.cds.psa-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
+ Build Errors : 70 / 8 / 0
+ /Users/danheslinga/psa-screening/input/contentig : 0 / 1 / 1
  /Users/danheslinga/psa-screening/input/examples/patient/psa-female : 2 / 0 / 1
- /Users/danheslinga/psa-screening/input/resources/library/PSARecommendation : 3 / 2 / 3
- /Users/danheslinga/psa-screening/input/resources/plandefinition/PSARecommendation : 9 / 3 / 2
+ /Users/danheslinga/psa-screening/input/resources/library/PSARecommendation : 3 / 1 / 3
+ /Users/danheslinga/psa-screening/input/resources/plandefinition/PSARecommendation : 9 / 2 / 2
 </table>
 == n/a ==
+WARNING: ImplementationGuide.id: The Implementation Guide Resource id should be dhes.cds.psa-screening
 ERROR: /Users/danheslinga/psa-screening/input/cql/PSARecommendation.cql: CQL source was not associated with a library resource in the IG.
 ERROR: /Users/danheslinga/psa-screening/input/cql/FHIRHelpers.cql: CQL source was not associated with a library resource in the IG.
 ERROR: /Users/danheslinga/psa-screening/output/Library-PSARecommendation-testing.html#/html/body/div/div/nav/div/div/ul/li/ul/li/a at Line 89, column 10: The link 'background.html' for "Background" cannot be resolved
@@ -89,8 +90,7 @@ WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-v
 WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
 WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
 == input/contentig.json ==
-WARNING: ImplementationGuide/hl7.fhir.us.dhes.prostate-cancer-screening: ImplementationGuide.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
-WARNING: ImplementationGuide.jurisdiction: The resource should declare its jurisdiction to match the package id (hl7.fhir.us.dhes.prostate-cancer-screening, jurisdiction = urn:iso:std:iso:3166#US instead of or as well as [urn:iso:std:iso:316#US]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#US "null"')
+WARNING: ImplementationGuide/psa-screening: ImplementationGuide.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
 == input/tests/PlanDefinition/PSARecommendation/psa-female/Patient/psa-female.json ==
 ERROR: Patient/psa-female: Patient.extension[0]: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex could not be found so is not allowed here
 ERROR: Patient/psa-female: Patient.extension[0].url: URL value 'http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex' does not resolve
@@ -99,7 +99,6 @@ ERROR: Library/PSARecommendation: Library.extension[1]: The extension http://hl7
 ERROR: Library/PSARecommendation: Library.extension[1].url: URL value 'http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem' does not resolve
 ERROR: Library/PSARecommendation: Library.extension[1].value.ofType(Reference): Unable to resolve resource with reference 'Device/cqf-tooling'
 WARNING: Library/PSARecommendation: Library.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
-WARNING: Library.jurisdiction: The resource should declare its jurisdiction to match the package id (hl7.fhir.us.dhes.prostate-cancer-screening, jurisdiction = urn:iso:std:iso:3166#US instead of or as well as [urn:iso:std:iso:316#US]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#US "null"')
 INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
 == input/resources/plandefinition/PSARecommendation.json ==
 ERROR: PlanDefinition/PSARecommendation: PlanDefinition.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition' does not resolve
@@ -113,5 +112,4 @@ ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[3]: The extens
 ERROR: PlanDefinition/PSARecommendation: PlanDefinition.extension[3].url: URL value 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability' does not resolve
 WARNING: PlanDefinition/PSARecommendation: PlanDefinition.jurisdiction[0].coding[0]: A definition for CodeSystem 'urn:iso:std:iso:316' could not be found, so the code cannot be validated
 WARNING: PlanDefinition/PSARecommendation: PlanDefinition.meta.profile[0]: Profile reference 'http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition' has not been checked because it could not be found, and the validator is set to not fetch unknown profiles
-WARNING: PlanDefinition.jurisdiction: The resource should declare its jurisdiction to match the package id (hl7.fhir.us.dhes.prostate-cancer-screening, jurisdiction = urn:iso:std:iso:3166#US instead of or as well as [urn:iso:std:iso:316#US]) (for Sushi users: in sushi-config.yaml, 'jurisdiction: urn:iso:std:iso:3166#US "null"')
 INFORMATION: Resource: This resource could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)
