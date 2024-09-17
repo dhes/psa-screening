@@ -53,7 +53,7 @@
     }]
   }],
   "copyright" : "2024+ Dan Heslinga, all rights reserved Creative Commons License",
-  "library" : ["https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"],
+  "library" : ["https://dhes.github.io/psa-screening/Library/PSARecommendation"],
   "action" : [{
     "title" : "Evaluate PSA Screening",
     "description" : "Determine whether PSA screening should be ordered.",

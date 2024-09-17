@@ -81,7 +81,7 @@
       "reference" : "Device/cqf-tooling"
     }
   }],
-  "url" : "https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation",
+  "url" : "https://dhes.github.io/psa-screening/Library/PSARecommendation",
   "version" : "0.1.0",
   "name" : "PSARecommendation",
   "status" : "draft",
@@ -91,7 +91,7 @@
       "code" : "logic-library"
     }]
   },
-  "date" : "2024-09-17T11:19:48-10:00",
+  "date" : "2024-09-17T11:58:54-10:00",
   "publisher" : "Dan Heslinga",
   "contact" : [{
     "telecom" : [{

@@ -168,7 +168,7 @@ define &quot;Reminder&quot;:
       <reference value="Device/cqf-tooling"/>
     </valueReference>
   </extension>
-  <url value="https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"/>
+  <url value="https://dhes.github.io/psa-screening/Library/PSARecommendation"/>
   <version value="0.1.0"/>
   <name value="PSARecommendation"/>
   <status value="draft"/>
@@ -178,7 +178,7 @@ define &quot;Reminder&quot;:
       <code value="logic-library"/>
     </coding>
   </type>
-  <date value="2024-09-17T11:19:48-10:00"/>
+  <date value="2024-09-17T11:58:54-10:00"/>
   <publisher value="Dan Heslinga"/>
   <contact>
     <telecom>

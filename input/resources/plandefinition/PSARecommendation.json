@@ -39,7 +39,7 @@
       }
     ]
   },
-  "library": ["https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"],
+  "library": ["https://dhes.github.io/psa-screening/Library/PSARecommendation"],
   "action": [
     {
       "title": "Evaluate PSA Screening",

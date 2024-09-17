@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "dhes.cds.prostate-cancer-screening",
-  "url": "https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening",
+  "id": "psa-screening",
+  "url": "https://dhes.github.io/psa-screening/ImplementationGuide/psa-screening",
   "version": "0.1.0",
   "name": "ProstateCancerScreening",
   "title": "Screening for prostate cancer",

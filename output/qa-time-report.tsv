@@ -1,5 +1,5 @@
 Source File	Size	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
-/input/contentig.json	4596	0	0	0	0	0	0	4	84	0	0	0	0	0	0	0	1	0	0	68	39	0	0	0	2	0	1
-/input/resources/library/PSARecommendation.json	122973	0	0	0	0	0	0	1	21	0	0	0	0	0	0	0	0	0	0	270	34	0	0	0	12	0	0
-/input/resources/plandefinition/PSARecommendation.json	1894	0	0	0	0	0	0	0	187	0	0	0	0	0	0	0	0	0	0	17	11	0	0	0	0	0	0
-/input/examples/patient/psa-female.json	368	0	0	0	0	0	0	0	1	0	0	0	0	0	0	0	0	0	0	7	10	0	0	0	0	0	0
+/input/contentig.json	4554	0	0	0	0	0	0	3	65	0	0	1	0	0	0	0	1	0	0	81	50	0	0	0	2	0	1
+/input/resources/library/PSARecommendation.json	122967	0	0	0	1	0	0	0	61	0	0	0	0	0	0	0	0	0	0	299	43	0	0	0	14	0	0
+/input/resources/plandefinition/PSARecommendation.json	1888	0	0	0	0	0	0	0	183	0	0	0	0	0	0	0	0	0	0	33	23	0	0	0	0	0	0
+/input/examples/patient/psa-female.json	368	0	0	0	0	0	0	0	2	0	0	0	0	0	0	0	0	0	0	21	28	0	0	0	0	0	0

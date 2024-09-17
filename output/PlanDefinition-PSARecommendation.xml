@@ -51,7 +51,7 @@
     </coding>
   </jurisdiction>
   <copyright value="2024+ Dan Heslinga, all rights reserved Creative Commons License"/>
-  <library value="https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"/>
+  <library value="https://dhes.github.io/psa-screening/Library/PSARecommendation"/>
   <action>
     <title value="Evaluate PSA Screening"/>
     <description value="Determine whether PSA screening should be ordered."/>

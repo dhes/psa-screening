@@ -77,7 +77,7 @@
        fhir:reference [ fhir:v "Device/cqf-tooling" ]
      ]
   ] ) ; # 
-  fhir:url [ fhir:v "https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "https://dhes.github.io/psa-screening/Library/PSARecommendation"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PSARecommendation"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
@@ -87,7 +87,7 @@
        fhir:code [ fhir:v "logic-library" ]
      ] )
   ] ; # 
-  fhir:date [ fhir:v "2024-09-17T11:19:48-10:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-17T11:58:54-10:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Dan Heslinga"] ; # 
   fhir:contact ( [
      fhir:telecom ( [
