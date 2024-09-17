@@ -10,7 +10,7 @@
       "version": "current",
       "desc": "Initial version",
       "status": "ci-build",
-      "path": "https://dhes.cds.prostate-cancer-screening/0.1.0"
+      "path": "https://dhes.cds.prostate-cancer-screening"
     }
   ]
 }
