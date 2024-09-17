@@ -24,7 +24,7 @@
     "url" : "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
     "valueCode" : "publishable"
   }],
-  "url" : "https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation",
+  "url" : "https://dhes.github.io/psa-screening/PlanDefinition/PSARecommendation",
   "version" : "0.1.0",
   "name" : "PSARecommendation",
   "title" : "PSA Screening Recommendation",

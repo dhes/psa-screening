@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation> a fhir:PlanDefinition ;
+<https://dhes.github.io/psa-screening/PlanDefinition/PSARecommendation> a fhir:PlanDefinition ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "PSARecommendation"] ; # 
   fhir:meta [
@@ -31,7 +31,7 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability"^^xsd:anyURI ] ;
      fhir:value [ fhir:v "publishable" ]
   ] ) ; # 
-  fhir:url [ fhir:v "https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation"^^xsd:anyURI] ; # 
+  fhir:url [ fhir:v "https://dhes.github.io/psa-screening/PlanDefinition/PSARecommendation"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PSARecommendation"] ; # 
   fhir:title [ fhir:v "PSA Screening Recommendation"] ; # 

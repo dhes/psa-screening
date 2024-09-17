@@ -22,7 +22,7 @@
   <extension url="http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability">
     <valueCode value="publishable"/>
   </extension>
-  <url value="https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation"/>
+  <url value="https://dhes.github.io/psa-screening/PlanDefinition/PSARecommendation"/>
   <version value="0.1.0"/>
   <name value="PSARecommendation"/>
   <title value="PSA Screening Recommendation"/>

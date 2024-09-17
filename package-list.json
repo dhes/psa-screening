@@ -1,7 +1,7 @@
 {
   "packageId": "hl7.fhir.us.dhes.prostate-cancer-screening",
   "title": "Prostate Cancer Screening",
-  "canonical": "https://dhes.cds.prostate-cancer-screening",
+  "canonical": "https://dhes.github.io/psa-screening",
   "introduction": "This implementation guide provides clinical decision support for prostate cancer screening.",
   "category": "Quality / CDS",
   "language": "en",
@@ -10,7 +10,7 @@
       "version": "current",
       "desc": "Initial version",
       "status": "ci-build",
-      "path": "https://dhes.cds.prostate-cancer-screening"
+      "path": "https://dhes.github.io/psa-screening"
     }
   ]
 }

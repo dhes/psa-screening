@@ -5,7 +5,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://dhes.cds.prostate-cancer-screening/Patient/psa-female> a fhir:Patient ;
+<https://dhes.github.io/psa-screening/Patient/psa-female> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "psa-female"] ; # 
   fhir:text [

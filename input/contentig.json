@@ -1,7 +1,7 @@
 {
   "resourceType": "ImplementationGuide",
   "id": "dhes.cds.prostate-cancer-screening",
-  "url": "https://dhes.cds.prostate-cancer-screening",
+  "url": "https://dhes.github.io/psa-screening/ImplementationGuide/dhes.cds.prostate-cancer-screening",
   "version": "0.1.0",
   "name": "ProstateCancerScreening",
   "title": "Screening for prostate cancer",
@@ -31,7 +31,7 @@
     }
   ],
   "copyright": "2024+ Dan Heslinga, all rights reserved Creative Commons License",
-  "packageId": "dhes.cds.prostate-cancer-screening",
+  "packageId": "hl7.fhir.us.dhes.prostate-cancer-screening",
   "license": "CC0-1.0",
   "fhirVersion": ["4.0.1"],
   "definition": {

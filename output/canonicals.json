@@ -1,12 +1,5 @@
 [
   {
-    "id" : "dhes.cds.prostate-cancer-screening",
-    "type" : "ImplementationGuide",
-    "url" : "https://dhes.cds.prostate-cancer-screening",
-    "version" : "0.1.0",
-    "name" : "ProstateCancerScreening"
-  },
-  {
     "id" : "PSARecommendation",
     "type" : "Library",
     "url" : "https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation",
@@ -14,9 +7,16 @@
     "name" : "PSARecommendation"
   },
   {
+    "id" : "hl7.fhir.us.dhes.prostate-cancer-screening",
+    "type" : "ImplementationGuide",
+    "url" : "https://dhes.github.io/psa-screening/ImplementationGuide/hl7.fhir.us.dhes.prostate-cancer-screening",
+    "version" : "0.1.0",
+    "name" : "ProstateCancerScreening"
+  },
+  {
     "id" : "PSARecommendation",
     "type" : "PlanDefinition",
-    "url" : "https://dhes.cds.prostate-cancer-screening/PlanDefinition/PSARecommendation",
+    "url" : "https://dhes.github.io/psa-screening/PlanDefinition/PSARecommendation",
     "version" : "0.1.0",
     "name" : "PSARecommendation"
   }

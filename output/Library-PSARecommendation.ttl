@@ -6,7 +6,7 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://dhes.cds.prostate-cancer-screening/Library/PSARecommendation> a fhir:Library ;
+<https://dhes.github.io/psa-screening/Library/PSARecommendation> a fhir:Library ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:id [ fhir:v "PSARecommendation"] ; # 
   fhir:text [
@@ -73,7 +73,7 @@
      fhir:url [ fhir:v "http://hl7.org/fhir/us/cqfmeasures/StructureDefinition/cqfm-softwaresystem"^^xsd:anyURI ] ;
      fhir:value [
        a fhir:Reference ;
-       fhir:link <https://dhes.cds.prostate-cancer-screening/Device/cqf-tooling> ;
+       fhir:link <https://dhes.github.io/psa-screening/Device/cqf-tooling> ;
        fhir:reference [ fhir:v "Device/cqf-tooling" ]
      ]
   ] ) ; # 
@@ -87,7 +87,7 @@
        fhir:code [ fhir:v "logic-library" ]
      ] )
   ] ; # 
-  fhir:date [ fhir:v "2024-09-17T10:56:15-10:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2024-09-17T11:19:48-10:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Dan Heslinga"] ; # 
   fhir:contact ( [
      fhir:telecom ( [

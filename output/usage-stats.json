@@ -1,5 +1,5 @@
 {
-  "package": "dhes.cds.prostate-cancer-screening",
+  "package": "hl7.fhir.us.dhes.prostate-cancer-screening",
   "version": "0.1.0",
   "fhirVersion": "4.0.1",
   "jurisdiction": "US",

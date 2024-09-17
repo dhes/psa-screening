@@ -1,6 +1,6 @@
 {
   "version" : "0.1.0",
-  "date" : "20240917105601",
+  "date" : "20240917111934",
   "notForPublication" : true,
-  "name" : "dhes.cds.prostate-cancer-screening.r4b"
+  "name" : "hl7.fhir.us.dhes.prostate-cancer-screening.r4b"
 }
