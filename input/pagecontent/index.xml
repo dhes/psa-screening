@@ -3,12 +3,12 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
 	<p>
-    Prostate cancer screening is one of the many Healthspan reminders that practitioners and patietns find hard to remember. FHIR and the clinical Quality Framework help to make this and other tasks more manageable.
+    This is a simple clinical reasoning module to remind clinicians to discuss screening for prostate cancer. 
   </p>
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
 	<p>
-    In this and other planned implementation guides your author seeks to provide a colleciton of common clinical reminders. This guide is an instance of screening for cancer -- prostate cancer in this case. The guide is based on the FHIR Clinical Reasoning Module and the Clinical Quality Language (CQL) specification. The guide is intended to be used in a FHIR server that supports the Clinical Reasoning Module.
+    The intent is twofold: Keep the reasoning as simple as possible, and allow customizations that incorporate patient and clinician preferences. 
   </p>
   <a name="walkthrough"> </a>
   <p>
