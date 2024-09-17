@@ -2,8 +2,8 @@ ProstateCancerScreening : Validation Results
 =========================================
 
 err = 16, warn = 12, info = 2
-IG Publisher Version: 1.6.24
-Generated Tue Sep 17 12:06:42 HST 2024. FHIR version 4.0.1 for dhes.cds.psa-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
+IG Publisher Version: 1.6.24 Out of date - current version is 1.6.25
+Generated Tue Sep 17 13:24:27 HST 2024. FHIR version 4.0.1 for dhes.cds.psa-screening#0.1.0 (canonical = https://dhes.github.io/psa-screening)
  Build Errors : 70 / 8 / 0
  /Users/danheslinga/psa-screening/input/contentig : 0 / 1 / 1
  /Users/danheslinga/psa-screening/input/examples/patient/psa-female : 2 / 0 / 1
