@@ -11,9 +11,13 @@ codesystem "LOINC": 'http://loinc.org'
 code "Birthdate": '21112-8' from "LOINC" display 'Birth date'
 code "PSA Follow-up": '21979-0' from "LOINC" display 'Planned/next follow-up'
 
-// parameter "Reference Date" DateTime default Now()
+parameter ReferenceDate DateTime default Today()
 
 context Patient
+
+define A:
+  (singleton from (Patient.extension E where E.url='http://example.org/fhir/StructureDefinition/patient-annotation')).value.value
+	// return E.value // this is a FHIR path
 
 // consider
 //  first degree relative with prostate cancer
@@ -21,7 +25,7 @@ context Patient
 //  African American
 
 define Age:
-  AgeInYearsAt(Now())
+  AgeInYearsAt(ReferenceDate)
 
 define Man:
   Patient.gender='male'
@@ -71,14 +75,14 @@ define FollowUpDuration:
 // Quantity { value:1, unit: 'year' }
 
 define LatestAcceptablePSATestDate:
-Today() - FollowUpDuration
+ReferenceDate - Coalesce(FollowUpDuration, 2 years)
 
 define MostRecentPSATestDate:
 	Last(PSATests).effective.value
 
 define RecentPSA:
   exists ( PSATests )
-  and date from Last(PSATests).effective on or after (Today() - FollowUpDuration)
+  and date from Last(PSATests).effective on or after (ReferenceDate - FollowUpDuration)
 
 define "Tickle":
   OlderThan40 and Man and not RecentPSA

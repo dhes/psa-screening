@@ -5,6 +5,10 @@
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
       "valueCode": "F"
+    },
+    {
+      "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
+      "valueString": "Female born 1964-05-31. Many values will be null. No action. "
     }
   ],
   "active": true,
