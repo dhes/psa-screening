@@ -94,7 +94,7 @@
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-09-06T00:56:18.641Z",
-            "modified": "2024-11-20T20:14:09.605Z",
+            "modified": "2024-11-20T22:15:03.211Z",
             "headers": [],
             "params": [
                 {
@@ -103,6 +103,11 @@
                     "isPath": false
                 }
             ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-within-2-years\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"ReferenceDate\",\n            \"valueDate\": \"2022-10-31\"\n          }\n        ]\n      }\n    }\n  ]\n}",
+                "form": []
+            },
             "tests": [
                 {
                     "type": "res-code",
