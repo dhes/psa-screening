@@ -9,12 +9,12 @@
             "_id": "88571a82-6bb4-47b0-9798-f4178827e9d2",
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
-            "name": "too-young",
+            "name": "too-young $apply",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-09-06T00:46:36.655Z",
-            "modified": "2024-11-21T01:27:59.865Z",
+            "modified": "2024-11-21T20:56:18.838Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -38,11 +38,16 @@
                 "inlineScripts": [
                     {
                         "script": [
-                            "let success = tc.response.json.contained &&",
-                            "              tc.response.json.contained[0] &&",
-                            "              !tc.response.json.contained[0].action;",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "tc.test(\"No action element present\", success);"
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
@@ -52,12 +57,12 @@
             "_id": "eca646e8-3778-48f4-849f-f0e1ffa7455b",
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
-            "name": "female",
+            "name": "female $apply",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
-            "sortNum": 20000,
+            "sortNum": 7500,
             "created": "2024-09-06T00:56:16.388Z",
-            "modified": "2024-11-21T01:28:47.915Z",
+            "modified": "2024-11-21T21:00:09.835Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -76,11 +81,16 @@
                 "inlineScripts": [
                     {
                         "script": [
-                            "let success = tc.response.json.contained &&",
-                            "              tc.response.json.contained[0] &&",
-                            "              !tc.response.json.contained[0].action;",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "tc.test(\"No action element present\", success);"
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
@@ -90,12 +100,12 @@
             "_id": "bae40b66-2d82-47d9-a3e8-623ee92af84d",
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
-            "name": "within-2-years",
+            "name": "within-2-years $apply",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-09-06T00:56:18.641Z",
-            "modified": "2024-11-21T01:33:09.840Z",
+            "modified": "2024-11-21T20:56:36.598Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -119,11 +129,16 @@
                 "inlineScripts": [
                     {
                         "script": [
-                            "let success = tc.response.json.contained &&",
-                            "              tc.response.json.contained[0] &&",
-                            "              !tc.response.json.contained[0].action;",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "tc.test(\"No action element present\", success);"
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
@@ -133,12 +148,12 @@
             "_id": "a2521164-306a-4eec-9862-7449309f0ebb",
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
-            "name": "no-psa",
+            "name": "no-psa $apply",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-09-06T00:56:21.218Z",
-            "modified": "2024-11-21T01:29:28.144Z",
+            "modified": "2024-11-21T21:01:34.376Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -157,12 +172,16 @@
                 "inlineScripts": [
                     {
                         "script": [
-                            "let success = tc.response.json.contained &&",
-                            "              tc.response.json.contained[0] &&",
-                            "              Array.isArray(tc.response.json.contained[0].action) &&",
-                            "              tc.response.json.contained[0].action.length > 0;",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "tc.test(\"Action element is present and has at least one element\", success);"
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
@@ -172,12 +191,12 @@
             "_id": "6ea8305c-4097-411d-958b-4a75c94af142",
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
-            "name": "follow-up-1-year",
+            "name": "follow-up-1-year $apply",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-09-09T04:07:12.314Z",
-            "modified": "2024-11-21T15:56:12.440Z",
+            "modified": "2024-11-21T20:56:50.201Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -196,15 +215,120 @@
                 "inlineScripts": [
                     {
                         "script": [
-                            "let success = tc.response.json.contained &&",
-                            "              tc.response.json.contained[0] &&",
-                            "              !tc.response.json.contained[0].action;",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "tc.test(\"No action element present\", success);"
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
             }
+        },
+        {
+            "_id": "e7268096-43ca-4a24-a3fa-62abb8cedec7",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "female exists",
+            "url": "Patient/psa-female",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2024-11-21T20:39:42.949Z",
+            "modified": "2024-11-21T20:41:17.409Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "dd524ca1-db5f-42a8-92fc-6d67fead95a6",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "too-young exists",
+            "url": "Patient/psa-too-young",
+            "method": "GET",
+            "sortNum": 8750,
+            "created": "2024-11-21T20:46:40.454Z",
+            "modified": "2024-11-21T20:47:20.193Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "cd9f0ceb-661e-4095-9ce3-510a08af1f92",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "within-2-years exists",
+            "url": "Patient/psa-within-2-years",
+            "method": "GET",
+            "sortNum": 15000,
+            "created": "2024-11-21T20:47:25.990Z",
+            "modified": "2024-11-21T20:48:40.932Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "29e4d323-b898-4197-b955-d9640ab5c0d3",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "no-psa exists",
+            "url": "Patient/psa-no-psa",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-11-21T20:47:36.217Z",
+            "modified": "2024-11-21T20:49:10.060Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "7e852d8a-fa7b-4818-a8a9-8bb58cca2e4d",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "follow-up-1-year exists",
+            "url": "Patient/psa-too-young",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-11-21T20:47:43.594Z",
+            "modified": "2024-11-21T20:47:43.594Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
         }
     ],
     "settings": {
