@@ -1,6 +1,10 @@
 {
   "resourceType": "Patient",
   "id": "psa-female",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test patient for PSA tracking.<br/>Age: 60</div>"
+  },
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
