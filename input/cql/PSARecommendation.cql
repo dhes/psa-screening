@@ -44,6 +44,9 @@ ReferenceDate - Coalesce(FollowUpDuration, 2 years)
 define MostRecentPSATestDate:
 	Last(PSATests).effective.value
 
+define StringValueOfMostRecentPSATestDate:
+	ToString(Last(PSATests).effective.value)
+
 define RecentPSA:
   exists ( PSATests )
   and date from Last(PSATests).effective on or after OldestAcceptablePSA

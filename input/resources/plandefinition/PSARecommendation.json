@@ -67,6 +67,36 @@
             "expression": "Reminder"
           }
         }
+      ],
+      "action": [
+        {
+          "title": "Most Recent PSA Test Date",
+          "description": "Evaluated PSA test date",
+          "trigger": [
+            {
+              "type": "named-event",
+              "name": "patient-view"
+            }
+          ],
+          "condition": [
+            {
+              "kind": "applicability",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "Tickle"
+              }
+            }
+          ],
+          "dynamicValue": [
+            {
+              "path": "action.description",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "StringValueOfMostRecentPSATestDate"
+              }
+            }
+          ]
+        }
       ]
     }
   ]
