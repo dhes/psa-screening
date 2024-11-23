@@ -1,0 +1,54 @@
+{
+    "_id": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+    "colName": "misc",
+    "created": "2024-11-22T22:34:52.414Z",
+    "sortNum": 35000,
+    "folders": [],
+    "settings": {
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/fhir+json"
+            }
+        ],
+        "auth": {
+            "type": "basic",
+            "basic": {
+                "username": "aequus",
+                "password": "AngryCuff2("
+            }
+        },
+        "options": {
+            "baseUrl": "https://cds.hopena.info:8443/fhir/"
+        }
+    },
+    "requests": [
+        {
+            "_id": "e4a67af7-b471-4d7d-ba61-f29c54a8e408",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "psa-within-2-years Immunizations",
+            "url": "Immunization?patient=Patient/heslinga-dan",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-11-22T22:34:52.427Z",
+            "modified": "2024-11-22T22:47:04.430Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "patient",
+                    "value": "Patient/heslinga-dan",
+                    "isPath": false
+                }
+            ],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        }
+    ]
+}

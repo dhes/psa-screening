@@ -15,6 +15,9 @@ parameter ReferenceDate Date default Today()
 
 context Patient
 
+define StringValueOfReferenceDate:
+	ToString(ReferenceDate)
+
 define A:
   (singleton from (Patient.extension E where E.url='http://example.org/fhir/StructureDefinition/patient-annotation')).value.value
 

@@ -42,8 +42,8 @@
   "library": ["https://dhes.github.io/psa-screening/Library/PSARecommendation"],
   "action": [
     {
-      "title": "Evaluate PSA Screening",
-      "description": "Determine whether PSA screening should be ordered.",
+      "title": "Repeat PSA",
+      "description": "Advise clinician or patient that a repeat PSA test is due.",
       "trigger": [
         {
           "type": "named-event",
@@ -70,29 +70,63 @@
       ],
       "action": [
         {
-          "title": "Most Recent PSA Test Date",
-          "description": "Evaluated PSA test date",
-          "trigger": [
+          "title": "Patient Last Name",
+          "description": "Last name of the patient to whom the PlanDefinition is being applied.",
+          "dynamicValue": [
             {
-              "type": "named-event",
-              "name": "patient-view"
-            }
-          ],
-          "condition": [
-            {
-              "kind": "applicability",
+              "path": "action.description",
               "expression": {
-                "language": "text/cql-identifier",
-                "expression": "Tickle"
+                "language": "text/cql-expression",
+                "expression": "%subject.name[0].family"
               }
             }
-          ],
+          ]
+        },
+        {
+          "title": "Patient First Name",
+          "description": "First name of the patient to whom the PlanDefinition is being applied.",
+          "dynamicValue": [
+            {
+              "path": "action.description",
+              "expression": {
+                "language": "text/cql-expression",
+                "expression": "%subject.name[0].given[0]"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Most Recent PSA Test Date",
           "dynamicValue": [
             {
               "path": "action.description",
               "expression": {
                 "language": "text/cql-identifier",
                 "expression": "StringValueOfMostRecentPSATestDate"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Patient Notes",
+          "dynamicValue": [
+            {
+              "path": "action.description",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "A"
+              }
+            }
+          ]
+        },
+        {
+          "title": "Reference Date",
+          "dynamicValue": [
+            {
+              "path": "action.description",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "StringValueOfReferenceDate"
               }
             }
           ]
