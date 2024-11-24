@@ -41,6 +41,9 @@ define FollowUpObservation:
 define FollowUpDuration:
 	First(FollowUpObservation.value) as Quantity
 
+define StringValueOfFollowUpDuration:
+	ToString(FollowUpDuration)
+
 define OldestAcceptablePSA:
 ReferenceDate - Coalesce(FollowUpDuration, 2 years)
 

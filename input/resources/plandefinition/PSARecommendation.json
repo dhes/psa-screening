@@ -130,6 +130,18 @@
               }
             }
           ]
+        },
+        {
+          "title": "Follow-up Duration",
+          "dynamicValue": [
+            {
+              "path": "action.description",
+              "expression": {
+                "language": "text/cql-identifier",
+                "expression": "StringValueOfFollowUpDuration"
+              }
+            }
+          ]
         }
       ]
     }
