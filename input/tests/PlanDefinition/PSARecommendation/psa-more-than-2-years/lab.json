@@ -1,6 +1,6 @@
 {
   "resourceType": "Observation",
-  "id": "psa-more-than-2-years-lab11",
+  "id": "psa-more-than-2-years-lab",
   "status": "final",
   "category": [
     {
@@ -23,7 +23,7 @@
     "text": "PSA"
   },
   "subject": {
-    "reference": "Patient/psa-within-2-years",
+    "reference": "Patient/psa-more-than-2-years",
     "display": "Ferd Berfel"
   },
   "effectiveDateTime": "2022-08-30",
