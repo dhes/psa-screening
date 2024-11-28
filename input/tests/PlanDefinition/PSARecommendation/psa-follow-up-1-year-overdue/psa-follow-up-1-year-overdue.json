@@ -1,6 +1,6 @@
 {
   "resourceType": "Patient",
-	"id": "psa-follow-up-1-year",
+	"id": "psa-follow-up-1-year-overdue",
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
@@ -8,7 +8,7 @@
     },
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2023-08-31 and follow-up interval is one year. So the most recent PSA is exactly one year ago. He tests as not due and receives no reminder."
+      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2023-08-30 and follow-up interval is one year. So the most recent PSA is one year and one day ago. He tests as due and receives a reminder for repeat PSA."
     }
   ],
   "active": true,

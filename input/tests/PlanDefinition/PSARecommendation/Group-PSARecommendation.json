@@ -30,8 +30,18 @@
     }
   }, {
     "entity": {
+      "reference": "Patient/psa-more-than-2-years",
+      "display": "Ferd Berfel"
+    }
+  }, {
+    "entity": {
       "reference": "Patient/psa-no-psa",
       "display": "Ben Dere"
+    }
+  }, {
+    "entity": {
+      "reference": "Patient/psa-follow-up-1-year-overdue",
+      "display": "Ferd Berfel"
     }
   } ]
 }

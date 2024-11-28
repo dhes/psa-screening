@@ -27,17 +27,27 @@
             "_id": "e4a67af7-b471-4d7d-ba61-f29c54a8e408",
             "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
             "containerId": "",
-            "name": "psa-within-2-years Immunizations",
-            "url": "Immunization?patient=Patient/heslinga-dan",
+            "name": "simulate Express client medication query",
+            "url": "MedicationStatement?patient=Patient/heslinga-dan&_include=MedicationStatement:medication&_include:iterate=Medication:ingredient",
             "method": "GET",
             "sortNum": 20000,
             "created": "2024-11-22T22:34:52.427Z",
-            "modified": "2024-11-22T22:47:04.430Z",
+            "modified": "2024-11-25T20:37:59.830Z",
             "headers": [],
             "params": [
                 {
                     "name": "patient",
                     "value": "Patient/heslinga-dan",
+                    "isPath": false
+                },
+                {
+                    "name": "_include",
+                    "value": "MedicationStatement:medication",
+                    "isPath": false
+                },
+                {
+                    "name": "_include:iterate",
+                    "value": "Medication:ingredient",
                     "isPath": false
                 }
             ],
@@ -49,6 +59,68 @@
                     "value": "200"
                 }
             ]
+        },
+        {
+            "_id": "e2be1ab5-4519-4c5e-8a66-02433b18ced7",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "update a MedicationStatement",
+            "url": "MedicationStatement/2041",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2024-11-25T20:47:04.036Z",
+            "modified": "2024-11-25T20:51:29.880Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n        \"resourceType\": \"MedicationStatement\",\n        \"id\": \"2041\",\n        \"meta\": {\n          \"versionId\": \"1\",\n          \"lastUpdated\": \"2024-09-19T18:51:37.949+00:00\",\n          \"source\": \"#CgeXxHjHN71hOd4J\"\n        },\n        \"status\": \"active\",\n        \"medicationReference\": {\n          \"reference\": \"Medication/sirolimus-2-mg-oral-tablet\",\n          \"display\": \"sirolimus 2 MG Oral Tablet\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/heslinga-dan\",\n          \"display\": \"Dan Heslinga\"\n        },\n        \"effectivePeriod\": {\n          \"start\": \"2024-09-17\"\n        },\n        \"dateAsserted\": \"2024-09-17\",\n        \"informationSource\": {\n          \"reference\": \"Patient/heslinga-dan\",\n          \"display\": \"Dan Heslinga\"\n        },\n        \"dosage\": [\n          {\n            \"text\": \"Take 3 tablets by mouth weekly every Thursday\",\n            \"timing\": {\n              \"repeat\": {\n                \"frequency\": 1,\n                \"period\": 1,\n                \"periodUnit\": \"wk\"\n              }\n            },\n            \"asNeededBoolean\": false,\n            \"route\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://snomed.info/sct\",\n                  \"code\": \"260548002\",\n                  \"display\": \"Oral\"\n                }\n              ]\n            }\n          }\n        ]\n      }",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "68cce841-4251-470e-9b5f-50e9e4319465",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "inspect psa-within-2-years",
+            "url": "Patient/psa-within-2-years/$everything",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2024-11-28T06:23:00.161Z",
+            "modified": "2024-11-28T06:23:53.560Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n        \"resourceType\": \"MedicationStatement\",\n        \"id\": \"2041\",\n        \"meta\": {\n          \"versionId\": \"1\",\n          \"lastUpdated\": \"2024-09-19T18:51:37.949+00:00\",\n          \"source\": \"#CgeXxHjHN71hOd4J\"\n        },\n        \"status\": \"active\",\n        \"medicationReference\": {\n          \"reference\": \"Medication/sirolimus-2-mg-oral-tablet\",\n          \"display\": \"sirolimus 2 MG Oral Tablet\"\n        },\n        \"subject\": {\n          \"reference\": \"Patient/heslinga-dan\",\n          \"display\": \"Dan Heslinga\"\n        },\n        \"effectivePeriod\": {\n          \"start\": \"2024-09-17\"\n        },\n        \"dateAsserted\": \"2024-09-17\",\n        \"informationSource\": {\n          \"reference\": \"Patient/heslinga-dan\",\n          \"display\": \"Dan Heslinga\"\n        },\n        \"dosage\": [\n          {\n            \"text\": \"Take 3 tablets by mouth weekly every Thursday\",\n            \"timing\": {\n              \"repeat\": {\n                \"frequency\": 1,\n                \"period\": 1,\n                \"periodUnit\": \"wk\"\n              }\n            },\n            \"asNeededBoolean\": false,\n            \"route\": {\n              \"coding\": [\n                {\n                  \"system\": \"http://snomed.info/sct\",\n                  \"code\": \"260548002\",\n                  \"display\": \"Oral\"\n                }\n              ]\n            }\n          }\n        ]\n      }",
+                "form": []
+            },
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "d8a6a8d3-f967-43ec-9f1c-a946583aef28",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "delete a pesky observation",
+            "url": "Observation/psa-more-than-2-years-lab11",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2024-11-28T16:19:01.411Z",
+            "modified": "2024-11-28T16:24:11.778Z",
+            "headers": []
         }
     ]
 }
