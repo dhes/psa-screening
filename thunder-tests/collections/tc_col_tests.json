@@ -14,7 +14,7 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-09-06T00:46:36.655Z",
-            "modified": "2024-11-21T20:56:18.838Z",
+            "modified": "2024-11-28T20:23:58.477Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -47,7 +47,7 @@
                             "",
                             "let success = !containsOperationOutcome && !requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome and no RequestGroup.action\", success);"
                         ]
                     }
                 ]
@@ -105,7 +105,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-09-06T00:56:18.641Z",
-            "modified": "2024-11-25T18:20:28.648Z",
+            "modified": "2024-11-28T20:24:19.252Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -138,7 +138,7 @@
                             "",
                             "let success = !containsOperationOutcome && !requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome and no RequestGroup.actiont\", success);"
                         ]
                     }
                 ]
@@ -153,7 +153,7 @@
             "method": "POST",
             "sortNum": 8735.4,
             "created": "2024-09-06T00:56:21.218Z",
-            "modified": "2024-11-21T21:01:34.376Z",
+            "modified": "2024-11-28T20:23:37.103Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -181,7 +181,7 @@
                             "",
                             "let success = !containsOperationOutcome && !!requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present.\", success);"
                         ]
                     }
                 ]
@@ -196,7 +196,7 @@
             "method": "POST",
             "sortNum": 8593.8,
             "created": "2024-09-09T04:07:12.314Z",
-            "modified": "2024-11-21T20:56:50.201Z",
+            "modified": "2024-11-28T20:21:41.388Z",
             "headers": [],
             "body": {
                 "type": "json",
@@ -224,7 +224,7 @@
                             "",
                             "let success = !containsOperationOutcome && !requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome and no RequestGroup.action present\", success);"
                         ]
                     }
                 ]
@@ -315,11 +315,11 @@
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
             "name": "follow-up-1-year exists",
-            "url": "Patient/psa-too-young",
+            "url": "Patient/psa-follow-up-1-year",
             "method": "GET",
             "sortNum": 8125,
             "created": "2024-11-21T20:47:43.594Z",
-            "modified": "2024-11-21T20:47:43.594Z",
+            "modified": "2024-11-28T20:38:18.795Z",
             "headers": [],
             "tests": [
                 {
@@ -359,11 +359,11 @@
             "method": "POST",
             "sortNum": 8730.5,
             "created": "2024-11-28T02:27:37.645Z",
-            "modified": "2024-11-28T02:30:31.425Z",
+            "modified": "2024-11-28T20:31:00.580Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"ReferenceDate\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year-overdue\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"ReferenceDate\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
                 "form": []
             },
             "tests": [
@@ -387,7 +387,7 @@
                             "",
                             "let success = !containsOperationOutcome && !!requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
                         ]
                     }
                 ]
@@ -418,11 +418,11 @@
             "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
             "containerId": "",
             "name": "too-young $everything",
-            "url": "Patient/psa-more-than-2-years/$everything",
+            "url": "Patient/psa-too-young/$everything",
             "method": "GET",
             "sortNum": 9375,
             "created": "2024-11-28T16:13:36.151Z",
-            "modified": "2024-11-28T20:11:29.185Z",
+            "modified": "2024-11-28T20:37:41.556Z",
             "headers": [],
             "tests": [
                 {
@@ -431,7 +431,24 @@
                     "action": "equal",
                     "value": "200"
                 }
-            ]
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// Check if the response contains a Bundle resource",
+                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
+                            "",
+                            "// Check if the Bundle's total attribute equals the expected number",
+                            "let expectedTotal = 1; // Adjust this number as needed for your test case",
+                            "let correctTotal = bundle && bundle.total === expectedTotal;",
+                            "",
+                            "// Create the test result based on whether the total is correct",
+                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
+                        ]
+                    }
+                ]
+            }
         },
         {
             "_id": "51a815b0-14b9-4a18-9631-4e3dfba55bc9",
@@ -593,7 +610,7 @@
             "method": "POST",
             "sortNum": 8732.7,
             "created": "2024-11-28T20:11:55.211Z",
-            "modified": "2024-11-28T20:12:28.576Z",
+            "modified": "2024-11-28T20:33:39.022Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -624,9 +641,46 @@
                             "                             tc.response.json.contained.find(item => ",
                             "                                 item.resourceType === \"RequestGroup\" && item.action);",
                             "",
-                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "61f2b3ad-f204-4f84-917a-0913d48d84c6",
+            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "containerId": "",
+            "name": "no-psa $everything",
+            "url": "Patient/psa-no-psa/$everything",
+            "method": "GET",
+            "sortNum": 8734.2,
+            "created": "2024-11-28T20:35:11.335Z",
+            "modified": "2024-11-28T20:36:52.494Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// Check if the response contains a Bundle resource",
+                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
+                            "",
+                            "// Check if the Bundle's total attribute equals the expected number",
+                            "let expectedTotal = 1; // Adjust this number as needed for your test case",
+                            "let correctTotal = bundle && bundle.total === expectedTotal;",
+                            "",
+                            "// Create the test result based on whether the total is correct",
+                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
                         ]
                     }
                 ]
