@@ -1,0 +1,10 @@
+{
+    "_id": "353986ee-374a-4787-bd70-5542e573b54f",
+    "name": "local env",
+    "default": true,
+    "sortNum": 20000,
+    "created": "2024-12-06T22:49:55.117Z",
+    "modified": "2024-12-06T22:49:55.117Z",
+    "data": [],
+    "envFile": "../.env"
+}

@@ -36,10 +36,14 @@
             {
                 "name": "Content-Type",
                 "value": "application/fhir+json"
+            },
+            {
+                "name": "Authorization",
+                "value": "Basic {{HAPI_FHIR_AUTH}}"
             }
         ],
         "options": {
-            "baseUrl": "https://cds.hopena.info:8443/fhir/"
+            "baseUrl": "{{FHIR_SERVER_URL}}"
         }
     }
 }

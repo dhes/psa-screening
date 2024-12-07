@@ -9,17 +9,14 @@
             {
                 "name": "Content-Type",
                 "value": "application/fhir+json"
+            },
+            {
+                "name": "Authorization",
+                "value": "Basic {{HAPI_FHIR_AUTH}}"
             }
         ],
-        "auth": {
-            "type": "basic",
-            "basic": {
-                "username": "aequus",
-                "password": "AngryCuff2("
-            }
-        },
         "options": {
-            "baseUrl": "https://cds.hopena.info:8443/fhir/"
+            "baseUrl": "{{FHIR_SERVER_URL}}"
         }
     },
     "requests": [
@@ -121,6 +118,66 @@
             "created": "2024-11-28T16:19:01.411Z",
             "modified": "2024-11-28T16:24:11.778Z",
             "headers": []
+        },
+        {
+            "_id": "20d04e31-3c51-4abe-abd6-cfc6192d1c2f",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "find test patient",
+            "url": "Patient/psa-female",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-11-29T23:58:56.662Z",
+            "modified": "2024-11-30T00:15:15.193Z",
+            "headers": []
+        },
+        {
+            "_id": "463707c2-1e05-4537-9d03-872416cb3c6d",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "find all test patients",
+            "url": "Patient?identifier=http://example.org/psa-screening|",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-11-30T00:15:36.368Z",
+            "modified": "2024-11-30T00:18:18.692Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "identifier",
+                    "value": "http://example.org/psa-screening|",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "09a47352-12dd-475a-9e26-96b1ce6f1066",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "display all PlanDefinitions",
+            "url": "PlanDefinition/",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-12-02T01:22:37.615Z",
+            "modified": "2024-12-04T05:00:34.104Z",
+            "headers": []
+        },
+        {
+            "_id": "22016737-d11f-4fdf-9bc0-e268e1739e57",
+            "colId": "496e7474-5e77-4b6a-bffd-c95a32f69333",
+            "containerId": "",
+            "name": "update a PlanDefinition",
+            "url": "PlanDefinition/ColorectalCancerScreeningCDS",
+            "method": "PUT",
+            "sortNum": 100000,
+            "created": "2024-12-04T05:01:29.251Z",
+            "modified": "2024-12-04T05:02:20.059Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n        \"resourceType\": \"PlanDefinition\",\n        \"id\": \"ColorectalCancerScreeningCDS\",\n        \"meta\": {\n          \"versionId\": \"2\",\n          \"lastUpdated\": \"2024-11-26T00:57:12.517+00:00\",\n          \"source\": \"#3SoCvQAZyP0wGGF7\",\n          \"profile\": [\n            \"http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-recommendationdefinition\"\n          ]\n        },\n        \"extension\": [\n          {\n            \"url\": \"http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability\",\n            \"valueCode\": \"shareable\"\n          },\n          {\n            \"url\": \"http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability\",\n            \"valueCode\": \"computable\"\n          },\n          {\n            \"url\": \"http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability\",\n            \"valueCode\": \"executable\"\n          },\n          {\n            \"url\": \"http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability\",\n            \"valueCode\": \"publishable\"\n          }\n        ],\n        \"name\": \"ColorectalCancerScreeningCDS\",\n        \"title\": \"Colorectal cancer screening\",\n        \"type\": {\n          \"coding\": [\n            {\n              \"system\": \"http://terminology.hl7.org/CodeSystem/plan-definition-type\",\n              \"code\": \"eca-rule\",\n              \"display\": \"ECA Rule\"\n            }\n          ]\n        },\n        \"status\": \"active\",\n        \"experimental\": true,\n        \"date\": \"2019-05-15\",\n        \"description\": \"The U.S. Preventive Services Task Force (2016) recommends screening for colorectal cancer starting at age 50 years and continuing until age 75 years. \",\n        \"library\": [\n          \"http://fhir.org/guides/cqf/ccc/Library/ColorectalCancerScreeningCDS\"\n        ],\n        \"action\": [\n          {\n            \"title\": \"Colorectal Cancer Screening\",\n            \"description\": \"The U.S. Preventive Services Task Force (2016) recommends screening for colorectal cancer starting at age 50 years and continuing until age 75 years. This is a Grade A recommendation (U.S. Preventive Services Task Force, 2016).\",\n            \"documentation\": [\n              {\n                \"type\": \"documentation\",\n                \"display\": \"U.S. Preventive Services Task Force Final Recommendation Statement Colorectal Cancer: Screening\",\n                \"url\": \"https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/colorectal-cancer-screening\"\n              }\n            ],\n            \"trigger\": [\n              {\n                \"type\": \"named-event\",\n                \"name\": \"patient-view\"\n              }\n            ],\n            \"condition\": [\n              {\n                \"kind\": \"applicability\",\n                \"expression\": {\n                  \"language\": \"text/cql-identifier\",\n                  \"expression\": \"Is Recommendation Applicable\"\n                }\n              }\n            ],\n            \"selectionBehavior\": \"exactly-one\",\n            \"dynamicValue\": [\n              {\n                \"path\": \"action.description\",\n                \"expression\": {\n                  \"language\": \"text/cql-identifier\",\n                  \"expression\": \"Get Card Detail\"\n                }\n              },\n              {\n                \"path\": \"action.title\",\n                \"expression\": {\n                  \"language\": \"text/cql-identifier\",\n                  \"expression\": \"Get Card Summary\"\n                }\n              },\n              {\n                \"path\": \"action.priority\",\n                \"expression\": {\n                  \"language\": \"text/cql-identifier\",\n                  \"expression\": \"Get Card Indicator\"\n                }\n              }\n            ],\n            \"action\": [\n              {\n                \"description\": \"Will perform colorectal cancer  screening\"\n              },\n              {\n                \"description\": \"Will not perform colorectal cancer  screening at this time - Snooze 1 month.\"\n              },\n              {\n                \"description\": \"Will not perform colorectal cancer  screening at this time - Snooze 12 months.\"\n              },\n              {\n                \"description\": \"Will not perform colorectal cancer  screening at this time - patient declined.\"\n              }\n            ]\n          }\n        ]\n      }",
+                "form": []
+            }
         }
     ]
 }

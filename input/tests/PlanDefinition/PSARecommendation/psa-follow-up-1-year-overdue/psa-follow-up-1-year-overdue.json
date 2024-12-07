@@ -1,6 +1,12 @@
 {
   "resourceType": "Patient",
 	"id": "psa-follow-up-1-year-overdue",
+  "identifier": [
+    {
+      "system": "http://example.org/psa-screening",
+      "value": "follow-up-1-year-overdue"
+    }
+  ],
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",

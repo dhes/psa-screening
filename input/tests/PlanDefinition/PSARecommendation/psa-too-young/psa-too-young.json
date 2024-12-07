@@ -1,6 +1,12 @@
 {
   "resourceType": "Patient",
   "id": "psa-too-young",
+  "identifier": [
+    {
+      "system": "http://example.org/psa-screening",
+      "value": "too-young"
+    }
+  ],
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",

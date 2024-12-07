@@ -1,6 +1,12 @@
 {
   "resourceType": "Patient",
   "id": "psa-no-psa",
+  "identifier": [
+    {
+      "system": "http://example.org/psa-screening",
+      "value": "no-psa"
+    }
+  ],
   "extension": [
     {
       "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",

@@ -23,3 +23,8 @@ Thumbs.db
 /input-cache
 /thunder-tests/thunderActivity.json
 /bundles
+*bundle.json
+Group-*
+
+# secrets #
+.env

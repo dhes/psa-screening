@@ -105,7 +105,7 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2024-09-06T00:56:18.641Z",
-            "modified": "2024-11-28T20:24:19.252Z",
+            "modified": "2024-12-02T22:07:18.256Z",
             "headers": [
                 {
                     "name": "Cache-Control",
@@ -138,7 +138,7 @@
                             "",
                             "let success = !containsOperationOutcome && !requestGroupWithAction;",
                             "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup.actiont\", success);"
+                            "tc.test(\"No OperationOutcome and no RequestGroup.action\", success);"
                         ]
                     }
                 ]
@@ -692,17 +692,14 @@
             {
                 "name": "Content-Type",
                 "value": "application/fhir+json"
+            },
+            {
+                "name": "Authorization",
+                "value": "Basic {{HAPI_FHIR_AUTH}}"
             }
         ],
-        "auth": {
-            "type": "basic",
-            "basic": {
-                "username": "aequus",
-                "password": "AngryCuff2("
-            }
-        },
         "options": {
-            "baseUrl": "https://cds.hopena.info:8443/fhir/"
+            "baseUrl": "{{FHIR_SERVER_URL}}"
         }
     }
 }

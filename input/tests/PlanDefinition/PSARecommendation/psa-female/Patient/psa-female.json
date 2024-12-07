@@ -1,6 +1,12 @@
 {
   "resourceType": "Patient",
   "id": "psa-female",
+  "identifier": [
+    {
+      "system": "http://example.org/psa-screening",
+      "value": "female"
+    }
+  ],
   "text": {
     "status": "generated",
     "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Test patient for PSA tracking.<br/>Age: 60</div>"
