@@ -9,10 +9,6 @@
   ],
   "extension": [
     {
-      "url": "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
-      "valueCode": "M"
-    },
-    {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
       "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2022-08-31 and follow-up interval is two years. In this case the personalized follow-up interval equals the default coded in the CQL."
     }
