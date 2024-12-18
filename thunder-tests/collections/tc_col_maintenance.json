@@ -14,20 +14,13 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2024-11-20T22:05:19.116Z",
-            "modified": "2024-11-23T23:33:30.468Z",
+            "modified": "2024-12-14T22:28:25.541Z",
             "headers": [],
             "body": {
                 "type": "binary",
                 "raw": "",
                 "form": [],
                 "binary": "../bundles/plandefinition/PSARecommendation/PSARecommendation-bundle.json"
-            },
-            "auth": {
-                "type": "basic",
-                "basic": {
-                    "username": "aequus",
-                    "password": "AngryCuff2("
-                }
             }
         }
     ],
