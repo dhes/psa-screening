@@ -11,9 +11,14 @@ codesystem "LOINC": 'http://loinc.org'
 code "Birthdate": '21112-8' from "LOINC" display 'Birth date'
 code "PSA Follow-up": '21979-0' from "LOINC" display 'Planned/next follow-up'
 
-parameter ReferenceDate Date default Today()
+parameter "Reference dateTime" DateTime 
+// default @2024-01-01 // for testing locally with Execute CQL
+default Today()
 
 context Patient
+
+define ReferenceDate:
+  date from "Reference dateTime"
 
 define StringValueOfReferenceDate:
 	ToString(ReferenceDate)
