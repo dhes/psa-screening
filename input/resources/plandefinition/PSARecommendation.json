@@ -120,7 +120,7 @@
           ]
         },
         {
-          "title": "Reference Date",
+          "title": "ReferenceDate",
           "dynamicValue": [
             {
               "path": "action.description",
