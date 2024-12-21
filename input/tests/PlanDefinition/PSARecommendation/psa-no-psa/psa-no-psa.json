@@ -10,7 +10,7 @@
   "extension": [
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "With ReferenceDate of 2024-08-31 this is a 56 y.o. man has never had a PSA."
+      "valueString": "With ReferenceDate of 2024-08-31 this is a 56 y.o. man has never had a PSA. True. "
     }
   ],
   "active": true,

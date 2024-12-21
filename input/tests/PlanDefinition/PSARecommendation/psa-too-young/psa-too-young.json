@@ -10,7 +10,7 @@
   "extension": [
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "With ReferenceDate of 2024-08-31 this is a 30 y.o. man who is too young for screening. "
+      "valueString": "With ReferenceDate of 2024-08-31 this is a 30 y.o. man who is too young for screening. False."
     }
   ],
   "active": true,

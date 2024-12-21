@@ -1,31 +1,36 @@
 {
-    "_id": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+    "_id": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
     "colName": "tests",
-    "created": "2024-09-06T00:46:12.073Z",
-    "sortNum": 30000,
+    "created": "2024-12-21T03:59:21.502Z",
+    "sortNum": 50000,
     "folders": [],
+    "settings": {
+        "headers": [
+            {
+                "name": "Content-Type",
+                "value": "application/fhir+json"
+            },
+            {
+                "name": "Authorization",
+                "value": "Basic {{HAPI_FHIR_AUTH}}"
+            }
+        ],
+        "options": {
+            "baseUrl": "{{FHIR_SERVER_URL}}"
+        }
+    },
     "requests": [
         {
-            "_id": "88571a82-6bb4-47b0-9798-f4178827e9d2",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "_id": "8ec0eb24-e395-459d-9479-6cb5d0ddb754",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
             "containerId": "",
-            "name": "too-young $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 10000,
-            "created": "2024-09-06T00:46:36.655Z",
-            "modified": "2024-11-28T20:23:58.477Z",
-            "headers": [
-                {
-                    "name": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-too-young\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
+            "name": "exists female",
+            "url": "Patient/psa-female/$everything",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-12-21T04:01:31.105Z",
+            "modified": "2024-12-21T04:21:02.353Z",
+            "headers": [],
             "tests": [
                 {
                     "type": "res-code",
@@ -33,54 +38,29 @@
                     "action": "equal",
                     "value": "200"
                 }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup.action\", success);"
-                        ]
-                    }
-                ]
-            }
+            ]
         },
         {
-            "_id": "eca646e8-3778-48f4-849f-f0e1ffa7455b",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "_id": "0c42ebd5-891d-4608-8c34-e33fd338d9ef",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
             "containerId": "",
-            "name": "female $apply",
+            "name": "test female",
             "url": "PlanDefinition/PSARecommendation/$apply",
             "method": "POST",
-            "sortNum": 7500,
-            "created": "2024-09-06T00:56:16.388Z",
-            "modified": "2024-11-21T21:00:09.835Z",
+            "sortNum": 40000,
+            "created": "2024-12-21T04:02:30.892Z",
+            "modified": "2024-12-21T04:05:36.546Z",
             "headers": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-female\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-female\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
                 "form": []
             },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
             "postReq": {
                 "inlineScripts": [
                     {
                         "script": [
+                            "// negative test case",
                             "let containsOperationOutcome = tc.response.json.contained &&",
                             "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
@@ -97,568 +77,15 @@
             }
         },
         {
-            "_id": "bae40b66-2d82-47d9-a3e8-623ee92af84d",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
+            "_id": "ce8dc6c5-7d84-445d-8235-b2d8f7d3ddcf",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
             "containerId": "",
-            "name": "within-2-years $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 20000,
-            "created": "2024-09-06T00:56:18.641Z",
-            "modified": "2024-12-02T22:07:18.256Z",
-            "headers": [
-                {
-                    "name": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-within-2-years\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup.action\", success);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "a2521164-306a-4eec-9862-7449309f0ebb",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "no-psa $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 8735.4,
-            "created": "2024-09-06T00:56:21.218Z",
-            "modified": "2024-11-28T20:23:37.103Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-no-psa\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome. RequestGroup.action is present.\", success);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "6ea8305c-4097-411d-958b-4a75c94af142",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 8593.8,
-            "created": "2024-09-09T04:07:12.314Z",
-            "modified": "2024-11-28T20:21:41.388Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome and no RequestGroup.action present\", success);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "e7268096-43ca-4a24-a3fa-62abb8cedec7",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "female exists",
-            "url": "Patient/psa-female",
-            "method": "GET",
-            "sortNum": 5000,
-            "created": "2024-11-21T20:39:42.949Z",
-            "modified": "2024-11-21T20:41:17.409Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "dd524ca1-db5f-42a8-92fc-6d67fead95a6",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "too-young exists",
-            "url": "Patient/psa-too-young",
-            "method": "GET",
-            "sortNum": 8750,
-            "created": "2024-11-21T20:46:40.454Z",
-            "modified": "2024-11-21T20:47:20.193Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "cd9f0ceb-661e-4095-9ce3-510a08af1f92",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "within-2-years exists",
-            "url": "Patient/psa-within-2-years",
-            "method": "GET",
-            "sortNum": 15000,
-            "created": "2024-11-21T20:47:25.990Z",
-            "modified": "2024-11-21T20:48:40.932Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "29e4d323-b898-4197-b955-d9640ab5c0d3",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "no-psa exists",
-            "url": "Patient/psa-no-psa",
-            "method": "GET",
-            "sortNum": 8733,
-            "created": "2024-11-21T20:47:36.217Z",
-            "modified": "2024-11-21T20:49:10.060Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "7e852d8a-fa7b-4818-a8a9-8bb58cca2e4d",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year exists",
-            "url": "Patient/psa-follow-up-1-year",
-            "method": "GET",
-            "sortNum": 8125,
-            "created": "2024-11-21T20:47:43.594Z",
-            "modified": "2024-11-28T20:38:18.795Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "5722a92c-3980-42cd-94f2-3011e4ce3da9",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year-overdue exists",
-            "url": "Patient/psa-follow-up-1-year-overdue",
-            "method": "GET",
-            "sortNum": 8671.9,
-            "created": "2024-11-28T02:27:29.159Z",
-            "modified": "2024-11-28T02:29:57.218Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "3bea6990-81d2-4575-bd92-afd831dfd75f",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year-overdue $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 8730.5,
-            "created": "2024-11-28T02:27:37.645Z",
-            "modified": "2024-11-28T20:31:00.580Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year-overdue\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "4a1c925e-3b21-4b51-8bbf-4dd62eadebc6",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "female $everything",
-            "url": "Patient/psa-female/$everything",
-            "method": "GET",
-            "sortNum": 6250,
-            "created": "2024-11-28T16:10:36.448Z",
-            "modified": "2024-11-28T16:11:14.759Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "9638b788-4a66-4041-b82d-d0149add487d",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "too-young $everything",
-            "url": "Patient/psa-too-young/$everything",
-            "method": "GET",
-            "sortNum": 9375,
-            "created": "2024-11-28T16:13:36.151Z",
-            "modified": "2024-11-28T20:37:41.556Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "// Check if the response contains a Bundle resource",
-                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
-                            "",
-                            "// Check if the Bundle's total attribute equals the expected number",
-                            "let expectedTotal = 1; // Adjust this number as needed for your test case",
-                            "let correctTotal = bundle && bundle.total === expectedTotal;",
-                            "",
-                            "// Create the test result based on whether the total is correct",
-                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "51a815b0-14b9-4a18-9631-4e3dfba55bc9",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "within-2-years exists $everything",
-            "url": "Patient/psa-within-2-years/$everything",
-            "method": "GET",
-            "sortNum": 25000,
-            "created": "2024-11-28T16:14:51.768Z",
-            "modified": "2024-11-28T16:36:29.271Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "// Check if the response contains a Bundle resource",
-                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
-                            "",
-                            "// Check if the Bundle's total attribute equals the expected number",
-                            "let expectedTotal = 4; // Adjust this number as needed for your test case",
-                            "let correctTotal = bundle && bundle.total === expectedTotal;",
-                            "",
-                            "// Create the test result based on whether the total is correct",
-                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "27f2ca49-29a8-4b0f-b1ca-6c93e7341cf4",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year $everything",
-            "url": "Patient/psa-follow-up-1-year/$everything",
-            "method": "GET",
-            "sortNum": 8437.5,
-            "created": "2024-11-28T16:48:01.444Z",
-            "modified": "2024-11-28T16:49:45.331Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "// Check if the response contains a Bundle resource",
-                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
-                            "",
-                            "// Check if the Bundle's total attribute equals the expected number",
-                            "let expectedTotal = 4; // Adjust this number as needed for your test case",
-                            "let correctTotal = bundle && bundle.total === expectedTotal;",
-                            "",
-                            "// Create the test result based on whether the total is correct",
-                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "356f84cf-c014-4542-a225-6961d0bfc5e3",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "follow-up-1-year-overdue $everything",
-            "url": "Patient/psa-follow-up-1-year-overdue/$everything",
-            "method": "GET",
-            "sortNum": 8711,
-            "created": "2024-11-28T19:57:18.041Z",
-            "modified": "2024-11-28T19:57:48.171Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "// Check if the response contains a Bundle resource",
-                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
-                            "",
-                            "// Check if the Bundle's total attribute equals the expected number",
-                            "let expectedTotal = 4; // Adjust this number as needed for your test case",
-                            "let correctTotal = bundle && bundle.total === expectedTotal;",
-                            "",
-                            "// Create the test result based on whether the total is correct",
-                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "6a69214a-879f-49e0-9763-fc82cb1dd37a",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "more-than-2-years exists",
-            "url": "Patient/psa-more-than-2-years",
-            "method": "GET",
-            "sortNum": 8731.8,
-            "created": "2024-11-28T20:10:13.412Z",
-            "modified": "2024-11-28T20:10:41.715Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "fce6ec2e-c5e6-47db-8c83-921676d14f3c",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "more-than-2-years $everything",
-            "url": "Patient/psa-more-than-2-years/$everything",
-            "method": "GET",
-            "sortNum": 8732.4,
-            "created": "2024-11-28T20:10:59.833Z",
-            "modified": "2024-11-28T20:13:23.391Z",
-            "headers": [],
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ]
-        },
-        {
-            "_id": "a5b2a3c2-0d9d-428a-a4d4-f1664e740753",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "more-than-2-years $apply",
-            "url": "PlanDefinition/PSARecommendation/$apply",
-            "method": "POST",
-            "sortNum": 8732.7,
-            "created": "2024-11-28T20:11:55.211Z",
-            "modified": "2024-11-28T20:33:39.022Z",
-            "headers": [
-                {
-                    "name": "Cache-Control",
-                    "value": "no-cache"
-                }
-            ],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-more-than-2-years\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \Reference dateTime\",\n            \"valueDate\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
-                "form": []
-            },
-            "tests": [
-                {
-                    "type": "res-code",
-                    "custom": "",
-                    "action": "equal",
-                    "value": "200"
-                }
-            ],
-            "postReq": {
-                "inlineScripts": [
-                    {
-                        "script": [
-                            "let containsOperationOutcome = tc.response.json.contained &&",
-                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
-                            "",
-                            "let requestGroupWithAction = tc.response.json.contained &&",
-                            "                             tc.response.json.contained.find(item => ",
-                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
-                            "",
-                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
-                            "",
-                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
-                        ]
-                    }
-                ]
-            }
-        },
-        {
-            "_id": "61f2b3ad-f204-4f84-917a-0913d48d84c6",
-            "colId": "d718dd45-8a9e-475a-b282-d2d8739a9370",
-            "containerId": "",
-            "name": "no-psa $everything",
+            "name": "exists no-psa",
             "url": "Patient/psa-no-psa/$everything",
             "method": "GET",
-            "sortNum": 8734.2,
-            "created": "2024-11-28T20:35:11.335Z",
-            "modified": "2024-11-28T20:36:52.494Z",
+            "sortNum": 45000,
+            "created": "2024-12-21T04:06:28.059Z",
+            "modified": "2024-12-21T04:21:43.460Z",
             "headers": [],
             "tests": [
                 {
@@ -667,39 +94,315 @@
                     "action": "equal",
                     "value": "200"
                 }
-            ],
+            ]
+        },
+        {
+            "_id": "78633b88-8e96-41d1-8ee6-14c5a09c2e16",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test no-psa",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-12-21T04:06:30.931Z",
+            "modified": "2024-12-21T04:08:58.654Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-no-psa\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
             "postReq": {
                 "inlineScripts": [
                     {
                         "script": [
-                            "// Check if the response contains a Bundle resource",
-                            "let bundle = tc.response.json.resourceType === \"Bundle\" ? tc.response.json : null;",
+                            "// positive test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
                             "",
-                            "// Check if the Bundle's total attribute equals the expected number",
-                            "let expectedTotal = 1; // Adjust this number as needed for your test case",
-                            "let correctTotal = bundle && bundle.total === expectedTotal;",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
                             "",
-                            "// Create the test result based on whether the total is correct",
-                            "tc.test(`Bundle contains ${expectedTotal} resources`, correctTotal);"
+                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "a7ef42bc-976d-42f0-a7a0-131cf2c7e72a",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "exists follow-up-1-year",
+            "url": "Patient/psa-follow-up-1-year/$everything",
+            "method": "GET",
+            "sortNum": 41250,
+            "created": "2024-12-21T04:09:22.159Z",
+            "modified": "2024-12-21T04:21:11.671Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "7be2571e-50ca-4853-8e86-8a788a0691fc",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test follow-up-1-year",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 42500,
+            "created": "2024-12-21T04:09:27.343Z",
+            "modified": "2024-12-21T04:11:23.638Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// negative test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
+                            "",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "1ff859fa-994c-48aa-9abb-f41b27691711",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "exists follow-up-1-year-overdue",
+            "url": "Patient/psa-follow-up-1-year-overdue/$everything",
+            "method": "GET",
+            "sortNum": 47500,
+            "created": "2024-12-21T04:12:04.559Z",
+            "modified": "2024-12-21T04:21:33.385Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "ec5cdf2f-af04-471f-bc98-69eb350dedbd",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test follow-up-1-year-overdue",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 52500,
+            "created": "2024-12-21T04:12:09.188Z",
+            "modified": "2024-12-21T04:13:38.274Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-follow-up-1-year-overdue\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// positive test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
+                            "",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "1a993051-a38b-4a2d-956a-a17d699ed97d",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "exists more-than-2-years",
+            "url": "Patient/psa-more-than-2-years/$everything",
+            "method": "GET",
+            "sortNum": 55000,
+            "created": "2024-12-21T04:14:13.345Z",
+            "modified": "2024-12-21T04:15:09.100Z",
+            "headers": []
+        },
+        {
+            "_id": "ed35b47f-dcff-478c-8bf0-ca569f0c8612",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test more-than-2 years",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2024-12-21T04:14:17.063Z",
+            "modified": "2024-12-21T04:15:48.895Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-more-than-2 years\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// positive test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
+                            "",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !!requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome. RequestGroup.action is present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "23ebe6ad-a51e-4722-a09d-5004dc3c9c0e",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "exists too-young",
+            "url": "Patient/psa-too-young/$everything",
+            "method": "GET",
+            "sortNum": 65000,
+            "created": "2024-12-21T04:16:21.394Z",
+            "modified": "2024-12-21T04:22:33.187Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "2fe4bcfe-3d23-40c8-8e8c-45eecabcbb35",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test too-young",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2024-12-21T04:16:25.866Z",
+            "modified": "2024-12-21T04:18:01.609Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-too-young\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// negative test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
+                            "",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "6bdc4d42-79d8-46e9-8ba9-504579e938e4",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "exists within-2-years",
+            "url": "Patient/psa-within-2-years/$everything",
+            "method": "GET",
+            "sortNum": 75000,
+            "created": "2024-12-21T04:18:34.373Z",
+            "modified": "2024-12-21T04:22:59.143Z",
+            "headers": [],
+            "tests": [
+                {
+                    "type": "res-code",
+                    "custom": "",
+                    "action": "equal",
+                    "value": "200"
+                }
+            ]
+        },
+        {
+            "_id": "d6b063fc-b945-4263-aed6-682b4a985244",
+            "colId": "33e8afb9-d9e4-44f4-9646-a7e10d41ca98",
+            "containerId": "",
+            "name": "test within-2-years",
+            "url": "PlanDefinition/PSARecommendation/$apply",
+            "method": "POST",
+            "sortNum": 80000,
+            "created": "2024-12-21T04:18:39.483Z",
+            "modified": "2024-12-21T04:19:43.309Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"resourceType\": \"Parameters\",\n  \"parameter\": [\n    {\n      \"name\": \"subject\",\n      \"valueString\": \"Patient/psa-within 2 years\"\n    },\n    {\n      \"name\": \"parameters\",\n      \"resource\": {\n        \"resourceType\": \"Parameters\",\n        \"parameter\": [\n          {\n            \"name\": \"Reference dateTime\",\n            \"valueDateTime\": \"2024-08-31\"\n          }\n        ]\n      }\n    }\n  ]\n}\n",
+                "form": []
+            },
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "// negative test case",
+                            "let containsOperationOutcome = tc.response.json.contained &&",
+                            "                               tc.response.json.contained.some(item => item.resourceType === \"OperationOutcome\");",
+                            "",
+                            "let requestGroupWithAction = tc.response.json.contained &&",
+                            "                             tc.response.json.contained.find(item => ",
+                            "                                 item.resourceType === \"RequestGroup\" && item.action);",
+                            "",
+                            "let success = !containsOperationOutcome && !requestGroupWithAction;",
+                            "",
+                            "tc.test(\"No OperationOutcome and no RequestGroup with action attribute present\", success);"
                         ]
                     }
                 ]
             }
         }
-    ],
-    "settings": {
-        "headers": [
-            {
-                "name": "Content-Type",
-                "value": "application/fhir+json"
-            },
-            {
-                "name": "Authorization",
-                "value": "Basic {{HAPI_FHIR_AUTH}}"
-            }
-        ],
-        "options": {
-            "baseUrl": "{{FHIR_SERVER_URL}}"
-        }
-    }
+    ]
 }

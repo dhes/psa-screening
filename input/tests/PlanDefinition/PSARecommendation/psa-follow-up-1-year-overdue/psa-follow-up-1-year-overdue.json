@@ -10,7 +10,7 @@
   "extension": [
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2023-08-30 and follow-up interval is one year. So the most recent PSA is one year and one day ago. He tests as due and receives a reminder for repeat PSA."
+      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2023-08-30 and follow-up interval is one year. So the most recent PSA is one year and one day ago. He tests as due and receives a reminder for repeat PSA. True. "
     }
   ],
   "active": true,

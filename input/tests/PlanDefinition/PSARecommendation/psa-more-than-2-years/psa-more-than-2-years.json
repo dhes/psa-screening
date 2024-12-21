@@ -10,7 +10,7 @@
   "extension": [
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2022-08-30 and follow-up interval is the default two years. He is one day overdue. He should be flagged as due for PSA."
+      "valueString": "With ReferenceDate of 2024-08-31 this is a 71 y.o. man whose last PSA was 2022-08-30 and follow-up interval is the default two years. He is one day overdue. He should be flagged as due for PSA. True."
     }
   ],
   "active": true,

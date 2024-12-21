@@ -14,7 +14,7 @@
   "extension": [
     {
       "url": "http://example.org/fhir/StructureDefinition/patient-annotation",
-      "valueString": "Female born 1964-05-31. Many values will be null. No action. "
+      "valueString": "Female born 1964-05-31. Many values will be null. False. "
     }
   ],
   "active": true,
